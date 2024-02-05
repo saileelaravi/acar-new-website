@@ -1,0 +1,45 @@
+.acar_footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #080913;
+}
+
+.foot_title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    // font-size: 1.0rem;
+    line-height: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+// ::ng-deep .map-container {
+//     height: 300px !important;
+// }
+
+::ng-deep .map-container  {
+    flex: 0 0 100%;
+    // max-width: 75%;
+}
+
+@media only screen and (min-width: 280px) {
+    ::ng-deep .map-container {
+        // flex: 0 0 48%;
+        max-width: 100% !important;
+    }
+}
+
+// @media only screen and (min-width: 450px) {
+//     ::ng-deep .map-container {
+//         // flex: 0 0 48%;
+//         // max-width: 75% !important;
+//     }
+// }
+
+// @media only screen and (min-width: 360px) {
+//     ::ng-deep .map-container{
+//         // flex: 0 0 48%;
+//         // max-width: 75% !important;
+//     }
+// }

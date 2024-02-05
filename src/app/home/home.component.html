@@ -1,0 +1,27 @@
+<!-- <app-header></app-header> -->
+
+    <!-- Carousel with sliding images -->
+    <ngb-carousel [interval]="1000">
+        @for (img of images; track img; let i = $index) {
+        <ng-template ngbSlide>
+            <div>
+                <img [src]="img" alt="Slide {{ i + 1 }}" width="100%" />
+            </div>
+        </ng-template>
+        }
+    </ngb-carousel>
+
+<!-- Latest News -->
+<app-acar-news></app-acar-news>
+
+<!-- Welcome to ACAR -->
+<app-welcome2acar></app-welcome2acar>
+
+<!-- Activities -->
+<app-activites></app-activites>
+<!-- you tube videos -->
+<app-youtbue-videos></app-youtbue-videos>
+<!-- Placement, training, Campus overview and higher education -->
+<app-campus></app-campus>
+<!-- Events -->
+<app-events></app-events>

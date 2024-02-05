@@ -1,0 +1,90 @@
+<div class="m-5">
+    <div class="row">
+        <div class="col-md-5 mt-3">
+            <p-carousel [value]="seedtech_lab" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card">
+                <ng-template let-product pTemplate="item">
+                    <div class="border-1 surface-border border-round text-center my-3">
+                        <div class="">
+                            <img src="{{ product.url }}" [alt]="" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{ product.title }}</h4>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="col-md-7">
+            <div>
+                <h1 class="aboutus_title">Department of Seed Science and Technology</h1>
+                <p> Seed is the basic and critical input in agriculture compared to other inputs like fertilizers,
+                    pesticides and water etc. For production of quality seed, processing, storage and marketing, the
+                    existing machinery in the state, need to be geared up for the scientific footing. Hence, in order to
+                    popularize the concept and uses of quality seed, the Department of Seed Science and Technology are
+                    coordinated in order to give growth and awareness among the students, to reach other communities
+                    like farmers. Major activities of seed science and technology are teaching about the overview of
+                    seed, seed anatomy, and importance of quality seed, quality seed production technology of cereals,
+                    millets pulses, oil seeds, fibre crops and vegetable crops. Overview of classes of seed and
+                    maintenance of genetic purity during seed production.</p>
+
+            </div>
+        </div>
+    </div>
+    <p> Not only quality seed production, after harvesting i.e., post harvesting operation like threshing,
+        winnowing, processing, storage also much important, hence it registered 5 to 20 % yield losses in
+        India. Hence, on behalf of the Department of Seed Science and Technology, briefly explain about seed
+        processing and its principles, Sequence of processing for different crops and grading of seed and
+        the importance of post harvesting losses and how we can avoid. Seed certification, certification
+        procedure (how can register the seed form) and seed testing for quality assessment also taught. The
+        importance of seed storage, conditions and packing materials used for safe storage of seeds are well
+        explained to the students.</p>
+
+    <div>
+        <h1 class="aboutus_title">Courses</h1>
+        <table style="width:100%">
+            <tr class="text-center">
+                <th>Year</th>
+                <th>Semester</th>
+                <th>Course Code</th>
+                <th>Course Tittle</th>
+                <th>Course Credit</th>
+            </tr>
+            <tr>
+                <th class="text-center">II</th>
+                <td class="text-center">III</td>
+                <td class="text-center">
+                    SST 201</td>
+                <td>Principles of Seed Technology</td>
+                <td class="text-center">
+                    (2+1)</td>
+            </tr>
+
+
+            <tr>
+                <th class="text-center">III</th>
+                <td class="text-center">VI</td>
+                <td class="text-center">	SST 351</td>
+                <td> Seed entrepreneurship skill development and management	</td>
+                <td class="text-center">
+                    (1+1)</td>
+            </tr>
+            <tr>
+                <th class="text-center">IV</th>
+                <td class="text-center">VIII</td>
+                <td class="text-center">	SST 451</td>
+                <td>Commercial Seed Production
+
+                </td>
+                <td class="text-center">
+                    ( 0+10)</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h1 class="aboutus_title">Research</h1>
+        <h3>Effect of Vermiwash Treatment on Seed Germination and Seedling vigour.</h3>
+        <p> Research mainly focus on to study the effect of vermiwash seed treatments on physiological and biochemical
+            parameters of seedlings and Studies on the rate of deterioration of seeds (Accelerated ageing)</p>
+    </div>
+</div>

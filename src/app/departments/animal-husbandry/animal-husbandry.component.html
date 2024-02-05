@@ -1,0 +1,110 @@
+<div class="m-5">
+    <h3 class="aboutus_title text-center">DEPARTMENT OF VETERINARY AND ANIMAL SCIENCES</h3>
+    <p>The Department of Veterinary and Animal Science is established with five acres of land in ACAR, Athimugam, during
+        the year of 2016. The main objective is to impart fundamentals education in Livestock and Poultry Production to
+        the undergraduate students. It comprises of various units Viz, Cattle, Buffalo, Sheep, Goat, Pig, Poultry
+        (Broiler & Native Chicken), Azolla, Fodder cultivation, Integrated Farming System, Hatchery Unit and two animal
+        husbandry labs for education and research purpose. The department of Veterinary and Animal Science is attending
+        to the needs of the farmers by transferring the technologies, demonstrations, training, exhibitions and
+        consultations.</p>
+    <h5 class="text-secondary">Vision</h5>
+    <p> To educate the local farmers on production and management of livestock and poultry by establishing modern
+        hatchery Unit, feed mill and IFS.</p>
+    <h5 class="text-secondary">Mission</h5>
+    <p> Through the popularization of the Kadaknath and native chicken in district besides advocating the modern IFS
+        facilitating the farmers for better supply chain to achieve higher income.</p>
+    <h5 class="text-secondary">Objectives</h5>
+    <ul>
+        <li>To provide the basic education about livestock and poultry production to the students and farmers.</li>
+        <li>To serve as a unique model mixed farming and integrated farming
+        </li>
+    </ul>
+
+    <h3 class="aboutus_title">VARIOUS UNITS</h3>
+    <h5 class="text-secondary"> Cattle & Buffalo Unit</h5>
+    <p>This department is maintaining the cattle and buffalo units to fulfil the demands of milk and milk products to
+        the ACAR hostel and local sale.</p>
+
+    <h5 class="text-secondary">Sheep and Goat Unit</h5>
+    <p> Sheep and goat are reared under free ranging system to provide the basic practical demonstration, trainings to
+        the undergraduate students, farmers and entrepreneurs. The droppings of sheep and goats contain higher nutrients
+        than farmyard manure and compost. On an average, the manure contains three per cent N, one per cent P2O5 and two
+        per cent K2O. Manure realised is used for our agricultural fields. In addition, the meat and live animals are
+        being utilized.</p>
+
+    <h5 class="text-secondary">Pig unit</h5>
+    <p>Pigs are monogastric animals and most potential source of meat and more efficient feed converters after the
+        broiler.
+        Pig farming will provide employment opportunities to seasonally employed rural farmers and support supplementary
+        income to improve their living standards. Pigs manure is widely used as fertilizer for agriculture farms and
+        fish
+        ponds. In ACAR maintenance of pig farm with the feeding of food waste from kitchen to minimise the cost of
+        production</p>
+
+    <h5 class="text-secondary">Poultry Unit</h5>
+
+    <p>Poultry farming is a continuous source of income. It is not seasonal and can produce income for the entire year.
+        Chickens lay eggs between 6 to 8 months, broilers take 6 to 10 weeks to bring in income. Meat, eggs, feathers
+        and
+        manure of chicken and broilers are all saleable and income generating. Poultry farming in a small scale requires
+        only minimum space and they can be reared even in the backyards of homes. The excreta of birds ferment very
+        quickly.
+        Poultry manure contains higher nitrogen and phosphorus compared to other bulky organic manures. The average
+        nutrient
+        content is 3.03 per cent N; 2.63 per cent P2O5 and 1.4 per cent K2O.Poultry feathers are also used for making
+        pillows, fancy articles and curios. ACAR broiler units maintains 3000 chick’s capacity to produce clean,
+        hygienic,
+        antibiotic free chicken and eggs to supply to the Adhiyamaan Engineering College hostels, ACAR and local sale.
+    </p>
+
+    <h5 class="text-secondary"> Fodder Cultivation & Azolla </h5>
+
+    <p>Three acres of land for fodders and 10 cents of land for Azolla cultivated for feeding the livestock and poultry and
+    also to conduct the trainings and demonstration to the students and farmers. ACAR farm cultivates fodders like Super
+    Napier, Co5, Hedge Lucerne and CoFS 29.</p>
+
+    <h5 class="text-secondary">Integrated Farming System</h5>
+
+    <p>The IFS model combines various compatible enterprises such as crops (field crops, horticultural crops), agroforestry
+    (agri-silvi culture, agri-horticulture, agri-pastoral, silvi-pastoral, horti- pastoral), livestock (dairy, pigs,
+    poultry, small ruminants), fishery, mushroom and bee culture in a synergistic way so that the wastes of one process
+    become the input for other processes for optimum farm productivity.</p>
+
+    <h5 class="text-secondary">Incubation and Hatchery Unit</h5>
+
+    <p>The department of Veterinary and Animal Science is maintaining 100 eggs capacity an incubation and hatchery unit to
+    produce good quality native chicks and to support the practical classes to the students and farmers.</p>
+
+    <div class="w-100 card pb-3">
+        <h2 class="text-center aboutus_title pt-2 m-0">Poultry</h2>
+        <p-carousel [value]="Poultry" [numVisible]="3" [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="Poultry" >
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round text-center">
+                <div class="mt-5">
+                    <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+                </div>
+                <div>
+                    <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+    <div class="w-100 card mt-3 pb-3">
+        <h2 class="text-center aboutus_title pt-2 m-0">Animal Husbandry</h2>
+        <p-carousel [value]="animal_husbandry" [numVisible]="3" [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="animal_husbandry" >
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round text-center">
+                <div class="mt-5">
+                    <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+                </div>
+                <div>
+                    <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+</div>

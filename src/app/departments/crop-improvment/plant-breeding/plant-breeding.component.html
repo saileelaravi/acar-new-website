@@ -1,0 +1,184 @@
+<div class="m-5">
+    <div class="row">
+        <div class="  col-md-5 h-25">
+            <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card">
+                <ng-template let-product pTemplate="item">
+                    <div class="border-1 surface-border border-round text-center my-3">
+                        <div class="">
+                            <img src="{{ product.url }}" [alt]="" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{ product.title }}</h4>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="col-md-7">
+            <h1 class="aboutus_title">Department of Genetics and Plant Breeding</h1>
+            <p>
+                Since the dawn of civilization, man has tamed the wild to meet his ends; not just animals but plants as
+                well. And practically that was the point of time from where the practice of breeding started. </p>
+
+            <p>The department of Genetics and Plant Breeding was started in Adhiyamaan College of Agriculture and
+                Research,
+                Athimugam in 2016. The college is affiliated to Tamil Nadu Agricultural University, Coimbatore with
+                triple
+                mandates of Education, Research and Extension. Plant Breeding provides the seeds of new high-yielding
+                cultivars, which often include other desired traits that increase farming profitability and
+                sustainability.
+                Genetics made plant breeding a science-based approach for crop improvement that continues evolving due
+                to
+                increasing knowledge. Conventional cross breeding methods are now used along with tools ensuing from
+                advances in omics and genetic engineering. The Department has equipped laboratory / field labs, bio
+                visual
+                charts with adequate equipment’s to carry out both fundamental and applied research and provide options
+                for
+                undergraduate students to get adequate exposure in advanced molecular biological techniques.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <h2 class="aboutus_title">Activites</h2>
+            <ul>
+                <li>Offering courses on Genetics, Cytogenetics, Plant breeding and Plant genetic resources for UG</li>
+                <li>Characterization of germplasm accessions in Rice`</li>
+                <li>Preserving the available plant genetic resources without loss of viability under controlled
+                    conditions.</li>
+                <li>Generating pre breeding plant genetic material by utilizing wild species and land races for quality,
+                    pest and disease resistance.</li>
+                <li>Applying marker assisted tools with classical approaches to introgress critical traits </li>
+                <li>Seed production of some field crops viz., red gram, rice and mustard</li>
+            </ul>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="bg-danger border-5 border-warning card mt-3">
+                <h2 class="text-center align-middle text-light m-3">Courses Offered & Research </h2>
+                <button type="button" class="btn btn-light fs-5 m-5" (click)="showDialog()">View</button>
+                <p-dialog header="Courses Offered" [resizable]="false" [modal]="true" [maximizable]="true"
+                    appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                    [contentStyle]="{height: '400px'}">
+                    <table style="width:100%">
+                        <tr class="text-center">
+                            <th>Year</th>
+                            <th>Semester</th>
+                            <th>Course Code</th>
+                            <th>Course Tittle</th>
+                            <th>Course Credit</th>
+                        </tr>
+                        <tr>
+                            <th class="text-center">I</th>
+                            <td class="text-center">I</td>
+                            <td>PBG 101</td>
+                            <td>Introduction to Agricultural Botany</td>
+                            <td class="text-center">
+                                (1+1)</td>
+                        </tr>
+
+
+                        <tr>
+                            <th class="text-center">II</th>
+                            <td class="text-center">IV</td>
+                            <td>
+                                PBG 201</td>
+                            <td>Fundamentals of Genetics</td>
+                            <td class="text-center">
+                                (2+1)</td>
+                        </tr>
+
+
+                        <tr>
+                            <th rowspan="3" class="text-center">III</th>
+                            <td class="text-center">V</td>
+                            <td>
+                                PBG 301</td>
+                            <td> Fundamentals of Plant Breeding</td>
+                            <td class="text-center">
+                                (2+1)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">V</td>
+                            <td>
+                                PGP 351</td>
+                            <td>
+                                Plant Genetic Resources: Collection, Conservation and Utilization </td>
+                            <td class="text-center">
+                                (1+1)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">VI</td>
+                            <td>
+                                PBG 302 </td>
+                            <td>
+                                Crop Improvement</td>
+                            <td class="text-center">
+                                (2+1)</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">IV</th>
+                            <td class="text-center">VII & VIII</td>
+                            <td>APW 401</td>
+                            <td>Students project work
+
+                            </td>
+                            <td class="text-center">
+                                ( 0+2)</td>
+                        </tr>
+                    </table>
+                    <h4 class="text-dark fw-bold my-3">Research</h4>
+                    <ul>
+                        <li>DUS characterization in Rice (Oryza L)</li>
+                        <li>Screening the potential of Rice landraces for strong culm traits and quality parameters
+                            (Oryza sativa. L)</li>
+                        <li>Evaluation of Genetic and phenotypic variability in soybean (Glycine max) for yiela and
+                            yield attributing traits.</li>
+                    </ul>
+                </p-dialog>
+            </div>
+        </div>
+    </div>
+
+    <div class=" card my-5">
+        <h3 class="text-center py-3">Hybridization in Bhendi</h3>
+        <p-carousel [value]="hybridization_in_bhendi" [numVisible]="4" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round text-center my-3">
+                    <div class="">
+                        <img src="{{ product.url }}" [alt]="" />
+                    </div>
+                    <div>
+                        <h6 class="mb-1">{{ product.title }}</h6>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+        <hr>
+
+        <h3 class="text-center py-3">Breeding Exposure Visits</h3>
+        <p-carousel [value]="breeding_exposure_visits" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round text-center my-3">
+                    <div class="">
+                        <img src="{{ product.url }}" [alt]="" />
+                    </div>
+                    <div>
+                        <h6 class="mb-1">{{ product.title }}</h6>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+    <div class="bg-secondary text-light p-3 fw-bold">
+        <p>உழுதுண்டு வாழ்வாரே வாழ்வார்மற் றெல்லாம்
+            தொழுதுண்டு பின்செல் பவர். குறள் – 1033</p>
+
+        <p>பொருள்: உழவு செய்து அதனால் கிடைத்ததை உண்டு வாழ்கின்றவரே உரிமையோடு வாழ்கின்றவர்; மற்றவர் எல்லோரும் பிறரைத்
+            தொழுது உண்டு பின் செல்கின்றவரே.</p>
+    </div>
+</div>

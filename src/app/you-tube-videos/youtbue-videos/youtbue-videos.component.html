@@ -1,0 +1,17 @@
+<div class="card mx-5 my-3">
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [circular]="false"
+      [responsiveOptions]="responsiveOptions">
+      <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round text-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe height="315" class="embed-responsive-item w-100 px-5 pt-3" [src]="product.url"
+              allowfullscreen></iframe>
+          </div>
+          <div *ngIf="product">
+            <h4 class="mb-1">{{ product.title }}</h4>
+          </div>
+          </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  

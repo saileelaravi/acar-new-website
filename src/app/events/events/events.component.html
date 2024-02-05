@@ -1,0 +1,16 @@
+<div class="card acar_activites mx-5 mt-5">
+    <h5 class="text-center">Current Events And Trainings</h5>
+    <p-carousel [value]="products" [numVisible]="5" [numScroll]="2" [circular]="false"
+      [responsiveOptions]="responsiveOptions">
+      <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round text-center">
+          <div class="">
+            <img src="{{ product.url }}" [alt]="" class="w-6 h-6 shadow-2"style="object-fit: cover;" />
+          </div>
+          <div>
+            <h4 class="mb-1">{{ product.title }}</h4>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
