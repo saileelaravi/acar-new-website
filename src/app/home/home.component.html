@@ -1,7 +1,7 @@
 <!-- <app-header></app-header> -->
 
-    <!-- Carousel with sliding images -->
-    <ngb-carousel [interval]="1000">
+<!-- Carousel with sliding images -->
+<!-- <ngb-carousel [interval]="1000">
         @for (img of images; track img; let i = $index) {
         <ng-template ngbSlide>
             <div>
@@ -9,7 +9,30 @@
             </div>
         </ng-template>
         }
-    </ngb-carousel>
+    </ngb-carousel> -->
+
+<!-- <div class=" acar_activites ">
+  <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [circular]="true"
+    [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
+    <ng-template let-product pTemplate="item">
+      <img src="{{ product }}" [alt]="" style="width: 100%; height: 600px;" />
+    </ng-template>
+  </p-carousel>
+</div> -->
+
+
+<div class="">
+  <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" 
+  [showIndicators]="true"
+    [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [autoPlay]="true"
+     [circular]="true" 
+    [numVisible]="1"  >
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item" style="width: 100%; display: block;" />
+    </ng-template>
+   
+  </p-galleria>
+</div>
 
 <!-- Latest News -->
 <app-acar-news></app-acar-news>
@@ -23,5 +46,9 @@
 <app-youtbue-videos></app-youtbue-videos>
 <!-- Placement, training, Campus overview and higher education -->
 <app-campus></app-campus>
+<!-- Placements -->
+<app-placements></app-placements>
+<!-- WHY ACAR -->
+<app-why-acar></app-why-acar>
 <!-- Events -->
-<app-events></app-events>
+<!-- <app-events></app-events> -->

@@ -1,0 +1,12 @@
+<div class="card mx-5 my-3 bg-secondary">
+    <h3 class="text-light text-center pt-3">Job Placements</h3>
+    <div class="d-flex flex-wrap justify-content-between mx-5 my-4">
+        <div *ngFor="let images of placed_students" class="card p-5 fw-bold">
+            <img src="{{images.url}}" alt="" class="w-100 ">
+            <span class="text-wrap">{{images.title}}</span>
+            <span class="text-center">{{images.id}}</span>
+
+            <span class="text-center">{{images.position}}</span>
+        </div>
+    </div>
+</div>
