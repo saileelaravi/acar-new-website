@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-teaching-staff',
   standalone: true,
-  imports: [],
+  imports: [ImageModule ],
   templateUrl: './teaching-staff.component.html',
   styleUrl: './teaching-staff.component.scss'
 })

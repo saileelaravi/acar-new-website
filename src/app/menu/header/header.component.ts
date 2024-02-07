@@ -87,7 +87,7 @@ export class HeaderComponent {
 
                             },
                             {
-                                label: 'Agricultural Entromology',
+                                label: 'Agricultural Engineering',
                                 command: () => this.route.navigate(['/departments/agricultural-engineering']),
 
                             },
@@ -128,6 +128,8 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Agricultural Entromology',
+                                command: () => this.route.navigate(['/departments/agriculture-entromology']),
+
                                 // items: [
                                 //     {
                                 //         label: 'Print',
@@ -136,7 +138,9 @@ export class HeaderComponent {
                                 // ]
                             },
                             {
-                                label: 'Plant Pathology'
+                                label: 'Plant Pathology',
+                                command: () => this.route.navigate(['/departments/plant-pathology']),
+
                             },
                         ]
                     },

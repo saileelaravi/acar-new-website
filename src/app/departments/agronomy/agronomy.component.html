@@ -1,7 +1,7 @@
 <div class="row m-5">
-    <div class="card acar_activites col-md-6">
+    <div class=" acar_activites col-md-6">
         <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true"
-            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card">
             <ng-template let-product pTemplate="item">
                 <div class="border-1 surface-border border-round text-center">
                     <div class="mt-5">
@@ -17,9 +17,9 @@
     </div>
 
     <div class="col-md-6 ">
-        <h1 class="aboutus_title">AGRONOMY</h1>
+        <h1 class="aboutus_title text-center">AGRONOMY</h1>
         <p>
-            <b>Agronomy</b> is the science of handling crops and soil to enhance the yield both of quantity
+            <b class="text-success">Agronomy</b> is the science of handling crops and soil to enhance the yield both of quantity
             and quality of the desired crop utilising land, water and light effectively with
             minimum production inputs. The unique contribution of agronomy as a discipline is to
             provide the integration of physical, chemical and biological knowledge into useful
@@ -27,7 +27,7 @@
             ever-changing agricultural technology to enhance the productivity of crops.
         </p>
         <p>
-            <b>Agrometeorological</b> knowledge has immense practical utility in mitigating weather
+            <b class="text-success">Agrometeorological</b> knowledge has immense practical utility in mitigating weather
             hazards on crop production. B type observatory has been installed and various weather
             parameters are observed and documented regularly.
         </p>

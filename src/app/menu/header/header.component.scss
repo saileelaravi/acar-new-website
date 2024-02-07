@@ -27,7 +27,7 @@
     background-color: #13040417;
 }
 ::ng-deep .p-menubar {
-    background-color: #ffa624;
+    background-color: #198754;
     border-radius: 5px;
     border: 0;
     padding: 0 10px;
@@ -41,10 +41,15 @@
 ::ng-deep ul.p-menubar-root-list {
     margin-left: 7em;
 }
-
+::ng-deep.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: #fff;
+}
 ::ng-deep .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
-    color: #4b5563;
-    background: #ffa624;
+    color: #fff;
+    background: #198754;
+}
+::ng-deep .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text:hover {
+    color: #fff;
 }
 ::ng-deep  ul#pn_id_1 {
     margin-bottom: 0;

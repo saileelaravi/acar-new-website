@@ -7,6 +7,8 @@ import { PlantBreedingComponent } from './crop-improvment/plant-breeding/plant-b
 import { CropPhysiologyComponent } from './crop-improvment/crop-physiology/crop-physiology.component';
 import { SeedScienceComponent } from './crop-improvment/seed-science/seed-science.component';
 import { BioChemistryComponent } from './crop-improvment/bio-chemistry/bio-chemistry.component';
+import { AgricultureEntromologyComponent } from './crop-protection/agriculture-entromology/agriculture-entromology.component';
+import { PlantPathologyComponent } from './crop-protection/plant-pathology/plant-pathology.component';
 
 const routes: Routes = [
   {path:'agronomy',component:AgronomyComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path:'crop-physiology',component:CropPhysiologyComponent},
   {path:'seed-science',component:SeedScienceComponent},
   {path:'bio-chemistry',component:BioChemistryComponent},
+  {path:'agriculture-entromology',component:AgricultureEntromologyComponent},
+  {path:'plant-pathology',component:PlantPathologyComponent}
 
 
 

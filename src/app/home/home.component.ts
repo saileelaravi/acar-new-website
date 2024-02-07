@@ -15,6 +15,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { PlacementsComponent } from '../activites/placements/placements.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { WhyAcarComponent } from '../campus/why-acar/why-acar.component';
+import { ImageModule } from 'primeng/image';
 
 @Component({
     selector: 'app-home',
@@ -33,7 +34,8 @@ import { WhyAcarComponent } from '../campus/why-acar/why-acar.component';
         NgOptimizedImage,
         PlacementsComponent,
         GalleriaModule,
-        WhyAcarComponent],
+        WhyAcarComponent,
+        ImageModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
 
