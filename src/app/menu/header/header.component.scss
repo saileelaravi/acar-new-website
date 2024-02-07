@@ -1,4 +1,4 @@
-.acar_topbar{
+.acar_topbar {
     background-color: #2f8805;
     // position: absolute;
     width: 100%;
@@ -18,7 +18,9 @@
     font-weight: 900;
     text-transform: uppercase;
 }
-.acar_header_01 h5 ,p {
+
+.acar_header_01 h5,
+p {
     color: #000;
 
 }
@@ -26,6 +28,7 @@
 .acar_header_background {
     background-color: #13040417;
 }
+
 ::ng-deep .p-menubar {
     background-color: #198754;
     border-radius: 5px;
@@ -41,32 +44,36 @@
 ::ng-deep ul.p-menubar-root-list {
     margin-left: 7em;
 }
-::ng-deep.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
-    color: #fff;
+
+::ng-deep.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: #0a0000;
 }
-::ng-deep .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
-    color: #fff;
+
+::ng-deep .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled)>.p-menuitem-content:hover {
     background: #198754;
 }
-::ng-deep .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text:hover {
-    color: #fff;
-}
-::ng-deep  ul#pn_id_1 {
+
+// ::ng-deep .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text:hover {
+//     color: #fff;
+// }
+::ng-deep ul#pn_id_1 {
     margin-bottom: 0;
     padding-left: 0;
     // margin-right: 10em;
 }
+
 .marquee {
     white-space: nowrap;
     overflow: hidden;
     animation: marquee 20s linear infinite;
-  }
+}
 
-  @keyframes marquee {
+@keyframes marquee {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
+}

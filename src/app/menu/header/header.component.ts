@@ -41,9 +41,11 @@ export class HeaderComponent {
                         label: "Chairperson's Message",
                         command: () => this.route.navigate(['/menu/messages'])
                     },
-                    // {
-                    //     label: "Principal's Message",
-                    // },
+                    {
+                        label: "Principal's Message",
+                        command: () => this.route.navigate(['/menu/principal-message'])
+
+                    },
                     // {
                     //     separator: true
                     // },
