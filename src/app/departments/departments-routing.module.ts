@@ -9,6 +9,9 @@ import { SeedScienceComponent } from './crop-improvment/seed-science/seed-scienc
 import { BioChemistryComponent } from './crop-improvment/bio-chemistry/bio-chemistry.component';
 import { AgricultureEntromologyComponent } from './crop-protection/agriculture-entromology/agriculture-entromology.component';
 import { PlantPathologyComponent } from './crop-protection/plant-pathology/plant-pathology.component';
+import { EnvironmentalScienceComponent } from './natural-resource-management/environmental-science/environmental-science.component';
+import { MicroBiologyComponent } from './natural-resource-management/micro-biology/micro-biology.component';
+import { SoilScienceComponent } from './natural-resource-management/soil-science/soil-science.component';
 
 const routes: Routes = [
   {path:'agronomy',component:AgronomyComponent},
@@ -19,7 +22,11 @@ const routes: Routes = [
   {path:'seed-science',component:SeedScienceComponent},
   {path:'bio-chemistry',component:BioChemistryComponent},
   {path:'agriculture-entromology',component:AgricultureEntromologyComponent},
-  {path:'plant-pathology',component:PlantPathologyComponent}
+  {path:'plant-pathology',component:PlantPathologyComponent},
+  {path:'soil-science',component:SoilScienceComponent},
+  {path:'micro-biology',component:MicroBiologyComponent},
+  {path:'environmental-science',component:EnvironmentalScienceComponent},
+
 
 
 

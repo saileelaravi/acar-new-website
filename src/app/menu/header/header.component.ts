@@ -151,12 +151,18 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Soil Science',
+                                command: () => this.route.navigate(['/departments/soil-science']),
+
                             },
                             {
                                 label: 'Microbiology',
+                                command: () => this.route.navigate(['/departments/micro-biology']),
+
                             },
                             {
                                 label: 'Environmental Science',
+                                command: () => this.route.navigate(['/departments/environmental-science']),
+
                             }
                         ]
                     },

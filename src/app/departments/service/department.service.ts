@@ -19,6 +19,9 @@ export class DepartmentService {
   private _plantPathology$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _mushroomProductionUnit$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _bioControlProductionUnit$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _soilScienceStudentsActivities$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _acarFertilityStatus$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+
 
 
 
@@ -35,6 +38,9 @@ export class DepartmentService {
   plantPathology$ = this._plantPathology$.asObservable();
   mushroomProductionUnit$ = this._mushroomProductionUnit$.asObservable();
   bioControlProductionUnit$ = this._bioControlProductionUnit$.asObservable();
+  soilScienceStudentsActivities$ = this._soilScienceStudentsActivities$.asObservable();
+  acarFertilityStatus$ = this._acarFertilityStatus$.asObservable();
+
 
 
 
@@ -82,6 +88,13 @@ export class DepartmentService {
       else if (itemRef.fullPath.split('/')[0] === 'bioControlProductionUnit') {
         this._bioControlProductionUnit$.next([...this._bioControlProductionUnit$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
       }
+      else if (itemRef.fullPath.split('/')[0] === 'soil-science-students-activites') {
+        this._soilScienceStudentsActivities$.next([...this._soilScienceStudentsActivities$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'acar-fertility-status') {
+        this._acarFertilityStatus$.next([...this._acarFertilityStatus$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+
     }).catch((error: any) => {
       console.error('Error getting download URL:', error);
     });
