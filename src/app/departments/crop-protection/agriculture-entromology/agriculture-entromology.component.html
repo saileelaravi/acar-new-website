@@ -1,15 +1,15 @@
 <h1 class="aboutus_title text-center mt-2">Division of Plant Protection</h1>
 <div class="mx-5 mb-5">
     <div class="row">
-        <div class="col-md-6 ">
+        <div class="col-md-6 container">
             <p-galleria [value]="imageUrls" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true"
                 [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [autoPlay]="true"
                 [circular]="true" [numVisible]="1" class="  py-3">
                 <ng-template pTemplate="item" let-item>
                     <div>
                         <h5 class="text-center py-2">Entomology Student Activities</h5>
-                        <p-image [src]="item.url" [preview]="true" width="500"></p-image>
-                        <h6 class=" mb-0 py-2 text-center text-wrap">{{item.name}}</h6>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
                     </div>
                 </ng-template>
             </p-galleria>
@@ -38,24 +38,261 @@
             </ul>
         </div>
     </div>
-    <div>
+    <div class="row">
         <h1 class="aboutus_title">Department Agricultural Entomology</h1>
-        <p> Department of Agricultural Entomology under the Division of Plant protection of Adhiyamaan College of
-            Agriculture and Research is now completing seven years (as on November, 2022) of unique activity imparting
-            to undergraduate students teaching, research and extension on Agricultural Entomology and also advisory
-            services to farmers. The department has begun with fundamentals of entomology and taxonomic studies on
-            various insects and then drawn to the studies on management of beneficial and harmful insects with special
-            emphasis on sericulture, apiculture and pest management of field and horticultural crops. On 5th May 2019,
-            Insect museum was established to create interest and arouse the curiosity among the undergraduate students.
-            Further, a bio-control production unit was started in August, 2022 and the department involved in mass
-            culturing of bio-control agents viz., Trichogramma, Bracon and Cryptolaemus montrouzieri. Apart from that,
-            the department is maintaining beekeeping with six Indian honeybee colonies to provide agricultural education
-            to the student’s during the classes and also trainings to rural youths and the progressive farmers.</p>
-        <p>Our department has well furnished facilities which meet the requirements to impart knowledge on agricultural
-            entomology to under graduate students. Our laboratory comprises of 320 insect collection boxes, 120 insect
-            display box, two storing cabinets, more than 50 wet preserved specimens, 11 compound microscope, 55
-            dissection microscope, weighing balance, pH meter, refrigerator, beekeeping equipments, silkworm rearing
-            appliances, by-products of sericulture and lac insect products, Pesticides container, insect traps, lab
-            chemicals, Soxhlet apparatus and glass wares. </p>
+        <div class="col-md-8">
+            <p> Department of Agricultural Entomology under the Division of Plant protection of Adhiyamaan College of
+                Agriculture and Research is now completing seven years (as on November, 2022) of unique activity
+                imparting
+                to undergraduate students teaching, research and extension on Agricultural Entomology and also advisory
+                services to farmers. The department has begun with fundamentals of entomology and taxonomic studies on
+                various insects and then drawn to the studies on management of beneficial and harmful insects with
+                special
+                emphasis on sericulture, apiculture and pest management of field and horticultural crops. On 5th May
+                2019,
+                Insect museum was established to create interest and arouse the curiosity among the undergraduate
+                students.
+                Further, a bio-control production unit was started in August, 2022 and the department involved in mass
+                culturing of bio-control agents viz., Trichogramma, Bracon and Cryptolaemus montrouzieri. Apart from
+                that,
+                the department is maintaining beekeeping with six Indian honeybee colonies to provide agricultural
+                education
+                to the student’s during the classes and also trainings to rural youths and the progressive farmers.</p>
+            <p>Our department has well furnished facilities which meet the requirements to impart knowledge on
+                agricultural
+                entomology to under graduate students. Our laboratory comprises of 320 insect collection boxes, 120
+                insect
+                display box, two storing cabinets, more than 50 wet preserved specimens, 11 compound microscope, 55
+                dissection microscope, weighing balance, pH meter, refrigerator, beekeeping equipments, silkworm rearing
+                appliances, by-products of sericulture and lac insect products, Pesticides container, insect traps, lab
+                chemicals, Soxhlet apparatus and glass wares. </p>
+        </div>
+        <div class="col-md-3 mx-3">
+            <div class="bg-danger border-5 border-warning card py-5 ">
+                <h1 class="text-center align-middle text-light">Courses OFFERED</h1>
+                <button type="button" class="btn btn-light fs-5 m-5" (click)="showDialog()">View Courses </button>
+                <p-dialog header="COURSES OFFERED" [resizable]="false" [modal]="true" [maximizable]="true"
+                    appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                    [contentStyle]="{height: '400px'}">
+                    <h6 class="py-2">As per 2017 syllabus, there are four compulsory courses and two experiential learning courses
+                        and one project work.</h6>
+
+                    <table style="width:100%">
+                        <tr class="text-center">
+                            <th>Semester</th>
+                            <th>Code</th>
+                            <th>Course Title</th>
+                            <th>Course Credit</th>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3</td>
+                            <td>AEN 201</td>
+                            <td class="text-start">Fundamentals of Entomology</td>
+                            <td>(2+1)</td>
+                        </tr>
+                        <tr class="text-center">   
+                            <td>4</td>
+                            <td>AEN 202</td>
+                            <td class="text-start">Management of Beneficial and Harmful Insects</td>
+                            <td>(2+1)</td>
+                        </tr>
+                        <tr class="text-center"> 
+                            <td>5</td>
+                            <td>AEN 301</td>
+                            <td class="text-start">Pests of field crops and their management</td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">  
+                            <td>6</td>
+                            <td>AEN 302</td>
+                            <td class="text-start">Pests of Horticultural crops and their management</td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>8</td>
+                            <td>AEN 452</td>
+                            <td class="text-start">Commercial Bee keeping </td>
+                            <td>(0+10)</td>
+                        </tr>
+                        <tr class="text-center">    
+                            <td>8</td>
+                            <td>SER 451</td>
+                            <td class="text-start">Commercial cocoon production</td>
+                            <td>(0+10)</td>
+                        </tr>
+                        <tr class="text-center">  
+                            <td>8</td>
+                            <td>APW 401</td>
+                            <td class="text-start">Project Report Preparation, Presentation and Evaluation</td>
+                            <td>(0+1)</td>
+                        </tr>
+                    </table>
+
+                </p-dialog>
+            </div>
+        </div>
     </div>
+
+    <div class="row">
+        <h1 class="aboutus_title mt-2">Bee Keeping</h1>
+        <div class="col-md-6 ">
+            <p-galleria [value]="beekeepingImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> Department of Agricultural Entomology established abeekeeping unit (six Indian honeybee colonies)in 2017
+                at Adhiyamaan College of Agriculture and Research. It mainly focuses on providing knowledge to students
+                and farmers on bee keeping. There are five important species of honey bees; the rock bee (Apisdorsata),
+                Indian bee (Apisceranaindica), little bee (Apis florae), European or Italian bee (Apismellifera) and
+                Dammer bee / Mosquito bee (Meliponairridipennis). Under the Sweet revolution, the focus is on beekeeping
+                through scientific methods and the production of quality honey and other beehive products. The Sweet
+                Revolution is related to increasing the income of India’s small and marginal farmers.Though the
+                honeybees are best known for their economic role in nature, it is to pollinate hundreds and thousands of
+                flowering plants and assure setting of seed or fruit. Honey bee pollination also improves the quality of
+                produce. The potential benefits due to bee pollination, in the form of increase in yields of various
+                crops. In addition, it does not require huge investments, infrastructure or even fertile land to start
+                bee farming in India. In agriculture, honey bees do not compete with the crops for resources. On the
+                other hand, it helps increase agricultural productivity.</p>
+        </div>
+
+        <div class="row">
+            <h1 class="aboutus_title  mt-2">Biocontrol unit</h1>
+            <div class="col-md-6 ">
+                <p-galleria [value]="bioControlImages" [showItemNavigators]="true" [showThumbnails]="false"
+                    [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                    [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                    <ng-template pTemplate="item" let-item>
+                        <div>
+                            <p-image [src]="item.url" [preview]="true" width="500"></p-image>
+                            <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                        </div>
+                    </ng-template>
+                </p-galleria>
+            </div>
+            <div class="col-md-6 my-2">
+                <p>
+                    Department of Agricultural Entomology has established the Biocontrol unit in 2021 at Adhiyamaan
+                    College of Agriculture and Research. The main aim of Biocontrol unit is to provide knowledge to the
+                    undergraduate students through teaching and culturing on Trichogramma, Bracon and Cryptolaemus
+                    montrouzieri. Moreover, awareness on Entomophages was given to the farmers.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="aboutus_title  mt-2">Sericulture</h1>
+            <div class="col-md-6 ">
+                <p-galleria [value]="sericultureImages" [showItemNavigators]="true" [showThumbnails]="false"
+                    [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                    [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                    <ng-template pTemplate="item" let-item>
+                        <div>
+                            <p-image [src]="item.url" [preview]="true" width="500"></p-image>
+                            <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                        </div>
+                    </ng-template>
+                </p-galleria>
+            </div>
+            <div class="col-md-6 my-2">
+                <p>
+                    Sericulture is under the Division of Plant Protection; it primarily caters to knowledge of
+                    undergraduate students through teaching. Basically, sericulture is an agro -based cottage industry
+                    suitable for all the land holders. Contrasted with agriculture crops, sericulture provides more
+                    employment round the year and extremely labours intensive, low capital investment, short conception
+                    period; high profit oriented and less input indoor activity that gives frequent periodicity of high
+                    economic returns to the rural farm families. In India there are four types of silk produced like
+                    mulberry silk, tasar silk (temperate and tropical), Muga silk and eri silk. In Tamil Nadu among the
+                    districts particularly Krishnagiri is a hotspot site of mulberry bivoltine raw silk production
+                    because of prevailing blessing agro-climatic condition. The district has Tamil Nadu Sericulture
+                    Training School, Central Sericultural Germplasm Resource Centre and P2 Eri silkworm seed production
+                    centre, Central Silk Board, Hosur, Krishnagiri district. 0.25 ha were maintained mulberry garden at
+                    Adhiyamaan College of Agriculture and Research for educational purpose and also having a small scale
+                    rearing shed about 100 dfls capacity.
+                </p>
+
+            </div>
+            <p>
+                On 11th December 2019, training on eri silkworm rearing was conducted by the department of
+                Agricultural Entomology in association with the department of Agricultural Extension. The two chief
+                guests have invited Dr. C. M. Kishore Kumar, Scientist-D and Dr.K.Velayudham, Scientist -D from P2
+                Eri silkworm seed production centre, central silk board, Hosur. He briefly explained about castor
+                cultivation and eri silkworm rearing. Totally 30 farmers participated in the training on eri
+                silkworm rearing, ACAR, Athimugam. At the end of the session, the scientists have concluded that, in
+                Tamil Nadu climatic conditions, especially traditional silk growing areas like Dharmapuri,
+                Krishnagiri, Salem and Erode districts, were highly suitable in Ericulture.
+            </p>
+            <p>
+                Sericulture section having well capable of rearing tray, incubation frame, black boxing cover, bed
+                cleaning nets, plastic tray, bamboo Mountages, plastic Mountages, leaf chopping board, knife, rotary
+                Mountages etc.
+            </p>
+        </div>
+
+        <div class="row">
+            <h1 class="aboutus_title">Exposure Visit</h1>
+            <div *ngFor="let image of exploreVisitImages" class="col-md-3 p-2">
+                <p-image src="{{image.url}}" [preview]="true" width="300" height="200"></p-image>
+                <h6 class="p-2">{{image.name.split('.')[0]}}</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h1 class="aboutus_title">Student Project Work</h1>
+        <div *ngFor="let image of studentsProjectWork" class="col-md-3 p-2">
+            <p-image src="{{image.url}}" [preview]="true" width="300" height="200"></p-image>
+            <h6 class="p-2">{{image.name.split('.')[0]}}</h6>
+        </div>
+    </div>
+
+    <div class="row">
+        <h1 class="aboutus_title mt-2">Nematology</h1>
+        <div class="col-md-6 ">
+            <p-galleria [value]="nematologyImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> Nematology is under the division of Plant Protection, mainly focusing on imparting knowledge to
+                undergraduate students through teaching. Tamil Nadu is the first state to realize the vitality of
+                nematodes in the Agricultural and Horticultural crops. The Krishnagiri district particularly Hosur,
+                Shoolagiri, Bagalur and Berigai area have an intensive cropping system to cultivate vegetables viz.,
+                Tomato, Brinjal, Bhendi, Beans, Cabbage, Cauliflower, Beetroot, Carrot and Potato etc. This site highly
+                infested by the root knot and cyst nematode in vegetables. The Nematology section creates awareness of
+                nematodes to the farmers and also to give remedy on how to control nematodes in the field level.</p>
+            <p> Nematology section has a well equipped laminar air flow chamber, sieves, slides, Hemocytometer,
+                Stereomicroscope, Autoclave, preserved specimens, chemicals and glassware etc.</p>
+            <p>A field demonstration was conducted by the department of plant protection, ACAR at Berigai village to
+                educate the vegetable growing farmers about integrated nematode management in carrot, potato, brinjal
+                and tomato on 10.02.2021. About 30 farmers from Berigai village attended the field demonstration
+                programme. During the programme, the lecture on the nematode management was given and stressed the
+                advantages of egg parasitic fungi and growing of antagonistic plants with main crop. </p>
+        </div>
+    </div>
+
+    <div class="bg-secondary text-light fw-bold p-3">
+        <p>உழவினார் கைம்மடங்கின் இல்லை விழைவதூஉம்</p>
+
+        <p>விட்டேமென் பார்க்கும் நிலை குறள் – 1036</p>
+
+        <p class="text-info">பொருள்</p>
+        <p>உழுபவர் கை மட்டும் வேலை செய்யாது மடங்கிவிட்டால், எல்லாரும் விரும்பும் உணவையும், நாம் விட்டுவிட்டோம் என்று
+            கூறும்
+            துறவியரும்கூட அவரது அறத்தில் நிலைத்து நிற்க முடியாது.</p>
+    </div>
+
 </div>

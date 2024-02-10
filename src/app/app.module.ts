@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
   declarations: [],
   imports: [
     CommonModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    // AngularFireModule.initializeApp(environment.firebaseConfig)
   ]
 })
 export class AppModule { }

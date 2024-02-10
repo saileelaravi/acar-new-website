@@ -1,1 +1,178 @@
-<p>plant-pathology works!</p>
+<h1 class="aboutus_title text-center my-4"> DEPARTMENT OF PLANT PATHOLOGY</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="plantPathologyImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> Plant Pathology mainly deals with the diseases of Agriculture and Horticultural crops and their
+                management. This department is connected with cultivation mushroom, bio-control agent production,
+                disease forecasting, post harvest disease management, agrochemicals, seed pathology and virology. the
+                laboratory is well equipped with instruments like audio visuals, herbarium collections, pathogen
+                preserved slides, diseases cycle chart, plant diseases chart, laminar airflow chamber, autoclaves,
+                compound binocular microscope, compound binocular light microscopes, stereo zoom microscope, hot air
+                oven, centrifuges, microwave oven, electronic weighing balance, colony counter, incubators,
+                refrigerator, chemicals and glass wares etc. Equipped with a mushroom cultivation shed for production of
+                mushroom, Final year students are involved in mushroom production and bio-control mass multiplication on
+                every year for their course of experiential learning. </p>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-4">
+                <div class="bg-danger border-5 border-warning card py-5">
+                    <h2 class="text-center align-middle text-light">Courses OFFERED</h2>
+                    <button type="button" class="btn btn-light fs-5 mx-5 my-3" (click)="showDialog()">View
+                        Courses</button>
+                    <p-dialog header="COURSES OFFERED" [resizable]="false" [modal]="true" [maximizable]="true"
+                        appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                        [contentStyle]="{height: '400px'}">
+                        <h6 class="py-2">As per 2017 syllabus, there are four compulsory courses and two experiential
+                            learning courses
+                            and one project work.</h6>
+
+                        <table style="width:100%">
+                            <tr class="text-center">
+                                <th>Semester</th>
+                                <th>Code</th>
+                                <th>Course Title</th>
+                                <th>Course Credit</th>
+                            </tr>
+                            <tr class="text-center">
+                                <td>3</td>
+                                <td>PAT 201 </td>
+                                <td class="text-start">Fundamentals of Plant Pathology</td>
+                                <td>(2+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>4</td>
+                                <td>PAT 202</td>
+                                <td class="text-start">Principles of Integrated Plant Disease Management</td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>5</td>
+                                <td>PAT 301</td>
+                                <td class="text-start">Diseases of Field and Horticultural crops and their management –
+                                    I</td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>6</td>
+                                <td>PAT 302</td>
+                                <td class="text-start">Diseases of Field and Horticultural crops and their management
+                                    -II</td>
+                                <td>(2+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>8</td>
+                                <td>PAT 451</td>
+                                <td class="text-start">Commercial Production of Bio-control agents</td>
+                                <td>(0+10)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>8</td>
+                                <td>PAT 452</td>
+                                <td class="text-start">Commercial mushroom production</td>
+                                <td>(0+10)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>8</td>
+                                <td>APW 401</td>
+                                <td class="text-start">Project Report Preparation, Presentation and Evaluation</td>
+                                <td>(0+1)</td>
+                            </tr>
+                        </table>
+                    </p-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <h2 class="aboutus_title text-center my-4">MUSHROOM PRODUCTION UNIT</h2>
+        <div class="col-md-6">
+            <p-galleria [value]="mushroomProductionUnitImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <p> Adhiyamaan College of Agriculture and Research, a brainchild of TNAU, Coimbatore (Affiliated), was
+                successfully launched in the year 2016 at Krishnagiri District, Hosur Taluk, of Athimugam Village to
+                commemorate the responsibility in the field of education and allied activities of Agriculture and
+                Horticulture in the surrounding areas of Hosur and Krishnagiri. Out of several departments, the Division
+                of Plant Protection and Department of Plant Pathology, located in B block, plant pathology engages in a
+                multidisciplinary approach of participates in a various of disciplines to control crop diseases and
+                related activities like the mushroom cultivation (Pleurotus sajor caju & Pleurotus djamor) and (Agaricus
+                bisporus) as part of the agriculture course curriculum in 2017. Mushroom production in Hosur area is
+                more suitable due to the moderate climatic condition (Maximum temperature 250C and minimum temperature
+                160C, and maximum Relative humidity 85 per cent in Athimugam) and farmers have taken up the production
+                of oyster and button mushroom and established a successful enterprise in and around this area. So, our
+                (ACAR) campus also established mushroom unit involving in the cultivation of both oyster and button
+                mushroom. Shell plays a key role in the dissemination of technical know-how to the farmers in addition,
+                we are also providing good quality of mother spawn of white oyster, yellow oyster and blue oyster
+                mushroom seeds to Statistify the needs of mushroom farmers. Future, we also providing mushroom
+                cultivation training programme for rural unemployed women’s to enhance the economic status of rural
+                people in Krishnagiri district. </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="aboutus_title text-center my-4">BIO CONTROL PRODUCTION UNIT</h2>
+        <div class="col-md-6">
+            <p-galleria [value]="bioControlProductionUnitImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <p> Adhiyamaan College of Agriculture and Research, affiliated to TNAU, Coimbatore was successfully launched
+                in the year 2016 at Krishnagiri District, Hosur Taluk of Athimugam Village to deliver Agricultural
+                education including secondary agriculture activities in the surrounding areas of Hosur and Krishnagiri.
+                The Department of Plant Pathology under the Division of Plant Protection located in B block is
+                delivering various courses to the students. In addition to these, Commercial production of Bio control
+                agents was also included for the benefit of students of B.Sc. (Hons.) Agriculture degree program. Use of
+                Chemical pesticides for the control of plant diseases causes phytotoxic effects in plants and also makes
+                the soil unfit for cultivation. Biological control is the effective alternate approach for the
+                management of plant diseases. These beneficial microorganisms did not cause any ill effects to plants;
+                environmentally safe and also involved in plant growth promotion activities. Bio control agents viz.,
+                Trichoderma asperellum and Bacillus subtilis were isolated from the rhizosphere soil and establishment
+                of bio control unit is under progress in our campus.</p>
+        </div>
+    </div>
+
+    <div class="bg-secondary fw-bold text-light p-3">
+        <p>
+            உழுதுண்டு வாழ்வாரே வாழ்வார்மற் றெல்லாம் </p>
+        <p>தொழுதுண்டு பின்செல் பவர். குறள் – 1033 </p>
+
+        <p>பொருள்: உழவு செய்து அதனால் கிடைத்ததை உண்டு வாழ்கின்றவரே உரிமையோடு வாழ்கின்றவர்; மற்றவர் எல்லோரும் பிறரைத்
+        தொழுது உண்டு பின் செல்கின்றவரே.
+        </p>
+    </div>
+</div>
