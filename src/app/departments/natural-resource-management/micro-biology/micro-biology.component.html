@@ -1,1 +1,177 @@
-<p>micro-biology works!</p>
+<h1 class="aboutus_title text-center mt-4">DEPARTMENT OF AGRICULTURAL MICROBIOLOGY</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 container">
+            <p-galleria [value]="microbialIsolationImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <h5 class="text-center py-2">Microbial Isolation</h5>
+                        <p-image [src]="item.url" [preview]="true" width="400" height="400" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> The universal recognition of microbes in daily life and more so in agriculture, led to the establishment
+                of the Department of Agricultural Microbiology in the Adhiyamaan College of Agriculture and Research,
+                Athimugam in the year 2016. Gradually, the department has evolved with the mandate of achieving academic
+                excellence and research in Agricultural Microbiology. The department is well equipped with Compound
+                Microscopes, Stereo Zoom Microscopes, Phase Contrast Microscope, Autoclave, Laminar Air Flow Chamber,
+                Incubator cum Shaker, Digital Colony Counter, Centrifuge, pH Meter, UV – Spectrophotometer, Microbial
+                Fermenter and Refrigerator. Availing these laboratory facilities and expertise of the faculty, the
+                student Project is being proposed every year and as a result, the novel microbial strains are identified
+                and its potentials explored.</p>
+
+            <p>
+                Further, the department gained its importance due to the threat exerted to the beneficial soil
+                microbiota and soil health on application of chemical fertilizers. So, the exploitation of beneficial
+                microbes as bioinoculants has become paramount importance in agriculture sector for their potential role
+                in food safety and sustainable crop production. As an initiative, quality bioinoculants such as
+                <b>Rhizobium, Azospirillum, Azotobacter, Phosphobacteria</b> and <b>Azolla</b> are produced in the
+                laboratory for
+                large scale supply to local farmers. The department continues to create human resource in Agricultural
+                Microbiology since its inception and supporting the farmers through supply of low-cost agricultural
+                inputs connected with organic farming and sustainable agriculture.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <h4 class="aboutus_title">The objectives of the laboratory,</h4>
+                <ul>
+                    <li>To impart scientific and technical knowledge in all domains of Microbiology</li>
+                    <li>Documentation of microbial diversity</li>
+                    <li>Development of multifunctional bio-inoculant strains for enhanced plant nutrition and soil
+                        health
+                    </li>
+                    <li>Training and Advisory Services to farmers on the usage of biofertilizers</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <div class="bg-danger border-5 border-warning card py-5">
+                    <h2 class="text-center align-middle text-light">Courses OFFERED</h2>
+                    <button type="button" class="btn btn-light fs-5 mx-5 my-3" (click)="showDialog()">View
+                        Courses</button>
+                    <p-dialog header="COURSES OFFERED" [resizable]="false" [modal]="true" [maximizable]="true"
+                        appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                        [contentStyle]="{height: '400px'}">
+                        <h6 class="py-2"> The list of Courses offered for B. Sc. (Hons.) Agriculture in this department
+                            are as follows,</h6>
+
+                        <table style="width:100%">
+                            <tr class="text-center">
+                                <th>S.No.</th>
+                                <th>Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th>I</th>
+                                <th></th>
+                                <th>Regular Courses</th>
+                            </tr>
+                            <tr class="text-center">
+                                <td>1</td>
+                                <td>AGM 101</td>
+                                <td class="text-start">Fundamentals of Microbiology </td>
+                                <td>(2+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>2</td>
+                                <td>AGM 301</td>
+                                <td class="text-start">Agricultural Microbiology </td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th>II</th>
+                                <th></th>
+                                <th>Optional Courses</th>
+                            </tr>
+                            <tr class="text-center">
+                                <td>1</td>
+                                <td>AGM 354</td>
+                                <td class="text-start"> Plant Microbe Interaction</td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>2</td>
+                                <td>AGM 355</td>
+                                <td class="text-start">Quality Control of bio-inoculants</td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th>III</th>
+                                <th></th>
+                                <th>Experiential Learning Course</th>
+                            </tr>
+
+                            <tr class="text-center">
+                                <td>1</td>
+                                <td> AGM 451</td>
+                                <td class="text-start">Bio-inoculant Production technology</td>
+                                <td>(0+10)</td>
+                            </tr>
+                        </table>
+                    </p-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md-4">
+            <p-galleria [value]="azollaImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <h3 class="aboutus_title text-center">Azolla</h3>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-4">
+            <p-galleria [value]="microbialculturesImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <h3 class="aboutus_title text-center">Microbial Cultures</h3>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-4">
+            <p-galleria [value]="bioProductsImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <h3 class="aboutus_title text-center">Bioproducts</h3>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+    </div>
+
+    <div class="bg-secondary fw-bold text-light p-3">
+        <p>தொடிப்புழுதி கஃசா உணக்கின் பிடித்தெருவும்</p>
+        <p>வேண்டாது சாலப் படும் குறள் – 1037</p>
+        <p>பொருள்:</p>
+        <p>உழுத மண்ணை, ஒருபலம் புழுதி, காற்பலம் ஆகிற அளவுக்குப் புழுதி ஆகும்படி காய விட்டுப் பிறகு பயிர் செய்தால் ஒரு
+            கைப்பிடி அளவு எருவும் இடாமலேயே கூட அந்தப் பயிர் அதிகம் விளையும்.</p>
+    </div>
+
+</div>

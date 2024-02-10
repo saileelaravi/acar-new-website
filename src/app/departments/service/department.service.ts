@@ -21,7 +21,11 @@ export class DepartmentService {
   private _bioControlProductionUnit$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _soilScienceStudentsActivities$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _acarFertilityStatus$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
-
+  private _microbialIsolation$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _azolla$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _microbialcultures$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _bioProducts$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _environmentalScienceStudentsActivies$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
 
 
 
@@ -40,9 +44,11 @@ export class DepartmentService {
   bioControlProductionUnit$ = this._bioControlProductionUnit$.asObservable();
   soilScienceStudentsActivities$ = this._soilScienceStudentsActivities$.asObservable();
   acarFertilityStatus$ = this._acarFertilityStatus$.asObservable();
-
-
-
+  microbialIsolation$ = this._microbialIsolation$.asObservable();
+  azolla$ = this._azolla$.asObservable();
+  microbialcultures$ = this._microbialcultures$.asObservable()
+  bioProducts$ = this._bioProducts$.asObservable()
+  environmentalScienceStudentsActivies$ = this._environmentalScienceStudentsActivies$.asObservable()
 
 
 
@@ -94,7 +100,21 @@ export class DepartmentService {
       else if (itemRef.fullPath.split('/')[0] === 'acar-fertility-status') {
         this._acarFertilityStatus$.next([...this._acarFertilityStatus$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
       }
-
+      else if (itemRef.fullPath.split('/')[0] === 'Microbial-Isolation') {
+        this._microbialIsolation$.next([...this._microbialIsolation$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Azolla') {
+        this._azolla$.next([...this._azolla$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Microbial-cultures') {
+        this._microbialcultures$.next([...this._microbialcultures$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'bio-products') {
+        this._bioProducts$.next([...this._bioProducts$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'environmentalScienceStudentsActivies') {
+        this._environmentalScienceStudentsActivies$.next([...this._environmentalScienceStudentsActivies$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
+      }
     }).catch((error: any) => {
       console.error('Error getting download URL:', error);
     });

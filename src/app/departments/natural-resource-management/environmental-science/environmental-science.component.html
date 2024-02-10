@@ -1,1 +1,65 @@
-<p>environmental-science works!</p>
+<h1 class="aboutus_title text-center mt-4">Environmental Science </h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 container">
+            <p-galleria [value]="environmentalScienceStudentsActiviesImages" [showItemNavigators]="true"
+                [showThumbnails]="false" [showIndicators]="true" [showIndicatorsOnItem]="true"
+                [responsiveOptions]="responsiveOptions" [autoPlay]="true" [circular]="true" [numVisible]="1"
+                class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <h5 class="text-center py-2">Students Activies</h5>
+                        <p-image [src]="item.url" [preview]="true" width="450" height="300" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> The Environmental Science in Agricultural Systems major provides an educational foundation to prepare
+                students for careers focused on environmental issues related to agriculture and horticultural
+                production. The laboratory primarily serves to expose students to soil, water and air related
+                environmental issues. Activities will include soil analysis, water analysis, solid waste management,
+                composting, vermicomposting, wastewater treatment and biogas production. Environmental science
+                laboratory, it is a wide laboratory, in this lab 50 students can accommodate at a stretch. In this lab
+                there are sufficient glass wares and have surplus equipment’s like,</p>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>pH Meter</li>
+                        <li>EC Meter</li>
+                        <li> TDS meter</li>
+                        <li>Hot air oven</li>
+                        <li>Flame photometer</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Visible spectrophotometer,</li>
+                        <li>Hot plate,</li>
+                        <li>Distilled water unit,</li>
+                        <li>Water Bath,</li>
+                        <li>Rotary Shaker,</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Binocular Microscope,</li>
+                        <li>BOD Incubator,</li>
+                        <li>Soxhlet apparatus</li>
+                        <li>Autoclave,</li>
+                        <li>Laminar air flow chamber</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-secondary fw-bold text-light my-3 p-3">
+        <p>தொடிப்புழுதி கஃசா உணக்கின் பிடித்தெருவும்</p>
+        <p>வேண்டாது சாலப் படும் குறள் – 1037</p>
+        <p>பொருள்:</p>
+        <p>உழுத மண்ணை, ஒருபலம் புழுதி, காற்பலம் ஆகிற அளவுக்குப் புழுதி ஆகும்படி காய விட்டுப் பிறகு பயிர் செய்தால் ஒரு
+            கைப்பிடி அளவு எருவும் இடாமலேயே கூட அந்தப் பயிர் அதிகம் விளையும்.</p>
+    </div>
+</div>
