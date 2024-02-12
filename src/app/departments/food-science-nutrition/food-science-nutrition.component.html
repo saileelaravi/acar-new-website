@@ -1,0 +1,149 @@
+<h1 class="aboutus_title text-center my-4">DEPARTMENT OF FOOD SCIENCE AND NUTRITION</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="aboutus_title text-center">Nourishing pregnant women for flourishing India</h5>
+            <p-galleria [value]="nourishingPregnantWomenImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> The Department of Food Science and Nutrition makes for an atmosphere that is pleasant and welcoming as
+                well as academically engaging and professional. The faculty member is well qualified and strives to
+                provide highest quality educational experience for the students by innovatively introducing the various
+                concepts of Food science and Nutrition and also by equipping them with practical knowledge of the same.
+            </p>
+            <h3 class="aboutus_title">Courses offered:</h3>
+            <p> The department offers the course ‘Principles of Food Science & Nutrition’ in the second semester of
+                first year. The course is structured in such a way that it covers all aspects of food science including
+                Nutrition, biochemistry, food microbiology, food technology, food safety and consumer education. The
+                department also opens up opportunities for the final year students to undertake research projects in
+                different areas of food science.</p>
+
+
+            <h3 class="aboutus_title">Objectives of the course:</h3>
+            <ul>
+                <li>To understand the significance of diverse food groups in relation to health.</li>
+                <li>To study the importance of nutrients in health and disease.</li>
+                <li>To train the students in the area of food product development, quality analysis, for safety etc.,
+                </li>
+                <li>To equip and inculcate an interest in research in various fields of food science & Nutrition.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="aboutus_title"> Facilities:</h3>
+        <p>The department has a well-equipped lab with a projector. The laboratory is well equipped with analytical
+            instruments such as photo colorimeter, spectrophotometer, digital weighing balance and food processing
+            devices that includes baking oven, fruit pulper, sugarcane juicer, cake mixer, gas stoves and a newly
+            installed fruit crusher.</p>
+
+        <h3 class="aboutus_title">Activities:</h3>
+        <p>The department has been actively engaging in supporting farmers and serving the community by way of research,
+        extension activities, community-based nutrition programmes, training programmes etc., The department also
+        organizes events such as poster designing, cooking contest and quiz competition during special occasions such as
+        World Food Day and National Nutrition Week to enable the students cohesively use their mind and body to bring
+        out their talents creatively.</p>
+
+        <h3 class="aboutus_title"> Key research highlights:</h3>
+        <ul class="mx-4">
+            <li>Formulation, sensory and shelf life evaluation of multi-millet based cookies.</li>
+            <li> Formulation of instant lemon-mint Jowar popcorn</li>
+        </ul>
+    </div>
+
+    <h1 class="aboutus_title text-center my-5">75th Azadi Ka Amrit Mahotsav</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center ">Nourishing pregnant women for flourishing India</h5>
+            <p-galleria [value]="nourishingPregnantWomenForFlourishingIndiaImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">Farmers Training Programme</h5>
+            <p-galleria [value]="farmersTrainingProgrammeImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">World Food Day</h5>
+            <p-galleria [value]="worldDayImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+    </div>
+
+    <h1 class="aboutus_title text-center my-5">National Nutrition Week 2022</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center ">Cooking Contest</h5>
+            <p-galleria [value]="cookingContextImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">Poster Designing</h5>
+            <p-galleria [value]="posterDesignImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">QUIZ Competition</h5>
+            <p-galleria [value]="quizCompetationImages" [showItemNavigators]="true" [showThumbnails]="false"
+            [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+            [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+            <ng-template pTemplate="item" let-item>
+                <div>
+                    <p-image [src]="item.url" [preview]="true" width="300" height="300" class="img-fluid"></p-image>
+                    <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+    </div>
+</div>

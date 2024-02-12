@@ -12,6 +12,8 @@ import { PlantPathologyComponent } from './crop-protection/plant-pathology/plant
 import { EnvironmentalScienceComponent } from './natural-resource-management/environmental-science/environmental-science.component';
 import { MicroBiologyComponent } from './natural-resource-management/micro-biology/micro-biology.component';
 import { SoilScienceComponent } from './natural-resource-management/soil-science/soil-science.component';
+import { HorticultureComponent } from './horticulture/horticulture.component';
+import { FoodScienceNutritionComponent } from './food-science-nutrition/food-science-nutrition.component';
 
 const routes: Routes = [
   {path:'agronomy',component:AgronomyComponent},
@@ -26,6 +28,9 @@ const routes: Routes = [
   {path:'soil-science',component:SoilScienceComponent},
   {path:'micro-biology',component:MicroBiologyComponent},
   {path:'environmental-science',component:EnvironmentalScienceComponent},
+  {path:'horticulture',component:HorticultureComponent},
+  {path:'food-science',component:FoodScienceNutritionComponent},
+
 
 
 

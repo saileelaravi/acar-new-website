@@ -168,36 +168,56 @@ export class HeaderComponent {
                     },
                     {
                         label: 'Horticulture',
+                        command: () => this.route.navigate(['/departments/horticulture']),
+
                     },
                     {
                         label: 'Food Science',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                     },
                     {
                         label: 'Social Science',
                         items: [
                             {
                                 label: 'Extension',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Agricultural Economics',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Arm',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Maths',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Agricultural Statistics',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Computer Science',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'Tamil',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                             {
                                 label: 'English',
+                        command: () => this.route.navigate(['/departments/food-science']),
+
                             },
                         ]
                     },

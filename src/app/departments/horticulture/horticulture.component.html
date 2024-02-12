@@ -1,0 +1,140 @@
+<h1 class="aboutus_title text-center my-4"> Department of Horticulture</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="aboutus_title text-center">Grafting and Layering</h5>
+            <p-galleria [value]="graftingAndLayeringImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> The Department of Horticulture having well qualified three teaching staffs in various disciplines of
+                Horticulture, three nonteaching staffs and six well trained field labourers for establishment and
+                maintenance of different horticultural practices. The department having naturally ventilated poly house
+                for cultivation of different horticultural crops under protected condition, the propagation unit having
+                to produce mango grafted saplings, ginger cultivation and other horticultural crops are grown in well
+                maintained shade net.</p>
+
+            <h3 class="aboutus_title">Pomology :</h3>
+            <p> The department growing more than seven varieties (Alphonso, Sendura, Banganapalli, Imam pasant, Malliga,
+                Neelum) of mango, citrus, fig, karonda, amla, guava and pomegranate for production and practical gaining
+                knowledge to students in orchard.</p>
+
+        </div>
+    </div>
+    <div class="row">
+        <h3 class="aboutus_title">Vegetable Science:</h3>
+        <p> The department established a Kitchen or Nutritional Garden to produce various nutritious vegetables and
+            growing tropical, temperate vegetables for educational purpose. </p>
+        <h3 class="aboutus_title">Medicinal and Aromatic crops :</h3>
+        <p> The medicinal or herbal plants and aromatic plants are collected and established as an herbal garden with
+            more than sixty types of herbal plants, more than fifteen aromatic plants were maintaining in herbal garden.
+        </p>
+    </div>
+    <div class="row my-3">
+        <div class="col-lg-6">
+            <h5 class="aboutus_title text-center">Herbal Garden</h5>
+            <p-galleria [value]="herbalGardenImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-lg-6">
+            <h5 class="aboutus_title text-center">Mist Chamber</h5>
+            <p-galleria [value]="mistChamberImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-lg-6">
+            <h5 class="aboutus_title text-center">Nursery</h5>
+            <p-galleria [value]="nurseryImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-lg-6">
+            <h5 class="aboutus_title text-center">Polyhouse</h5>
+            <p-galleria [value]="polyhouseImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="aboutus_title text-center my-4"> Floriculture and Landscaping: </h1>
+
+        <div class="col-md-6">
+            <p-galleria [value]="FloricultureAndLandscapingImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6 my-2">
+            <p> The department is having good collection of different types of loose flowers (Crossandra, Marigold,
+                Barleria, Jasmine, Chrysanthemum, Nerium, Tuberose, hibiscus and bird of paradise etc.) and cut flowers
+                (Gladiolus, Gerbera), three types of rose in open field condition are growing in flower cafeteria. Well
+                established ornamental mother block having more than 30 types of ornamental shrubs for propagation and
+                educational purpose for the students. The protected structure shade net highly utilized for well rooted
+                ornamental plants for sale and landscaping purpose in the college campus.</p>
+
+            <p> The college having formal style and informal style of garden with different components and well
+                collection of different types of ornamental plants, flowering and foliage shrubs trees, climbers, water
+                lilies and fully maintained landscape surrounding of college, the ornamental mother block established
+                for to raise various ornamental plants. The plants are propagated by different methods and the cuttings
+                are kept in mist chamber for rooting. The well rooted cuttings are transferred to shade net for
+                commercial sale. The college provides good facilities for learning various practical oriented activities
+                related to horticultural subjects to learn easily by the students. The staffs are delivering good
+                theoretical as well as practical oriented horticultural knowledge to the students and make them to
+                indulge in the practical works which would benefit them in future.</p>
+
+        </div>
+    </div>
+    <div class="bg-secondary text-light fw-bold my-2 p-3">
+        <p>தொடிப்புழுதி கஃசா உணக்கின் பிடித்தெருவும்</p>
+        <p>வேண்டாது சாலப் படும். குறள் – 1037</p>
+        <p>பொருள்:</p>
+        <p>உழுத மண்ணை, ஒருபலம் புழுதி, காற்பலம் ஆகிற அளவுக்குப் புழுதி ஆகும்படி காய விட்டுப் பிறகு பயிர் செய்தால் ஒரு
+            கைப்பிடி அளவு எருவும் இடாமலேயே கூட அந்தப் பயிர் அதிகம் விளையும்.</p>
+
+    </div>
+</div>
