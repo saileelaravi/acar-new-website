@@ -1,0 +1,95 @@
+<h1 class="aboutus_title text-center my-4">DEPARTMENT OF AGRICULTURAL ECONOMICS</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="agriculturalEconomicsImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li>ACAR Agricultural Economics department is envisaged to provide excellent and high quality education
+                    in the field of agricultural economics, conduct policy oriented research in frontier areas covering
+                    agricultural and rural development issues. </li>
+                <li> The mandate of the department is to facilitate the farming community with consultancy services,
+                    trainings, exhibition, etc., for economic upliftment and to widen and encourage the entrepreneurship
+                    skills among students through hands-on training and field exposure visits.</li>
+                <li> The major courses for under graduate programme includes Fundamentals of Agricultural Economics,
+                    Farm
+                    Management, Production & Resource Economics, Agricultural Marketing, Trade & prices and Agricultural
+                    Finance & Cooperation.</li>
+                    <li>
+                        The department organized Financial Awareness and Consumer Training program to the students.</li>
+            </ul>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <ul>
+                   
+                    <li> The department is engaged in applied, policy, and problem-solving research in agriculture and
+                        allied
+                        sectors covering various thematic areas like market, trade, finance, agri-business, livelihood,
+                        natural resource, institutions, growth and development.</li>
+                    <li> Different research projects were carried out, covering areas like production economics,
+                        agricultural
+                        marketing and agricultural finance.</li>
+                    <li>Currently, our faculties are involved in organizing FPOs and market related issues.</li>
+                    <li> The department is having an Economics Laboratory with 30 computers. </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="bg-danger border-5 border-warning card py-5">
+                    <h2 class="text-center align-middle text-light">Courses Offered</h2>
+                    <button type="button" class="btn btn-light fs-5 mx-5 my-3" (click)="showDialog()">View
+                        Courses</button>
+                    <p-dialog header="COURSES OFFERED" [resizable]="false" [modal]="true" [maximizable]="true"
+                        appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                        [contentStyle]="{height: '400px'}">
+    
+                        <table style="width:100%">
+                            <tr class="text-center">
+                                <th>S.No.</th>
+                                <th>Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr class="text-center"> 
+                                <td>1</td> 
+                                <td>AEC 102</td>
+                                <td class="text-start">  Fundamentals of Agricultural Economics
+                                </td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>2</td>
+                                <td>AEC 201</td>
+                                <td class="text-start"> Farm Management, Production and Resource Economics</td>
+                                <td>(1+1)</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>3</td>
+                                <td>AEC 301</td>
+                                <td class="text-start">Agricultural Marketing, Trade and Prices</td>
+                                <td>(2+1)</td>
+                            </tr>
+                          
+                            <tr class="text-center">
+                                <td> 4</td>
+                                <td>AEC 302</td>
+                                <td class="text-start">Agricultural Finance and Co-operation</td>
+                                <td>(2+1)</td>
+                            </tr>
+                        </table>
+                    </p-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

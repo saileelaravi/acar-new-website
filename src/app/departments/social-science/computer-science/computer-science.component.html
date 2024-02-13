@@ -1,0 +1,52 @@
+<h1 class="aboutus_title text-center my-4">Depatment of Computer Science:</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="computerScienceImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="450" height="300" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <p> The main goal of Department of Physical Science (Computer Science) is to improve the students’ capacity
+                to establish and maintain the system that will produce future leaders. Since the lifespan of the common
+                tools and approaches used today is being shortened by consistent and quick improvements in computing
+                technology, learning is a continual process that does not finish with the attainment of a degree. As a
+                result, we do not try to turn our students into walking manuals for any one language or software.
+                Instead, students are given a solid foundation in computer science, taught how to solve problems and
+                made flexible.</p>
+        </div>
+    </div>
+    <div class="my-5">
+        <p>The goal is to combine academic achievement with the development of character through value-based education,
+            which is favourable to enhancing the students’ innate abilities and confidence to take on the problems of
+            the world.</p>
+        <ul>
+            <li>
+                In the course COM 311 – Agriculture Informatics (1+1) during III-Year Sixth semester, students can learn
+                about hardware, software, operating systems, networks, HTML, MS Excel, MS Access, Google Forms,
+                programming concepts, C programming, Infocrop, Mobile App Inventor, E-Agriculture, ICT, Decision Support
+                Systems, Expert Systems, Computer Controlled Devices, IOT, Cloud Computing and Crop Calendar as well as
+                practical knowledge in the aforementioned subjects. After completing this course, students will be
+                familiar with how to use the internet, send emails, create charts in Excel, store data in databases
+                using MS Access, write C programmes for real-time applications, create websites and mobile applications,
+                and complete projects using expert systems and decision support systems, IoT and cloud computing
+                knowledge.
+            </li>
+            <li>
+                The Event titled “Digital Literacy Program” conducted by the Department of Physical Science (Computer
+                Science). The Objectives of the Course is aimed at taking Students excel skills to the next level.
+                Students will be able to apply complex functions within Excel to manage, manipulate, analyse and
+                visualize data and Students will learn the basic tools used in Adobe Photoshop to create and edit
+                images. Students will learn how to optimize images and save images in proper file formats. Students will
+                learn colour selection and conversion as it relates to both Web and business publications.
+            </li>
+        </ul>
+    </div>
+</div>

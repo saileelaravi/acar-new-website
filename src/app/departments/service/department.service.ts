@@ -38,6 +38,13 @@ export class DepartmentService {
   private _worldFoodDay$     = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _quizCompetition$  = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _posterDesign$     = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _extension$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _agriculturalEconomics$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _maths$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _computerScience$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _tamil$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _english$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+
 
 
 
@@ -73,6 +80,13 @@ export class DepartmentService {
   cookingContest$  = this._cookingContest$.asObservable()
   quizCompetition$ = this._quizCompetition$.asObservable()
   posterDesign$     = this._posterDesign$.asObservable()
+  extension$ = this._extension$.asObservable()
+  agriculturalEconomics$ = this._agriculturalEconomics$.asObservable()
+  maths$ = this._maths$.asObservable()
+  computerScience$ = this._computerScience$.asObservable()
+  tamil$ = this._tamil$.asObservable()
+  english$ = this._english$.asObservable()
+
 
 
 
@@ -178,6 +192,24 @@ export class DepartmentService {
       }
       else if (itemRef.fullPath.split('/')[0] === 'poster-designing') {
         this._posterDesign$.next([...this._posterDesign$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Extension') {
+        this._extension$.next([...this._extension$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'AGRICULTURAL ECONOMICS') {
+        this._agriculturalEconomics$.next([...this._agriculturalEconomics$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Maths') {
+        this._maths$.next([...this._maths$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Computer Science') {
+        this._computerScience$.next([...this._computerScience$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Tamil') {
+        this._tamil$.next([...this._tamil$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'English') {
+        this._english$.next([...this._english$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
       }
     }).catch((error: any) => {
       console.error('Error getting download URL:', error);

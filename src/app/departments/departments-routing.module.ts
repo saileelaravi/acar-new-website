@@ -14,6 +14,13 @@ import { MicroBiologyComponent } from './natural-resource-management/micro-biolo
 import { SoilScienceComponent } from './natural-resource-management/soil-science/soil-science.component';
 import { HorticultureComponent } from './horticulture/horticulture.component';
 import { FoodScienceNutritionComponent } from './food-science-nutrition/food-science-nutrition.component';
+import { AgriculturalEconomicsComponent } from './social-science/agricultural-economics/agricultural-economics.component';
+import { ARMComponent } from './social-science/arm/arm.component';
+import { ComputerScienceComponent } from './social-science/computer-science/computer-science.component';
+import { EnglishComponent } from './social-science/english/english.component';
+import { ExtensionComponent } from './social-science/extension/extension.component';
+import { MathsComponent } from './social-science/maths/maths.component';
+import { TamilComponent } from './social-science/tamil/tamil.component';
 
 const routes: Routes = [
   {path:'agronomy',component:AgronomyComponent},
@@ -30,6 +37,14 @@ const routes: Routes = [
   {path:'environmental-science',component:EnvironmentalScienceComponent},
   {path:'horticulture',component:HorticultureComponent},
   {path:'food-science',component:FoodScienceNutritionComponent},
+  {path:'extension',component:ExtensionComponent},
+  {path:'tamil',component:TamilComponent},
+  {path:'english',component:EnglishComponent},
+  {path:'maths',component:MathsComponent},
+  {path:'arm',component:ARMComponent},
+  {path:'computer-science',component:ComputerScienceComponent},
+  {path:'agricultural-economics',component:AgriculturalEconomicsComponent},
+
 
 
 

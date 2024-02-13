@@ -1,0 +1,211 @@
+<h1 class="aboutus_title text-center my-4">DEPARTMENT OF AGRICULTURAL EXTENSION AND RURAL SOCIOLOGY</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="extensionImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div *ngIf="galleriaImages">
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <!-- <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6> -->
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <p>The Department of Social Sciences comprises of Agricultural Extension and Rural Sociology, Agricultural
+                Economics, Agriculture and Rural Management, Tamil, English, Mathematics, Computer Sciences and Physical
+                Education.</p>
+
+            <p>The Department of Agricultural Extension and Rural Sociology is located in the “B Block” of Adhiyamaan
+                College of Agriculture and Research. The main objective of this department is to transfer the
+                technologies
+                from lab to land. This department is mainly to transfer good agricultural practices and technologies to
+                the
+                farming community. Rural Sociology, Educational Psychology, Panchayati Raj, Social Institutions and
+                Organizations, Leadership, Developmental Programmes to uplift the Farming Community, Methods involved in
+                teaching farmers, Personality Development, Intelligence, Communication Skills and Recent Advances in
+                Agricultural Extension and Rural Sociology are being taught by the Department. Extensive visits to
+                villages,
+                State Agricultural University, State Department of Agriculture, Government Institutions and
+                Organizations,
+                NGOs are organized for the students to learn their activities. All India Study Tour and Rural
+                Agricultural
+                Work Experience (RAWE) is also being offered to the final year students to expand their knowledge on
+                Indian
+                agricultural scenario.</p>
+
+        </div>
+    </div>
+
+    <p>The Audio Visual Laboratory of the Department of Agricultural Extension and Rural Sociology is equipped with
+        Modern Audio Visual Aids such as Video Cameras, Lightening Accessories and Editing Facility, Mixer Console,
+        Digital Voice Recorders, Collar Microphone, DSLR Camera with Zoom, Wide Angle, Tele Photo Lens, Wireless
+        MIC, Apple I Mac PC Model, Editing Softwares, LED TVs, DVD Players and Public Address Systems.</p>
+
+    <p>The activities being carried out in the Department of Agricultural Extension and Rural Sociology are given
+        hereunder.</p>
+    <div>
+
+        <h4 class="aboutus_title"> i) ACAR Newsletter </h4>
+        <p> ACAR Newsletter is being published from Adhiyamaan College of Agriculture and Research for every quarter (4
+            issues per year).</p>
+
+        <h4 class="aboutus_title"> ii) Publication </h4>
+        <p> The activities and events of ACAR is being published in Tamil dailies.</p>
+
+        <h4 class="aboutus_title"> iii) Training </h4>
+        <p> Organizing training programmes on recent advances in agriculture and allied sectors.</p>
+
+        <h4 class="aboutus_title"> iv) Popular Articles </h4>
+        <p> Publishing popular articles written by the scientists of Adhiyamaan College of Agriculture and Research in
+            the tamil dailies.</p>
+
+        <h4 class="aboutus_title"> v) Extension Literature’s </h4>
+        <p> Preparation of extension literatures viz, leaflet, folder, etc., on advances in agriculture and allied
+            sector.</p>
+
+        <h4 class="aboutus_title"> vi) Visitors </h4>
+        <p> Accompanying the visitors in visiting the campus</p>
+
+        <h4 class="aboutus_title"> vii) ACAR Magazine </h4>
+        <p> The tamil magazine named “Uzhavae Thalai” is prepared and it is under process for publishing.</p>
+    </div>
+
+    <div class="row justify-content-between">
+        <div class="col-lg-6">
+            <h4 class="aboutus_title"> vii) Other Activities</h4>
+            <p> Apart from the above, the Department is fully engaged in the preparation of Annual Reports, Student
+                Magazine, ACAR’s Information Brochure in English and Tamil, A Compendium on Strength of ACAR, Compiling
+                monthly reports every month and preparation of college reports whenever needed.</p>
+
+            <p> Ms. J. Jeyasri, Alumni (2017 Batch) of Adhiyamaan College of Agriculture and Research, got selected in
+                “Vikatan Student Reporter Scheme (2019-20)” as a Student Reporter (Press Correspondent Trainee). There
+                were
+                three stages in selection process, viz., preliminary, written exam (main) and interview. In all the
+                three
+                stages, she got selected which gives laurels to the institution. In this connection, she has attended
+                the
+                training camp for three days in Chennai. She was guided by Dr. S. Janani, Assistant Professor (Agrl.
+                Extension) and Mr. M. Murugan, Assistant Professor (Agrl. Extension)</p>
+        </div>
+        <div class="col-lg-4 my-5">
+            <div class="bg-danger border-5 border-warning card py-5">
+                <h2 class="text-center align-middle text-light">Courses Offered</h2>
+                <button type="button" class="btn btn-light fs-5 mx-5 my-3" (click)="showDialog()">View
+                    Courses</button>
+                <p-dialog header="COURSES OFFERED" [resizable]="false" [modal]="true" [maximizable]="true"
+                    appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+                    [contentStyle]="{height: '400px'}">
+                    <h4 class="py-2">I. Courses Offered B.Sc. (Agriculture)</h4>
+
+                    <table style="width:100%">
+                        <tr class="text-center">
+                            <th>S.No.</th>
+                            <th>Semester</th>
+                            <th>Course Title</th>
+                            <th>Credit Hours</th>
+                        </tr>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>I</td>
+                            <td class="text-start"> AEX 101 Fundamentals of Rural Sociology and Educational Psychology
+                            </td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>2</td>
+                            <td>III</td>
+                            <td class="text-start"> AEX 201 Dimensions of Agricultural Extension</td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3</td>
+                            <td>VI</td>
+                            <td class="text-start"> AEX 301 Extension Methodologies and Transfer of Agricultural
+                                Technology</td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td rowspan="2">4</td>
+                            <td rowspan="2">VII</td>
+                            <td class="text-start">
+                                AEX 401 Rural Agricultural Work Experience (RAWE)</td>
+                            <td>(0+20)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-start">AEX 402 All India Study Tour (AIST)</td>
+                            <td>(0+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td> 5</td>
+                            <td>VII & VIII</td>
+                            <td class="text-start">APW 401 Project Report Preparation, Presentation and Evaluation</td>
+                            <td>(0+1)</td>
+                        </tr>
+                    </table>
+
+                    <h4 class="py-2">II. Courses Offered (2017 Syllabus)</h4>
+
+                    <table style="width:100%">
+                        <tr class="text-center">
+                            <th>S.No.</th>
+                            <th>Semester</th>
+                            <th>Course Title</th>
+                            <th>Credit Hours</th>
+                        </tr>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>I</td>
+                            <td class="text-start">
+                                AEX 101 Rural Sociology and Educational Psychology
+                            </td>
+                            <td>(2+0)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>2</td>
+                            <td>II</td>
+                            <td class="text-start">
+                                AEX 102 Fundamentals of Agricultural Extension Education</td>
+                            <td>(2+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3</td>
+                            <td>IV</td>
+                            <td class="text-start">
+                                AEX 201 Personality Development and Communication Skills</td>
+                            <td>(1+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td rowspan="2">4</td>
+                            <td rowspan="2">VII</td>
+                            <td class="text-start">
+
+                                AEX 401 Rural Agricultural Work Experience (RAWE)</td>
+                            <td>(0+20)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-start">
+                                AEX 402 All India Study Tour</td>
+                            <td>(0+1)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td> 5</td>
+                            <td>VII & VIII</td>
+                            <td class="text-start">
+                                APW 401 Project Report Preparation, Presentation and Evaluation</td>
+                            <td>(0+1)</td>
+                        </tr>
+                    </table>
+                </p-dialog>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let item of extensiongallery" class="image-wrapper" class="col-md-3 py-2">
+            <p-image [src]="item.url" [preview]="true" width="300" height="250" class="img-fluid"></p-image>
+        </div>
+    </div>
+</div>

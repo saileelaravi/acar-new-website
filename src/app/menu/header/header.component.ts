@@ -181,42 +181,42 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Extension',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/extension']),
 
                             },
                             {
                                 label: 'Agricultural Economics',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/agricultural-economics']),
 
                             },
                             {
                                 label: 'Arm',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/arm']),
 
                             },
                             {
                                 label: 'Maths',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/maths']),
 
                             },
                             {
                                 label: 'Agricultural Statistics',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/maths']),
 
                             },
                             {
                                 label: 'Computer Science',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/computer-science']),
 
                             },
                             {
                                 label: 'Tamil',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/tamil']),
 
                             },
                             {
                                 label: 'English',
-                        command: () => this.route.navigate(['/departments/food-science']),
+                        command: () => this.route.navigate(['/departments/english']),
 
                             },
                         ]

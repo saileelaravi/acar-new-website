@@ -47,7 +47,7 @@ export class FoodScienceNutritionComponent {
     this.worldDayImages = images;
   });
   this.departmentService.cookingContest$.subscribe((images: { url: string; name: string; }[]) => {
-    this.cookingContextImages = images;
+      this.cookingContextImages = images;
   });
   this.departmentService.quizCompetition$.subscribe((images: { url: string; name: string; }[]) => {
     this.quizCompetationImages = images;

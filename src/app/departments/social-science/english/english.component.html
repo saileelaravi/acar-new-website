@@ -1,0 +1,50 @@
+<h1 class="aboutus_title text-center my-4">Department of English
+</h1>
+<div class="mx-5 mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="englishImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="450" height="300" class="img-fluid"></p-image>
+                        <!-- <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6> -->
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <p> English course is one of the best and dedicated disciplines ceaselessly educating and energizing
+                students with quality content. It offers a comprehensive curriculum to equip students with a sound
+                knowledge of communication and to strengthen their language and presentation skills. The course innates
+                and develop the sound proficiency skills of the students. It helps to conduct seminars and encourages
+                the students to present papers with confidence. The motto of the course is under vision to achieve
+                academic excellence, develop talents as well as personality development and include healthy attitudes
+                through effectual and active teaching.</p>
+            <h3 class="aboutus_title">The objectives of English Course are,</h3>
+            <ul>
+                <li>To enable the students, comprehend the spoken form.</li>
+                <li>To develop students’ ability to use English in day-to-day life and real-life situation.</li>
+                <li>To understand the written text and able to use skimming, scanning skills.</li>
+                <li>To write simple English to express ideas.</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <p> The course ENG-101 Comprehension and Communication skills in English (1+1) which facilitates the students to
+        develop the LSRW skills. The course includes Phonetic knowledge, textual grammar, paragraph writing, letter
+        writing, Interview skills, Intensive and extensive listening, conversation techniques and practice, skimming and
+        scanning, article writing, group Discussion. ENG 103</p>
+
+        <p> The course ENG-103 Development Education (0+1) which facilitates the students of personality development. It
+        aids the students to acquire the basic principles of learning, career development, Entrepreneurship. It also
+        supports the students to develop the communication skills in various aspects like Interpersonal communication,
+        transactional communication, role-play, article writing, editing, blogging, and report writing.</p>
+
+        <p> Language is primarily a spoken form. To know language means to understand and speak the language. The department
+        of English offers a <b>Lingua Langue (Spoken English)– ENG01</b> certificate course to first-year students once a week
+        as a co-curriculum to improve their speaking and writing proficiency in advanced English, raising the students’
+        standard.</p>
+    </div>
+</div>
