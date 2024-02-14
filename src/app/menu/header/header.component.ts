@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
+import { AcademicsService } from '../../academics/service/academics.service';
+import { MenuService } from '../service/menu.service';
+import { Observable } from 'rxjs';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
     selector: 'app-header',
@@ -11,11 +15,11 @@ import { MenubarModule } from 'primeng/menubar';
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    constructor(private route: Router) {
+    pdfUrl$!: any;
 
-    }
+    constructor(private route: Router) { }
 
-    items: MenuItem[] | undefined;
+    items: MenuItem[] = [];
 
     ngOnInit() {
         this.items = [
@@ -181,42 +185,42 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Extension',
-                        command: () => this.route.navigate(['/departments/extension']),
+                                command: () => this.route.navigate(['/departments/extension']),
 
                             },
                             {
                                 label: 'Agricultural Economics',
-                        command: () => this.route.navigate(['/departments/agricultural-economics']),
+                                command: () => this.route.navigate(['/departments/agricultural-economics']),
 
                             },
                             {
                                 label: 'Arm',
-                        command: () => this.route.navigate(['/departments/arm']),
+                                command: () => this.route.navigate(['/departments/arm']),
 
                             },
                             {
                                 label: 'Maths',
-                        command: () => this.route.navigate(['/departments/maths']),
+                                command: () => this.route.navigate(['/departments/maths']),
 
                             },
                             {
                                 label: 'Agricultural Statistics',
-                        command: () => this.route.navigate(['/departments/maths']),
+                                command: () => this.route.navigate(['/departments/maths']),
 
                             },
                             {
                                 label: 'Computer Science',
-                        command: () => this.route.navigate(['/departments/computer-science']),
+                                command: () => this.route.navigate(['/departments/computer-science']),
 
                             },
                             {
                                 label: 'Tamil',
-                        command: () => this.route.navigate(['/departments/tamil']),
+                                command: () => this.route.navigate(['/departments/tamil']),
 
                             },
                             {
                                 label: 'English',
-                        command: () => this.route.navigate(['/departments/english']),
+                                command: () => this.route.navigate(['/departments/english']),
 
                             },
                         ]
@@ -227,30 +231,47 @@ export class HeaderComponent {
             {
                 label: 'Academics',
                 items: [
-                    { label: 'Course Offered' },
+                    {
+                        label: 'Course Offered',
+                        command: () => this.route.navigate(['/academics/course-offered']),
+                    },
                     {
                         label: 'Academic Cell',
                         items: [
                             {
                                 label: 'Exams',
+                                command: () => this.route.navigate(['/academics/exams']),
+
                             },
                             {
                                 label: 'Rules Regulations',
+                                command: () => this.route.navigate(['/academics/rules-regulations']),
+
                             }
                         ]
                     },
-                    { label: 'Certificate Courses' },
+                    {
+                        label: 'Certificate Courses',
+                        command: () => this.route.navigate(['/academics/certificate-courses']),
+                    },
 
 
-                    { label: 'NSS | NCC' },
+                    {
+                        label: 'NSS | NCC',
+                        command: () => this.route.navigate(['/academics/nss-ncc']),
+                    },
                     {
                         label: 'Publications',
                         items: [
                             {
                                 label: 'Newsletters & Brouchers',
+                                command: () => this.route.navigate(['/academics/newsletters-brouchers']),
+
                             },
                             {
                                 label: 'Books',
+                                command: () => this.route.navigate(['/academics/books']),
+
                             },
                         ]
                     },
@@ -259,27 +280,49 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Students Counselling Cell',
+                                // command: (event) => {
+                                //     if (event.item && event.item.label) {
+                                //         this.logLabelName(event.item.label);
+                                //     }
+                                // }
+                                command: () => this.route.navigate(['/academics','students-counselling-cell']),
+
+
                             },
                             {
                                 label: 'Disciplinary Committee',
+                                command: () => this.route.navigate(['/academics/disiplinary']),
+
                             },
                             {
                                 label: 'Womens Grievance cell',
+                                command: () => this.route.navigate(['/academics/women-grievance-cell']),
+
                             },
                             {
                                 label: 'Reservation Monitoring Cell',
+                                command: () => this.route.navigate(['/academics/reservation-monitoring-cell']),
+
                             },
                             {
                                 label: 'Finance Committee',
+                                command: () => this.route.navigate(['/academics/finance']),
+
                             },
                             {
                                 label: 'Innovation Cell',
+                                command: () => this.route.navigate(['/academics/innovation-cell']),
+
                             },
                             {
                                 label: 'IQAC',
+                                command: () => this.route.navigate(['/academics/iqac']),
+
                             },
                             {
                                 label: 'Waste Disposal committee',
+                                command: () => this.route.navigate(['/departments/waste-disposal']),
+
                             },
                         ]
                     },
@@ -343,6 +386,5 @@ export class HeaderComponent {
             },
         ];
     }
-
 
 }

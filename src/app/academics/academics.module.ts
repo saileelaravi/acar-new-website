@@ -1,22 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
-import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { MenuService } from './menu/service/menu.service';
 
+import { AcademicsRoutingModule } from './academics-routing.module';
+import { AcademicsService } from './service/academics.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../../environments/environment';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    AcademicsRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     HttpClientModule,
-  ],
 
-  providers: [AngularFireStorage],
+
+  ],
+  providers: [
+    AcademicsService
+  ],
 })
-export class AppModule { }
+export class AcademicsModule { }

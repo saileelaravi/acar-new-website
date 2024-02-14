@@ -1,0 +1,50 @@
+<h1 class="aboutus_title text-center my-3">Certificate Courses</h1>
+<div class="m-5">
+    <div class="row">
+        <div class="col-md-6">
+            <p-galleria [value]="certificateCourseOrinterProgramImages" [showItemNavigators]="true"
+                [showThumbnails]="false" [showIndicators]="true" [showIndicatorsOnItem]="true"
+                [responsiveOptions]="responsiveOptions" [autoPlay]="true" [circular]="true" [numVisible]="1"
+                class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" class="img-fluid"></p-image>
+                        <h5 class="aboutus_title text-center my-3">Certificate Course Orientation Program</h5>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <h2 class="aboutus_title text-center">Spoken English</h2>
+            <p>The course titled <b>“Lingua Langue (Spoken English)”</b> conducted by the Department of English. The
+                main goal
+                of this course is to help you improve your spoken English skills to enable you to communicate more
+                effectively in English. Our goal is to assist the student in developing skills in the goal areas
+                (Intelligibility, Vocabulary, Grammar, Presentation skill, personality development and Interactive
+                communication) so that any deficiencies in skill or practice do not interfere with communication. The
+                objectives of this course are,</p>
+            <ul>
+                <li>Develop their intellectual, personal and professional abilities</li>
+                <li>Acquire basic language skills (listening, speaking, reading and writing) in order to communication
+                    with speakers of English language.</li>
+                <li>Acquire the Phonetic competence necessarily required in various life situations.</li>
+            </ul>
+            <p>This course mainly designed for students who wish to begin taking advantage of some of the higher-level
+                functionality in Spoken English to develop fluency. The course is mainly focused on Idioms and phrase to
+                express subtle meanings or intentions. Idioms are generally used to convey the meaning of an expression
+                or a word. Sometimes, Idioms and Phrases can be very useful in explaining the meaning compared to the
+                literal word. They make the student understand with a poetic touch to the writing and enables the pupils
+                to develop their standard English.</p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="aboutus_title "> Digital Literacy Program</h2>
+        <p>The Event titled “Digital Literacy Program” conducted by the Department of Physical Science (Computer
+            Science). The Objectives of the Course is aimed at taking Students excel skills to the next level. Students
+            will be able to apply complex functions within Excel to manage, manipulate, analyze and visualize data and
+            Students will learn the basic tools used in Adobe Photoshop to create and edit images. Students will learn
+            how to optimize images and save images in proper file formats. Students will learn color selection and
+            conversion as it relates to both Web and business publications.</p>
+    </div>
+</div>
