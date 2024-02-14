@@ -285,43 +285,43 @@ export class HeaderComponent {
                                 //         this.logLabelName(event.item.label);
                                 //     }
                                 // }
-                                command: () => this.route.navigate(['/academics','students-counselling-cell']),
+                                command: () => this.route.navigate(['/academics', 'committee/students-counselling-cell']),
 
 
                             },
                             {
                                 label: 'Disciplinary Committee',
-                                command: () => this.route.navigate(['/academics/disiplinary']),
+                                command: () => this.route.navigate(['/academics', 'committee/disciplinary-commitee']),
 
                             },
                             {
                                 label: 'Womens Grievance cell',
-                                command: () => this.route.navigate(['/academics/women-grievance-cell']),
+                                command: () => this.route.navigate(['/academics', 'committee/WGC-ACAR']),
 
                             },
                             {
                                 label: 'Reservation Monitoring Cell',
-                                command: () => this.route.navigate(['/academics/reservation-monitoring-cell']),
+                                command: () => this.route.navigate(['/academics', 'committee/ACAR-Reservation-Monitoring-cell']),
 
                             },
                             {
                                 label: 'Finance Committee',
-                                command: () => this.route.navigate(['/academics/finance']),
+                                command: () => this.route.navigate(['/academics', 'committee/ACAR-Finance-commitee']),
 
                             },
                             {
                                 label: 'Innovation Cell',
-                                command: () => this.route.navigate(['/academics/innovation-cell']),
+                                command: () => this.route.navigate(['/academics', 'committee/ACAR-Institution-Innovative-Cell']),
 
                             },
                             {
                                 label: 'IQAC',
-                                command: () => this.route.navigate(['/academics/iqac']),
+                                command: () => this.route.navigate(['/academics', 'committee/ACAR-IQAC']),
 
                             },
                             {
                                 label: 'Waste Disposal committee',
-                                command: () => this.route.navigate(['/departments/waste-disposal']),
+                                command: () => this.route.navigate(['/academics', 'committee/WDC-Internal-circular']),
 
                             },
                         ]

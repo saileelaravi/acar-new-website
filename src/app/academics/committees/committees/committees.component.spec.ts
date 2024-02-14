@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IQACComponent } from './iqac.component';
+import { CommitteesComponent } from './committees.component';
 
-describe('IQACComponent', () => {
-  let component: IQACComponent;
-  let fixture: ComponentFixture<IQACComponent>;
+describe('CommitteesComponent', () => {
+  let component: CommitteesComponent;
+  let fixture: ComponentFixture<CommitteesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IQACComponent]
+      imports: [CommitteesComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(IQACComponent);
+    fixture = TestBed.createComponent(CommitteesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

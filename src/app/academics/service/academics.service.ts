@@ -8,11 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class AcademicsService {
   private _certificateCourseOrintedProgram$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
 
-
-
   certificateCourseOrintedProgram$ = this._certificateCourseOrintedProgram$.asObservable();
-
-
 
   constructor(private storage: AngularFireStorage) {
 
@@ -32,11 +28,14 @@ export class AcademicsService {
       if (itemRef.fullPath.split('/')[0] === 'certificate-course-oriented-program') {
         this._certificateCourseOrintedProgram$.next([...this._certificateCourseOrintedProgram$.value, { url: url, name: itemRef.name.replace(/-/g, ' ') }]);
       }
-
-
-
     }).catch((error: any) => {
       console.error('Error getting download URL:', error);
     });
+  }
+  getPdfUrl(label: string) {
+    let pdfFileName: string;
+    pdfFileName = label + '.pdf'
+    const storageRef = this.storage.ref(`/committee-documents/${pdfFileName}`);
+    return storageRef.getDownloadURL();
   }
 }
