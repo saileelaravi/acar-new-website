@@ -7,11 +7,11 @@ import { ImageModule } from 'primeng/image';
 @Component({
   selector: 'app-agronomy',
   standalone: true,
-  imports: [CarouselModule,NgbAccordionModule,DialogModule ,ImageModule ],
+  imports: [CarouselModule, NgbAccordionModule, DialogModule, ImageModule],
   templateUrl: './agronomy.component.html',
   styleUrl: './agronomy.component.scss',
-  host: {ngSkipHydration: 'true'},
-   
+  host: { ngSkipHydration: 'true' },
+
 })
 export class AgronomyComponent {
   products = [
@@ -27,11 +27,11 @@ export class AgronomyComponent {
     { url: 'assets/PLOUGHING.jpg', title: 'PLOUGHING' },
     { url: 'assets/TRAINING-AND-FIELD-DEMONSTRATION-TO-FARMERS.jpg', title: 'TRAINING AND FIELD DEMONSTRATION TO FARMERS' },
     { url: 'assets/SOWING.jpg', title: 'SOWING' },
-  
+
   ];
 
   responsiveOptions!: any[];
-  items = ['Vision', 'Mission', 'Principles','Facilities and infrastructure'];
+  items = ['Vision', 'Mission', 'Principles', 'Facilities and infrastructure'];
   dialogVisible: boolean = false;
 
   weatherData = [
@@ -42,33 +42,33 @@ export class AgronomyComponent {
     { url: 'assets/Rainfall-1.jpg', title: 'Rainfall' },
     { url: 'assets/Relative-Humidity-1.jpg', title: 'Relative Humidity' },
     { url: 'assets/wind-speed-1.jpg', title: 'wind speed' },
-    
+
   ]
 
 
   ngOnInit() {
 
     this.responsiveOptions = [
-        {
-            breakpoint: '1199px',
-            numVisible: 1,
-            numScroll: 1
-        },
-        {
-            breakpoint: '991px',
-            numVisible: 2,
-            numScroll: 1
-        },
-        {
-            breakpoint: '767px',
-            numVisible: 1,
-            numScroll: 1
-        }
+      {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
+      },
+      {
+        breakpoint: '991px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
+      }
     ];
-}
+  }
 
-showDialog() {
-  this.dialogVisible = true;
-}
+  showDialog() {
+    this.dialogVisible = true;
+  }
 
 }

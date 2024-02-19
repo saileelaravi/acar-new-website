@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'certificate-courses', component: CertificateCoursesComponent },
   { path: 'nss-ncc', component: NccAndnssComponent },
   { path: 'newsletters-brouchers', component: NewslettersComponent },
+  { path: 'newsletters-brouchers/:id', component: NewslettersComponent },
+
   { path: 'books', component: BooksComponent },
   { path: ':id', component: CommitteesComponent },
 ];

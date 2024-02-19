@@ -1,1 +1,19 @@
-<p>books works!</p>
+<div class="container my-5">
+    <div class="row">
+        <ng-container *ngIf="staffPublication" class="col-12 card" style="max-width: 900px;">
+            <div class="d-flex flex-wrap justify-content-start align-items-center">
+                <div *ngFor="let image of staffPublication; let index = index" class="col-4 mb-3">
+                    <img [src]="image.url" [alt]="" (click)="imageClick(index)" class="card p-3" />
+                    <h6 class="pt-3 ">{{image.name.split('.')[0]}}</h6>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <p-galleria [value]="staffPublication" [(visible)]="displayCustom" [activeIndex]="activeIndex"
+        [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+        [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.url" style="width: 100%; display: block;" />
+        </ng-template>
+    </p-galleria>
+</div>

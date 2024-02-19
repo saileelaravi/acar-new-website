@@ -1,1 +1,20 @@
-<p>newsletters works!</p>
+<div class="mx-5 my-3">
+    <h1 class="aboutus_title">Brochures</h1>
+    <div class="d-flex flex-wrap gap-4">
+        <div *ngFor="let images of BrouchersImages">
+            <div class="card p-4" (click)="redirectToImagesPdf(images.name)">
+                <img src="{{images.url}}" alt="">
+                <h5 class="pt-3 text-center">{{images.name.split('.')[0]}}</h5>
+            </div>
+        </div>
+    </div>
+    <h1 class="aboutus_title">Newsletters</h1>
+    <div class="d-flex flex-wrap gap-4">
+        <div *ngFor="let images of newsLetterImages">
+            <div class="card p-4" (click)="redirectToImagesPdf(images.name)">
+                <img src="{{images.url}}" alt="">
+                <h6 class="pt-3 text-center">{{images.name.split('.')[0]}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

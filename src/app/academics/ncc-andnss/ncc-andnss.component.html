@@ -1,1 +1,173 @@
-<p>ncc-andnss works!</p>
+<h1 class="aboutus_title text-center my-3">NSS – National Service Scheme</h1>
+
+<div class="mx-5 my-3">
+
+    <div class="row my-5">
+        <div class="col-md-6">
+            <p-galleria [value]="nssDayTreePlantingImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="500" height="300" class="img-fluid"></p-image>
+                        <h5 class="aboutus_title text-center my-3">NSS DAY Tree Planting</h5>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-md-6">
+            <h3 class="aboutus_title text-center ">About ACAR NSS Unit</h3>
+            <p> The National Service Scheme (NSS) unit of Adhiyamaan College of Agriculture and Research (ACAR),
+                Athimugam has been successfully functioning well with so many activities furnishing development to the
+                volunteers as well as the community since 2016.</p>
+            <p> ACAR NSS unit is a young NSS SFU (Self Financing Unit) registered under Government of India, Ministry of
+                Youth Affairs and Sports, NSS Regional Centre, Chennai. The NSS unit of ACAR constitutes 242 volunteers.
+            </p>
+            <p> The overall objective of NSS is “Personality development of the students through community services”.
+            </p>
+            <p> ACAR NSS unit has been actively involved in servicing to the villages in and around the campus.</p>
+        </div>
+    </div>
+
+    <div ngbAccordion [closeOthers]="true" class=" p-0">
+        <div ngbAccordionItem [collapsed]="false" class="my-3">
+            <h2 ngbAccordionHeader>
+                <button class="text-light fs-5 bg-success fw-bold" ngbAccordionButton>Motto</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        The motto of National Service Scheme is NOT ME BUT YOU.
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+                <button class="text-light fs-5 bg-success fw-bold" ngbAccordionButton>Vision</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        To develop a democratic society with equality by supporting ‘Social Service’ without expectation
+                        and keeping sympathy for ‘All Living Being’ by accommodating each other’s angle of opinion.
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div ngbAccordionItem class="my-3">
+            <h2 ngbAccordionHeader>
+                <button class="text-light fs-5 bg-success fw-bold" ngbAccordionButton>Mission</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        To foster enthusiasm and high moral values in students especially NSS volunteers through the
+                        activities, orientation programs and camps. To develop students’ personality by involving those
+                        (volunteers) in planning, decision making, organizing and execution of the activities of the
+                        unit.
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div ngbAccordionItem class="my-3">
+            <h2 ngbAccordionHeader>
+                <button class="text-light fs-5 bg-success fw-bold" ngbAccordionButton>Objectives</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        <ul>
+                            <li>Understand the community in which they work</li>
+                            <li>Understand themselves in relation to their community;</li>
+                            <li> Identify the needs and problems of the community and involve them in problem solving
+                                process;</li>
+                            <li> Develop among themselves a sense of social and civic responsibility;</li>
+                            <li>Utilize their knowledge in finding practical solution to individual and community
+                                problems;</li>
+                            <li>Develop competence required for group living and sharing of responsibilities;</li>
+                            <li>Gain skills in mobilizing community participation;</li>
+                            <li>Acquire leadership qualities and democratic attitude;</li>
+                            <li> Develop capacity to meet emergencies and natural disasters and</li>
+                            <li>Practice national integration and social harmony.</li>
+                        </ul>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="aboutus_title">Regular NSS activities</h3>
+        <p> Regular activities viz., NSS orientation class, tree planting, rallies, campus cleaning, temple cleaning,
+            playground, hostel cleaning, organizing special lectures, celebrating national day, NSS day, conducting
+            blood
+            donation camp, various competitions, old age home visit, training to traditional culture etc. are carried
+            out by
+            the NSS volunteers within and outside the campus premises.</p>
+
+        <h3 class="aboutus_title">NSS Special camp activities</h3>
+        <p>During the fourth semester, a special camp programme for a period of seven days is conducted regularly in the
+            adopted village. Both NSS volunteers and NSS Programme Officer stays in the adopted village itself
+            throughout
+            the camp period and carry out the village improvement programme. For serviving, Special campaign activities
+            viz., conducting general medical camp, dental camp, eye camps, free veterinary camp, cleaning activities,
+            tree
+            planting, organizing lecture, rallies etc., are carried out by the NSS volunteers in the particular adopted
+            village.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center ">Azadi Ka Amrit Mahotsav</h5>
+            <p-galleria [value]="azadiKaAmritMahotsavImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="200" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">Waste Disposal Campaign</h5>
+            <p-galleria [value]="wasteDisposalCampaignImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="200" class="img-fluid"></p-image>
+                        <h6 class=" mb-0 py-2 text-center">{{item.name}}</h6>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="aboutus_title text-center">World Food Day</h5>
+            <p-galleria [value]="worlFoodDayImages" [showItemNavigators]="true" [showThumbnails]="false"
+                [showIndicators]="true" [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions"
+                [autoPlay]="true" [circular]="true" [numVisible]="1" class="  py-3">
+                <ng-template pTemplate="item" let-item>
+                    <div>
+                        <p-image [src]="item.url" [preview]="true" width="300" height="200" class="img-fluid"></p-image>
+                        <!-- <h6 class=" mb-0 py-2 text-center">{{item.name.split('.')[0]}}</h6> -->
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+    </div>
+    <div class="bg-secondary text-light fw-bold p-3 my-5">
+        <p>
+            காய்ச்செந்நெற் கதிரருந்து
+            மோட்டெருமை முழுக்குழவி
+            கூட்டுநிழல் துயில்வதியும்
+            கோட்டெங்கிற் குலைவாழைக்
+            காய்க்கமுகிற் கமழ்மஞ்சள்
+            இனமாவின் இணர்ப்பெண்ணை
+            முதற்சேம்பின் முளையிஞ்சி (15)
+        </p>
+        <p class="text-center text-info"> – பட்டினப்பாலை</p>
+    </div>
+</div>
