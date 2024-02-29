@@ -1,12 +1,139 @@
-<div class="card mx-5 my-3 bg-secondary">
-    <h3 class="text-light text-center pt-3">Job Placements</h3>
-    <div class="d-flex flex-wrap justify-content-between mx-5 my-4">
-        <div *ngFor="let images of placed_students" class="card p-5 fw-bold">
-            <img src="{{images.url}}" alt="" class="w-100 ">
-            <span class="text-wrap">{{images.title}}</span>
-            <span class="text-center">{{images.id}}</span>
-
-            <span class="text-center">{{images.position}}</span>
+<div class="mx-5 my-3" *ngIf="showOnlyjobPlacements">
+    <ng-container *ngIf="jobPlacementsImages">
+        <div class="card card1">
+            <h2 class="aboutus_title text-center mt-2">Job Placements</h2>
+            <p-carousel [value]="jobPlacementsImages" [numVisible]="4" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="50000">
+                <ng-template let-product pTemplate="item" let-i="index">
+                    <div class="border-1 surface-border border-round text-center">
+                        <div class="m-4 card w-75">
+                            <img src="{{ product.url }}" [alt]="" class="px-5"
+                                (click)="imageClick(jobPlacementsImages.indexOf(product))" />
+                            <div class="py-3">
+                                <p class="text-center m-0 fw-bold">{{product.name.split('.')[0]}}</p>
+                                <p class="text-center m-0">{{product.id}}</p>
+                                <p class="text-center m-0">{{product.position}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
         </div>
-    </div>
+        <p-galleria [value]="jobPlacementsImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+            [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+            [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+</div>
+
+<div class="mx-5 my-3 card card1" *ngIf="!showOnlyjobPlacements">
+    <ng-container *ngIf="jobPlacementsImages">
+        <div class="">
+            <h2 class="aboutus_title text-center mt-2">Job Placements</h2>
+            <p-carousel [value]="jobPlacementsImages" [numVisible]="4" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="50000">
+                <ng-template let-product pTemplate="item" let-i="index">
+                    <div class="border-1 surface-border border-round text-center">
+                        <div class="m-4 card w-75">
+                            <img src="{{ product.url }}" [alt]="" class="px-5"
+                                (click)="imageClick(jobPlacementsImages.indexOf(product))" />
+                            <div class="py-3">
+                                <p class="text-center m-0 fw-bold">{{product.name}}</p>
+                                <p class="text-center m-0">{{product.id}}</p>
+                                <p class="text-center m-0">{{product.position}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <p-galleria [value]="jobPlacementsImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+            [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+            [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+
+    <ng-container *ngIf="tnau_higher_studies_2016_batchImages">
+        <div class="">
+            <h3 class="aboutus_title text-center mt-2">ICAR & TNAU Higher Studies 2016 Batch</h3>
+            <p-carousel [value]="tnau_higher_studies_2016_batchImages" [numVisible]="4" [numScroll]="1"
+                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="50000">
+                <ng-template let-product pTemplate="item" let-i="index">
+                    <div class="border-1 surface-border border-round text-center">
+                        <div class=" m-3">
+                            <img src="{{ product.url }}" [alt]="" class=" w-100 card p-4"
+                                (click)="imageClick(tnau_higher_studies_2016_batchImages.indexOf(product))" />
+                            <span class="text-center m-0 fw-bold text-uppercase">{{product.name}}</span>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <p-galleria [value]="tnau_higher_studies_2016_batchImages" [(visible)]="displayCustom"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+            [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+
+    <ng-container *ngIf="tnau_higher_studies_2017_batchImages">
+        <div class="">
+            <h3 class="aboutus_title text-center mt-2">ICAR & TNAU Higher Studies 2017 Batch</h3>
+            <p-carousel [value]="tnau_higher_studies_2017_batchImages" [numVisible]="4" [numScroll]="1"
+                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="50000">
+                <ng-template let-product pTemplate="item" let-i="index">
+                    <div class="border-1 surface-border border-round text-center">
+                        <div class=" m-3">
+                            <img src="{{ product.url }}" [alt]="" class=" w-100 card p-4"
+                                (click)="imageClick(tnau_higher_studies_2017_batchImages.indexOf(product))" />
+                            <span class="text-center m-0 fw-bold text-uppercase">{{product.name}}</span>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <p-galleria [value]="tnau_higher_studies_2017_batchImages" [(visible)]="displayCustom"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+            [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+
+    <ng-container *ngIf="other_higher_education_institutionsImages">
+        <div class="">
+            <h3 class="aboutus_title text-center mt-2">Other Higher Educational Institutions</h3>
+            <p-carousel [value]="other_higher_education_institutionsImages" [numVisible]="4" [numScroll]="1"
+                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="50000">
+                <ng-template let-product pTemplate="item" let-i="index">
+                    <div class="border-1 surface-border border-round text-center">
+                        <div class=" m-3">
+                            <img src="{{ product.url }}" [alt]="" class=" w-100 card p-4"
+                                (click)="imageClick(other_higher_education_institutionsImages.indexOf(product))" />
+                            <span class="text-center m-0 fw-bold text-uppercase">{{product.name}}</span>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <p-galleria [value]="other_higher_education_institutionsImages" [(visible)]="displayCustom"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+            [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
 </div>

@@ -386,7 +386,9 @@ export class HeaderComponent {
                 label: 'Job Placemnets',
                 items: [
                     {
-                        label: 'Higer Education & Job Placemnets'
+                        label: 'Higer Education & Job Placemnets',
+                        command: () => this.route.navigate(['/activites/placements']),
+
                     }
                 ]
             },
