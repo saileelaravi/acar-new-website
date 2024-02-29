@@ -1,0 +1,437 @@
+<div>
+  <h2 class="aboutus_title text-center my-3">Dr. S. Sridharan Principal, ACAR feels Proud in Honoring the Organic Farmer
+    Padma shri Awardee (2021 - 2022)</h2>
+  <ng-container *ngIf="padhmaSreeAwardImages">
+    <div class=" ">
+      <p-carousel [value]="padhmaSreeAwardImages" [numVisible]="3" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
+                (click)="imageClick(padhmaSreeAwardImages.indexOf(product))" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="padhmaSreeAwardImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Tanflora Visit 2023</h2>
+  <ng-container *ngIf="tanflorVisitImages">
+    <div class=" ">
+      <p-carousel [value]="tanflorVisitImages" [numVisible]="3" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
+                (click)="imageClick(tanflorVisitImages.indexOf(product))" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="tanflorVisitImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Educational Awareness to the School Students</h2>
+  <ng-container *ngIf="eductionalAwarnessImages">
+    <div class=" ">
+      <p-carousel [value]="eductionalAwarnessImages" [numVisible]="3" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
+                (click)="imageClick(eductionalAwarnessImages.indexOf(product))" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="eductionalAwarnessImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Voter's Day Drawing Competition 2023</h2>
+  <ng-container *ngIf="votersDayImages">
+    <div class=" ">
+      <p-carousel [value]="votersDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="h-0">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(votersDayImages.indexOf(product))" style="height: 18rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="votersDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Nss Day Program 2023</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">DENGU AWARENESS PROGRAM 2023</h2>
+  <ng-container *ngIf="dengueAwarenessProgramImages">
+    <div class=" ">
+      <p-carousel [value]="dengueAwarenessProgramImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(dengueAwarenessProgramImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="dengueAwarenessProgramImages" [(visible)]="displayCustom"
+      [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+      [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+      [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">GRADUATION DAY 2023</h2>
+  <ng-container *ngIf="graduationImages">
+    <div class=" ">
+      <p-carousel [value]="graduationImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(graduationImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="graduationImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">ACAR Alumini meet 2023</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">ATAM Training on Effective Breeding Management in Cattle</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Awareness Programme on Higher Education for School Students</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Exposure Visit to NIFTEM, TNAU</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">PRA Settipalli</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">Training on Integrated Crop Management</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">ERI Silkworm Training 2022</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>
+
+<div>
+  <h2 class="aboutus_title text-center my-3">GIS Guest lecture</h2>
+  <ng-container *ngIf="nssDayImages">
+    <div class=" ">
+      <p-carousel [value]="nssDayImages" [numVisible]="4" [numScroll]="3" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="border-1 surface-border border-round text-center">
+            <div class="">
+              <img src="{{ product.url }}" [alt]="" class="w-75  shadow-2"
+                (click)="imageClick(nssDayImages.indexOf(product))" style="height: 15rem;" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ product.title }}</h4>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <p-galleria [value]="nssDayImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+      [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+      [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+      <ng-template pTemplate="item" let-item>
+        <img src="{{ item.url }}" alt="{{ item.title }}" />
+      </ng-template>
+    </p-galleria>
+  </ng-container>
+</div>

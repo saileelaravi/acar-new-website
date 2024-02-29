@@ -1,0 +1,60 @@
+<div>
+    <h2 class="aboutus_title text-center my-3">Friendly Match B/W ACAR & Horticulture College,Jeenur 2023</h2>
+    <ng-container *ngIf="friendlyMatchbwAcarandHorticultureImages">
+        <div class="row mx-5">
+            <div *ngFor="let image of friendlyMatchbwAcarandHorticultureImages; let index = index" class="col-3 my-2 "
+                key="index">
+                <img [src]="image.url" [alt]="image.url" style="cursor: pointer" (click)="imageClick(index)"
+                    class="w-100" />
+            </div>
+        </div>
+        <p-galleria [value]="friendlyMatchbwAcarandHorticultureImages" [(visible)]="displayCustom"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+            [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+</div>
+
+<div>
+    <h2 class="aboutus_title text-center my-3">Inter Collegiate Tournament 2022 - Coimbatore</h2>
+    <ng-container *ngIf="inter_college_tournament_2022_coimbatoreImages">
+        <div class="row mx-5">
+            <div *ngFor="let image of inter_college_tournament_2022_coimbatoreImages; let index = index"
+                class="col-3 my-2 " key="index">
+                <img [src]="image.url" [alt]="image.url" style="cursor: pointer" (click)="imageClick(index)"
+                    class="w-100 h-100" />
+            </div>
+        </div>
+        <p-galleria [value]="inter_college_tournament_2022_coimbatoreImages" [(visible)]="displayCustom"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
+            [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+</div>
+
+<div>
+    <h2 class="aboutus_title text-center my-3">Sports Day 2022</h2>
+    <ng-container *ngIf="sports_day_2022Images">
+        <div class="row mx-5">
+            <div *ngFor="let image of sports_day_2022Images; let index = index" class="col-3 my-2 " key="index">
+                <img [src]="image.url" [alt]="image.url" style="cursor: pointer" (click)="imageClick(index)"
+                    class="w-100 h-100" />
+            </div>
+        </div>
+        <p-galleria [value]="sports_day_2022Images" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
+            [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
+            [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
+            <ng-template pTemplate="item" let-item>
+                <img src="{{ item.url }}" alt="{{ item.title }}" />
+            </ng-template>
+        </p-galleria>
+    </ng-container>
+</div>

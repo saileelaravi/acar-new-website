@@ -1,0 +1,32 @@
+<h1 class="my-3 aboutus_title text-center">YOGA</h1>
+<div class="mx-5">
+    <div class="image-wrapper">
+        <div class="row">
+            <ng-container *ngIf="yogaImages" class="">
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    <div *ngFor="let image of yogaImages; let index = index" class="col-lg-3 mb-3">
+                        <img [src]="image.url" [alt]="" (click)="imageClick(index)" class="card p-3 h-100 w-75" />
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <p-galleria [value]="yogaImages" [(visible)]="displayCustom" [activeIndex]="activeIndex"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.url" />
+            </ng-template>
+        </p-galleria>
+    </div>
+    <div class="bg-secondary text-light fw-bold p-3">
+        <p>காய்ச்செந்நெற் கதிரருந்து
+            மோட்டெருமை முழுக்குழவி
+            கூட்டுநிழல் துயில்வதியும்
+            கோட்டெங்கிற் குலைவாழைக்
+            காய்க்கமுகிற் கமழ்மஞ்சள்
+            இனமாவின் இணர்ப்பெண்ணை
+            முதற்சேம்பின் முளையிஞ்சி (15)</p>
+
+        <p class="text-center text-info"> – பட்டினப்பாலை</p>
+    </div>
+</div>

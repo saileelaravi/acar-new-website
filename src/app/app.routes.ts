@@ -36,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'academics',
     loadChildren: () => import('../app/academics/academics.module').then(m => m.AcademicsModule)
+  },
+  {
+    path: 'life-at-acar',
+    loadChildren: () => import('../app/life-at-acar/life-at-acar.module').then(m => m.LifeAtAcarModule)
   }
 ];

@@ -334,9 +334,13 @@ export class HeaderComponent {
                 items: [
                     {
                         label: 'Hostel',
+                        command: () => this.route.navigate(['/life-at-acar/hostel']),
+
                     },
                     {
                         label: 'Yoga',
+                        command: () => this.route.navigate(['/life-at-acar/yoga']),
+
                     },
                     {
                         label: 'Events',
@@ -344,12 +348,18 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Trainings and Events',
+                        command: () => this.route.navigate(['/life-at-acar/trainings-and-events']),
+
                             },
                             {
                                 label: 'Functions',
+                        command: () => this.route.navigate(['/life-at-acar/Functions']),
+
                             },
                             {
                                 label: 'Sports',
+                        command: () => this.route.navigate(['/life-at-acar/Sports']),
+
                             }
                         ]
 
@@ -359,9 +369,13 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Library',
+                        command: () => this.route.navigate(['/life-at-acar/Library']),
+
                             },
                             {
                                 label: 'IT LAB',
+                        command: () => this.route.navigate(['/life-at-acar/IT-Lab']),
+
                             },
                         ]
                     },

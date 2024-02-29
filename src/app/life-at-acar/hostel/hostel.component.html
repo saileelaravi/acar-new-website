@@ -1,0 +1,101 @@
+<h1 class="text-center aboutus_title my-2">Hostel</h1>
+<div class="mx-5">
+    <p> Hostel facilities separately for boys and girl students. The hostels are separated widely and fenced. Care is
+        taken
+        to provide as much comfort as possible.</p>
+
+    <div class="image-wrapper">
+        <div class="row">
+            <ng-container *ngIf="hostelImages" class="">
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    <div *ngFor="let image of hostelImages; let index = index" class="col-lg-3 mb-3">
+                        <img [src]="image.url" [alt]="" (click)="imageClick(index)" class="card p-3 w-75 h-100" />
+                        <h6 class="pt-3 px-5">{{image.name.split('.')[0]}}</h6>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <p-galleria [value]="hostelImages" [(visible)]="displayCustom" [activeIndex]="activeIndex"
+            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.url" />
+            </ng-template>
+        </p-galleria>
+    </div>
+    <h3 class="aboutus_title">Ladies Hostel Facilities</h3>
+    <p>A well ventilated structure with wide spaced corridors and closed on all sides. The rooms are wide and can
+        accommodate two students. A lounge for visiting guests is also provided.</p>
+    <ul>
+        <li>A cot is provided to each student. </li>
+        <li>Bathroom complex with toilets (Eastern / Western) along with wash basins on each floor is provided.</li>
+        <li> Working tables and chairs are provided for each room. There are ceiling fans, tube lights, two double
+            socketpower switch boards, bureaus and metal/wood racks. Shoe/slipper stand is also provided for inmate of
+            each
+            room.</li>
+        <li> Dining hall is wide spaced with a capacity of 200 students at a time. Granite table tops with stainless
+            steel stools are provided. A storage rack for plates is available. Washing sinks are available. All the mess
+            services (Breakfast/ Lunch/ Dinner) are of self serviced.</li>
+        <li>A 42″ LED TV is provided in Dining Hall for entertainment. </li>
+        <li> RO water (Normal/Cold/ Hot) is provided for drinking purposes. RO water doctor is also available at each
+            floor for easy access at any time.</li>
+        <li> Separate washing area and washing machine for each wing is being installed. </li>
+        <li>Dailies (The Hindu English and Ttamil, Daily Thanthi) are provided to improve the language fluency and
+            general knowledge. Separate reading room is also provided.</li>
+        <li> Indoor game facility like shuttle badminton, carrom board and chess are available inside the hostel. </li>
+        <li> Medical kit comprising of painkiller, first aid kit, simple generic drugs are available for immediate
+            relief. Students in need of medical attention are taken to multi specialty hospital at Hosur, accompanied by
+            staff members.</li>
+        <li> Napkin burner for each wing is provided. </li>
+        <li> Napkin vending machine is also provided.</li>
+        <li> Generator facilities have been provided to hostel. </li>
+        <li>For security purpose camera is placed in entrance and exit of hostel. </li>
+        <li>Wifi facilities are provided in hostels 24×7 for betterment of students, aiding in their studies.</li>
+        <li> The hostel facilities are maintained by a team of house keeping and sanitary workers who maintain the
+            rooms, corridors, common area, bathrooms and toilets daily.</li>
+    </ul>
+    <h3 class="aboutus_title">Gents Hostel Facilities</h3>
+    <p> A well-ventilated structure with wide spaced corridors and closed on all sides. The rooms are wide and can
+        accommodate two students per room. A lounge for visiting guests is also provided, there are separate deputy and
+        assistant wardens to monitoring the hostel activities.</p>
+    <ul>
+        <li>
+            A cot per student, working tables and chairs are provided for each room. There are ceiling fans, tube
+            lights, two double socket power switch boards, bureaus and metal/wood racks. Shoe/slipper stand is also
+            provided for inmate of each room and Generator and UPS facilities have been provided in hostel. </li>
+        <li>
+            Dining hall is wide spaced with a capacity of 200 students at a time. Granite table tops with stainless
+            steel stools are provided. A storage rack for plates is available. Washing sinks are available. All the mess
+            services (Breakfast/ Lunch/ Dinner) are of self-serviced.
+        </li>
+        <li> A 42″ LED TV is provided in Dining Hall for entertainment. </li>
+        <li> For security purpose camera is placed in entrance and exit of hostel and in kitchen for monitoring purpose.
+        </li>
+        <li>Wifi facilities are provided in hostels 24×7 for betterment of students, aiding in their studies. </li>
+        <li>RO water (Normal/Cold/ Hot) is provided for drinking purposes. RO water doctor is also available at each
+            floor for easy access at any time.
+        </li>
+        <li> Separate washing area and washing machine for each wing is being installed. </li>
+        <li> Dailies (The Hindu Tamil and English, daily thanthi) are provided to each room to improve the language
+            fluency and general knowledge. Separate reading room is also provided.</li>
+        <li> Indoor game facility like shuttle badminton, carom board and chess are available inside the hostel.</li>
+        <li>Medical kit comprising of painkiller, first aid kit, simple generic drugs are available for immediate
+            relief. Students in need of medical attention are taken to multi-specialty hospital at Hosur, for that there
+            is separate vehicle (bolero) available in hostel by round the clock.</li>
+        <li>The hostel facilities are maintained by a team of housekeeping and sanitary workers who maintain the rooms,
+            corridors, common area, bathrooms and toilets daily.</li>
+    </ul>
+
+    <div class="bg-secondary text-light fw-bold p-3">
+        <p>காய்ச்செந்நெற் கதிரருந்து
+            மோட்டெருமை முழுக்குழவி
+            கூட்டுநிழல் துயில்வதியும்
+            கோட்டெங்கிற் குலைவாழைக்
+            காய்க்கமுகிற் கமழ்மஞ்சள்
+            இனமாவின் இணர்ப்பெண்ணை
+            முதற்சேம்பின் முளையிஞ்சி (15)</p>
+
+        <p class="text-center text-info"> – பட்டினப்பாலை</p>
+    </div>
+
+</div>
