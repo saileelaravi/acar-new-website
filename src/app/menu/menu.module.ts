@@ -18,7 +18,8 @@ import { MenuService } from './service/menu.service';
     AngularFireStorageModule,
     HttpClientModule,
   ],
-  providers: [AngularFireStorage ],
+  providers: [AngularFireStorage,MenuService ],
+  
 
 })
 export class MenuModule { }

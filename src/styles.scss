@@ -7,7 +7,7 @@
 
 
 
-body{
+body {
     overflow-x: hidden;
     background-color: antiquewhite;
     // font-family: 'Merriweather', georgia, arial !important;
@@ -15,12 +15,15 @@ body{
     // line-height: 1.4rem;
 
 }
-.aboutus_title{
+
+.aboutus_title {
     // color: #de3c44;
     color: #198754;
 
 }
-.aboutus_title,p{
+
+.aboutus_title,
+p {
     text-align: justify;
 }
 

@@ -1,135 +1,67 @@
 <h1 class="aboutus_title text-center my-2"> Teaching staff</h1>
-
-<div class="m-5 mt-0">
-    <h1 class="aboutus_title">Principal</h1>
-    <!-- <div class="card">
-        <div class="d-flex flex-wrap gap-3  m-3 text-center">
-            <div>
-                <p-image src="assets/SUK_4800.jpg" alt="Image" width="300" [preview]="true" ></p-image>
-            </div>
-            <div class="my-5">
-                <h2>Dr. S. SRIDHARAN</h2>
-                <h5 class="text-center">PRINCIPAL</h5>
-                <a href="" class="text-success text-decoration-underline "> Know More </a>
+<!-- <h1 class="aboutus_title">Principal</h1> -->
+<div class="row justify-content-center">
+    <!-- <div class="col-xl-6 ">
+        <div class="card card1">
+            <div class="row ">
+                <div class="col text-center p-3">
+                    <p-image src="assets/001.jpg" alt="Image" width="240" [preview]="true" class="img-fluid"></p-image>
+                </div>
+                <div class="col text-center my-5">
+                    <h3>Dr. S. SRIDHARAN</h3>
+                    <h5 class="text-center">PRINCIPAL</h5>
+                    <a href="" class="text-success text-decoration-underline "> View Profile </a>
+                </div>
             </div>
         </div>
     </div> -->
-    <div class="row">
-        <div class="col-xl-6 ">
-            <div class="card">
-                <div class="row ">
-                    <div class="col text-center p-3">
-                        <p-image src="assets/SUK_4800.jpg" alt="Image" width="240" [preview]="true"
-                            class="img-fluid"></p-image>
-                    </div>
-                    <div class="col text-center my-5">
-                        <h3>Dr. S. SRIDHARAN</h3>
-                        <h5 class="text-center">PRINCIPAL</h5>
-                        <a href="" class="text-success text-decoration-underline "> Know More </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+
+
+<div class="mx-5">
+    <!-- <h3 class="aboutus_title mx-5">Crop Improvment</h3> -->
+
+    <div class=" mx-5 flex justify-content-center">
+        <p-dropdown [options]="department" [(ngModel)]="selectedDepartment" optionLabel="name" [placeholder]=placeholder
+            (onChange)="openSelectedDepartmentImages(selectedDepartment)"
+            [ngClass]="{'selected-department-green': selectedDepartment}"></p-dropdown>
     </div>
 
-    <h1 class="aboutus_title">Crop Management</h1>
-    <div class="row ">
-        <div class="col-md-3">
-            <div class=" card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/Lakshmanakumar-150px.jpg" alt="Image" width="200" [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Dr. P. LAKSHMANAKUMAR</h5>
-                    <h5 class="text-center">Associate Professor <br> (Agronomy)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
+    <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of FacultyImages">
+        <div class="d-flex">
+            <div class="w-25 p-4">
+                <img src="{{images.url}}" alt="" class="rounded-circle">
+            </div>
+            <div class="border-left border border-secondary my-5"></div>
 
+            <div>
+                <div class="d-flex flex-wrap">
+                    <p class="mt-5 mx-3">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="mx-2 fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
+                    </p>
+                    <p class="mt-5">
+                        <span>|</span>
+                    </p>
+                    <p class="mt-5 mx-3">
+                        <i class="fa-solid fa-briefcase"></i><span
+                            class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/rasakumar.jpg" alt="Image" width="200" [preview]="true"></p-image>
+                <div class="mx-3">
+                    <i class="fa-solid fa-gear"></i><span
+                        class="mx-2 fs-6 fw-bold text-success">{{images.name.split('_')[3]}}</span>
                 </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Mr. R. RASAKUMAR</h5>
-                    <h5 class="text-center">Associate Professor <br> (Agronomy)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/KEERTHANA.S.jpg" alt="Image" width="200" [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Mrs. S. Keerthana</h5>
-                    <h5 class="text-center">Associate Professor <br> (Agronomy)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/jawahar-q77sy4gt1s9htt5fkqwiuoddtswxh7ekmjhrozmsbu.jpg" alt="Image" width="200"
-                        [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Mr. R. JAWAHAR</h5>
-                    <h5 class="text-center">Associate Professor <br> (Forestry)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/karthick-er-pylb6sb25fwmmin22x3xy8xpi614kkxdiqmjd354a2.jpg" alt="Image"
-                        width="200" [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Er. M. KARTHICK</h5>
-                    <h5 class="text-center">Associate Professor <br> (Agricultural Engineering)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/fgjy-q7xq48if3w2jzvttjzjf3biekrt6z1pa1yjr49b2sq.jpg" alt="Image" width="200"
-                        [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Mr. N. INDIANRAJ</h5>
-                    <h5 class="text-center">Associate Professor <br> (Agronomy)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
+                <!-- <div class="mx-3">
+                    <i class="fa-solid fa-envelope"></i><span
+                        class="mx-2 fs-6 fw-bold">{{images.name.split('_')[2]}}</span>
+                </div> -->
 
-                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border text-center my-2">
-                <div class="p-3">
-                    <p-image src="assets/upanandaranganIMG_0758-e1684486665100-270x300_1_150x150.jpg" alt="Image" width="200"
-                        [preview]="true"></p-image>
-                </div>
-                <div class="p-3">
-                    <h5 class="text-danger">Dr. G. Ananda Sekaran</h5>
-                    <h5 class="text-center">Associate Professor <br> (Animal Husbandry)</h5>
-                    <a href="" class="text-success text-decoration-underline"> Know More</a>
-
-                </div>
+            <div class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
+                <button class="btn btn-success">View Profile</button>
             </div>
-        </div>
 
+        </div>
     </div>
-
-
-
-
-
 </div>
