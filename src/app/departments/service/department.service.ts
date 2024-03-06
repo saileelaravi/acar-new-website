@@ -34,16 +34,25 @@ export class DepartmentService {
   private _FloricultureAndLandscaping$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _nourishingPregnantWomenForFlourishingIndia$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _farmersTrainingProgramme$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
-  private _cookingContest$   = new BehaviorSubject<{ url: string; name: string }[]>([]);
-  private _worldFoodDay$     = new BehaviorSubject<{ url: string; name: string }[]>([]);
-  private _quizCompetition$  = new BehaviorSubject<{ url: string; name: string }[]>([]);
-  private _posterDesign$     = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _cookingContest$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _worldFoodDay$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _quizCompetition$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _posterDesign$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _extension$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _agriculturalEconomics$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _maths$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _computerScience$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _tamil$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
   private _english$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+  private _agronomy$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _agronomy_stats$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _agriculture_engn_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _animal_husbandry_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _poultry_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _plant_breeading_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _hybridizatio_in_bhendi_plant_breeding_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _breeding_Exposure_Visits_dept_img_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _seed_science_dept_img$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
 
 
 
@@ -76,16 +85,25 @@ export class DepartmentService {
   FloricultureAndLandscaping$ = this._FloricultureAndLandscaping$.asObservable()
   nourishingPregnantWomenForFlourishingIndia$ = this._nourishingPregnantWomenForFlourishingIndia$.asObservable()
   farmersTrainingProgramme$ = this._farmersTrainingProgramme$.asObservable()
-  worldFoodDay$= this._worldFoodDay$.asObservable()
-  cookingContest$  = this._cookingContest$.asObservable()
+  worldFoodDay$ = this._worldFoodDay$.asObservable()
+  cookingContest$ = this._cookingContest$.asObservable()
   quizCompetition$ = this._quizCompetition$.asObservable()
-  posterDesign$     = this._posterDesign$.asObservable()
+  posterDesign$ = this._posterDesign$.asObservable()
   extension$ = this._extension$.asObservable()
   agriculturalEconomics$ = this._agriculturalEconomics$.asObservable()
   maths$ = this._maths$.asObservable()
   computerScience$ = this._computerScience$.asObservable()
   tamil$ = this._tamil$.asObservable()
   english$ = this._english$.asObservable()
+  agronomy$ = this._agronomy$.asObservable()
+  agronomy_stats$ = this._agronomy_stats$.asObservable()
+  agriculture_engn_dept_img$ = this._agriculture_engn_dept_img$.asObservable()
+  animal_husbandry_dept_img$ = this._animal_husbandry_dept_img$.asObservable()
+  poultry_dept_img$ = this._poultry_dept_img$.asObservable()
+  plant_breeading_dept_img$ = this._plant_breeading_dept_img$.asObservable()
+  hybridizatio_in_bhendi_plant_breeding_dept_img$ = this._hybridizatio_in_bhendi_plant_breeding_dept_img$.asObservable()
+  breeding_Exposure_Visits_dept_img_dept_img$ = this._breeding_Exposure_Visits_dept_img_dept_img$.asObservable()
+  seed_science_dept_img$ = this._seed_science_dept_img$.asObservable()
 
 
 
@@ -186,7 +204,7 @@ export class DepartmentService {
       }
       else if (itemRef.fullPath.split('/')[0] === 'Cooking-contest') {
         this._cookingContest$.next([...this._cookingContest$.value, { url: url, name: itemRef.name.replace(/-/g, ' ').replace("scaled", "") }]);
-      } 
+      }
       else if (itemRef.fullPath.split('/')[0] === 'quiz-competition') {
         this._quizCompetition$.next([...this._quizCompetition$.value, { url: url, name: itemRef.name.replace(/-/g, ' ').replace("scaled", "") }]);
       }
@@ -210,6 +228,60 @@ export class DepartmentService {
       }
       else if (itemRef.fullPath.split('/')[0] === 'English') {
         this._english$.next([...this._english$.value, { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' ').replace("scaled", "") }]);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'agronomy_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/-/g, ' '), id: itemRef.name.split('_')[1].split('.')[0] };
+        const updatedPlacements = [...this._agronomy$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._agronomy$.next(updatedPlacements);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'agronomy_stats') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/-/g, ' ').replace(/.jpg/g, ' '), id: itemRef.name.split('_')[1].split('.')[0] };
+        const updatedPlacements = [...this._agronomy_stats$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._agronomy_stats$.next(updatedPlacements);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'agriculture_engn_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/-/g, ' ').replace(/.jpg/g, ' '), id: itemRef.name.split('_')[1].split('.')[0] };
+        const updatedPlacements = [...this._agriculture_engn_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._agriculture_engn_dept_img$.next(updatedPlacements);
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'animal_husbandry_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' '), id: itemRef.name.split('.')[0] };
+        const updatedPlacements = [...this._animal_husbandry_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._animal_husbandry_dept_img$.next(updatedPlacements)
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'poultry_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' '), id: itemRef.name.split('.')[0] };
+        const updatedPlacements = [...this._poultry_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._poultry_dept_img$.next(updatedPlacements)
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'plant_breeading_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' '), id: itemRef.name.split('.')[0] };
+        const updatedPlacements = [...this._plant_breeading_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._plant_breeading_dept_img$.next(updatedPlacements)
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'hybridizatio_ in_bhendi_plant_breeding_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' '), id: itemRef.name.split('.')[0] };
+        const updatedPlacements = [...this._hybridizatio_in_bhendi_plant_breeding_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._hybridizatio_in_bhendi_plant_breeding_dept_img$.next(updatedPlacements)
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'Breeding_Exposure_Visits_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' '), id: itemRef.name.split('_')[1].split('.')[0] };
+        const updatedPlacements = [...this._breeding_Exposure_Visits_dept_img_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._breeding_Exposure_Visits_dept_img_dept_img$.next(updatedPlacements)
+      }
+      else if (itemRef.fullPath.split('/')[0] === 'seed_science_dept_img') {
+        const newPlacement = { url: url, name: itemRef.name.replace(/.jpg/g, ' ').replace(/-/g, ' '), id: itemRef.name.split('_')[1].split('.')[0] };
+        const updatedPlacements = [...this._seed_science_dept_img$.value, newPlacement];
+        updatedPlacements.sort((a, b) => a.id - b.id);
+        this._seed_science_dept_img$.next(updatedPlacements)
       }
     }).catch((error: any) => {
       console.error('Error getting download URL:', error);

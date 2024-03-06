@@ -59,52 +59,57 @@
 
     <h5 class="text-secondary"> Fodder Cultivation & Azolla </h5>
 
-    <p>Three acres of land for fodders and 10 cents of land for Azolla cultivated for feeding the livestock and poultry and
-    also to conduct the trainings and demonstration to the students and farmers. ACAR farm cultivates fodders like Super
-    Napier, Co5, Hedge Lucerne and CoFS 29.</p>
+    <p>Three acres of land for fodders and 10 cents of land for Azolla cultivated for feeding the livestock and poultry
+        and
+        also to conduct the trainings and demonstration to the students and farmers. ACAR farm cultivates fodders like
+        Super
+        Napier, Co5, Hedge Lucerne and CoFS 29.</p>
 
     <h5 class="text-secondary">Integrated Farming System</h5>
 
-    <p>The IFS model combines various compatible enterprises such as crops (field crops, horticultural crops), agroforestry
-    (agri-silvi culture, agri-horticulture, agri-pastoral, silvi-pastoral, horti- pastoral), livestock (dairy, pigs,
-    poultry, small ruminants), fishery, mushroom and bee culture in a synergistic way so that the wastes of one process
-    become the input for other processes for optimum farm productivity.</p>
+    <p>The IFS model combines various compatible enterprises such as crops (field crops, horticultural crops),
+        agroforestry
+        (agri-silvi culture, agri-horticulture, agri-pastoral, silvi-pastoral, horti- pastoral), livestock (dairy, pigs,
+        poultry, small ruminants), fishery, mushroom and bee culture in a synergistic way so that the wastes of one
+        process
+        become the input for other processes for optimum farm productivity.</p>
 
     <h5 class="text-secondary">Incubation and Hatchery Unit</h5>
 
-    <p>The department of Veterinary and Animal Science is maintaining 100 eggs capacity an incubation and hatchery unit to
-    produce good quality native chicks and to support the practical classes to the students and farmers.</p>
+    <p>The department of Veterinary and Animal Science is maintaining 100 eggs capacity an incubation and hatchery unit
+        to
+        produce good quality native chicks and to support the practical classes to the students and farmers.</p>
 
-    <div class="w-100 card pb-3">
+    <div class="w-100 card card1 pb-3">
         <h2 class="text-center aboutus_title pt-2 m-0">Poultry</h2>
-        <p-carousel [value]="Poultry" [numVisible]="3" [numScroll]="1" [circular]="true"
-        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="Poultry" >
-        <ng-template let-product pTemplate="item">
-            <div class="border-1 surface-border border-round text-center">
-                <div class="mt-5">
-                    <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+        <p-carousel [value]="poultry_dept_Images" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="poultry_dept_Images">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round text-center">
+                    <div class="mt-5">
+                        <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+                    </div>
+                    <div>
+                        <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
+                    </div>
                 </div>
-                <div>
-                    <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
-                </div>
-            </div>
-        </ng-template>
-    </p-carousel>
+            </ng-template>
+        </p-carousel>
     </div>
-    <div class="w-100 card mt-3 pb-3">
+    <div class="w-100 card card1 mt-3 pb-3">
         <h2 class="text-center aboutus_title pt-2 m-0">Animal Husbandry</h2>
-        <p-carousel [value]="animal_husbandry" [numVisible]="3" [numScroll]="1" [circular]="true"
-        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="animal_husbandry" >
-        <ng-template let-product pTemplate="item">
-            <div class="border-1 surface-border border-round text-center">
-                <div class="mt-5">
-                    <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+        <p-carousel [value]="animal_husbandry_deptImages" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" *ngIf="animal_husbandry_deptImages">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round text-center">
+                    <div class="mt-5">
+                        <img src="{{ product.url }}" [alt]="" class="shadow-2 col-md-10 h-6" />
+                    </div>
+                    <div>
+                        <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
+                    </div>
                 </div>
-                <div>
-                    <!-- <h4 class="mb-1">{{ product.title }}</h4> -->
-                </div>
-            </div>
-        </ng-template>
-    </p-carousel>
+            </ng-template>
+        </p-carousel>
     </div>
 </div>

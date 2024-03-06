@@ -1,30 +1,47 @@
 <h1 class="aboutus_title text-center my-2"> Teaching staff</h1>
 <!-- <h1 class="aboutus_title">Principal</h1> -->
 <div class="row justify-content-center">
-    <!-- <div class="col-xl-6 ">
-        <div class="card card1">
-            <div class="row ">
-                <div class="col text-center p-3">
-                    <p-image src="assets/001.jpg" alt="Image" width="240" [preview]="true" class="img-fluid"></p-image>
+    <div class="col-xl-6 ">
+        <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of principalImages">
+            <div class="d-flex">
+                <div class="p-4">
+                    <img src="{{images.url}}" alt="" class="">
                 </div>
-                <div class="col text-center my-5">
-                    <h3>Dr. S. SRIDHARAN</h3>
-                    <h5 class="text-center">PRINCIPAL</h5>
-                    <a href="" class="text-success text-decoration-underline "> View Profile </a>
+                <div class="border-left border border-secondary my-5"></div>
+
+                <div class=" mx-4">
+                    <p class="mt-5 ">
+                        <i class="fa-solid fa-user px-2"></i>
+                        <span class="fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
+                    </p>
+                    <!-- <p class="mt-5">
+                            <span>|</span>
+                        </p> -->
+                    <p class="">
+                        <i class="fa-solid fa-briefcase px-2"></i><span
+                            class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
+                    </p>
+                    <p class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
+                        <button class="btn btn-success">View Profile</button>
+                    </p>
                 </div>
+                <!-- <div class="mx-3">
+                        <i class="fa-solid fa-gear"></i><span
+                            class="mx-2 fs-6 fw-bold text-success">{{images.name.split('_')[3]}}</span>
+                    </div> -->
+                <!-- <div class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
+                    <button class="btn btn-success">View Profile</button>
+                </div> -->
+
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
 
-
 <div class="mx-5">
-    <!-- <h3 class="aboutus_title mx-5">Crop Improvment</h3> -->
-
     <div class=" mx-5 flex justify-content-center">
         <p-dropdown [options]="department" [(ngModel)]="selectedDepartment" optionLabel="name" [placeholder]=placeholder
-            (onChange)="openSelectedDepartmentImages(selectedDepartment)"
-            [ngClass]="{'selected-department-green': selectedDepartment}"></p-dropdown>
+            (onChange)="openSelectedDepartmentImages(selectedDepartment)"></p-dropdown>
     </div>
 
     <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of FacultyImages">
@@ -52,11 +69,6 @@
                     <i class="fa-solid fa-gear"></i><span
                         class="mx-2 fs-6 fw-bold text-success">{{images.name.split('_')[3]}}</span>
                 </div>
-                <!-- <div class="mx-3">
-                    <i class="fa-solid fa-envelope"></i><span
-                        class="mx-2 fs-6 fw-bold">{{images.name.split('_')[2]}}</span>
-                </div> -->
-
             </div>
             <div class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
                 <button class="btn btn-success">View Profile</button>

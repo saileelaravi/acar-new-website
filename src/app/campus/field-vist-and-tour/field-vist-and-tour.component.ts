@@ -1,19 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/compat/storage';
+import { Component } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { ImageModule } from 'primeng/image';
 
 @Component({
-  selector: 'app-laboratries',
+  selector: 'app-field-vist-and-tour',
   standalone: true,
   imports: [CommonModule, GalleriaModule, CarouselModule, ImageModule],
-  templateUrl: './laboratries.component.html',
-  styleUrl: './laboratries.component.scss'
+  templateUrl: './field-vist-and-tour.component.html',
+  styleUrl: './field-vist-and-tour.component.scss'
 })
-export class LaboratriesComponent implements OnInit {
-  // imageUrls: any = [];
+export class FieldVistAndTourComponent {
   responsiveOptions: any[] = [];
   imageUrls: { url: string; name: string; }[] = [];
   displayCustom: boolean = false;
@@ -22,7 +21,7 @@ export class LaboratriesComponent implements OnInit {
   constructor(private storage: AngularFireStorage) { }
 
   ngOnInit() {
-    this.readFilesFromStorage('laboratries');
+    this.readFilesFromStorage('/feildVisitAndStudyTour');
   }
 
   readFilesFromStorage(folderPath: string) {
@@ -37,6 +36,8 @@ export class LaboratriesComponent implements OnInit {
   readFile(itemRef: any): Promise<void> {
     return new Promise<void>((resolve, reject) => {
       itemRef.getDownloadURL().then((url: string) => {
+        console.log(url);
+
         this.imageUrls.push({ url: url, name: itemRef.name.replace(/-/g, ' ') });
         resolve();
       }).catch((error: any) => {
@@ -49,5 +50,4 @@ export class LaboratriesComponent implements OnInit {
     this.activeIndex = index;
     this.displayCustom = true;
   }
-
 }

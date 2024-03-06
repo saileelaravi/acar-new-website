@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
+import { DepartmentService } from '../../service/department.service';
 
 @Component({
   selector: 'app-bio-chemistry',
@@ -9,14 +10,15 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './bio-chemistry.component.scss'
 })
 export class BioChemistryComponent {
-  products = [
-    { url: 'assets/coloumn-chromotography.jpg', title: 'Coloumn chromotography' },
-    { url: 'assets/eating-lemongrass-tea-with-students.jpg', title: 'Drinking lemongrass tea with students' },
-    { url: 'assets/harvesting-lemongrass.jpg', title: 'Harvesting lemongrass' },
-    { url: 'assets/lemongrass-dried-and-powdered.jpg', title: 'Lemongrass dried and powdered' },
-    { url: 'assets/soap-products.jpg', title: 'Soap products' },
-    { url: 'assets/visiting-lemongrass-field.jpg', title: 'Visiting lemongrass field' },
+  responsiveOptions: any[]=[];
+  seed_science_dept_img: { url: string; name: string; }[]=[];
 
-  ]
-  responsiveOptions!: any[];
+  constructor(private departmentService: DepartmentService) {
+    this.departmentService.readFilesFromStorage('seed_science_dept_img');
+
+    this.departmentService.seed_science_dept_img$.subscribe((images: { url: string; name: string; }[]) => {
+      this.seed_science_dept_img = images
+      console.log(images);
+    });
+  }
 }

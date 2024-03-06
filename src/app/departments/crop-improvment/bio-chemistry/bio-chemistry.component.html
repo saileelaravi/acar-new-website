@@ -1,14 +1,34 @@
 <div class="mx-5 my-3">
-   
-        <div class="">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <p-carousel [value]="seed_science_dept_img" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card card1 mb-5">
+                <ng-template let-product pTemplate="item">
+                    <div class="border-1 surface-border border-round text-center my-3">
+                        <div class="">
+                            <h3 class="aboutus_title text-center">Lemon Grass Oil Extraction</h3>
+
+                            <img src="{{ product.url }}" [alt]="" class="mx-2" />
+                        </div>
+                        <div>
+                            <h6 class="mb-1">{{ product.name.split('_')[0] }}</h6>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="col">
             <h1 class="aboutus_title text-center">Department of Biochemistry</h1>
             <p>Biochemistry department provides course in Introduction to plant Biochemistry (2+1) to the undergraduate
                 students of B.Sc. (Hons.) Agriculture. The biochemistry department extended the research facilities like
                 extraction and isolation of oil, Natural dye and secondary metabolites from herbal plants and insects.
                 The department have Soxhlet extraction unit, thin layer chromatography (TLC), Column chromatography, UV
                 chamber, Melting point apparatus and Hot air oven.</p>
-
         </div>
+
+
+    </div>
     <h3 class="aboutus_title">Ongoing Research Project 2022:</h3>
     <h5>Extraction of oil from herbal plants and production of value-added products like Herbal bathing soap</h5>
     <ul>
@@ -25,20 +45,7 @@
         <li>Preparation of biodiesel and bio ethanol from plant materials.</li>
         <li>Extraction and isolation of oil from oil seeds.</li>
     </ul>
-    <h3 class="aboutus_title">Lemon Grass Oil Extraction</h3>
-        <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [circular]="true"
-            [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card mb-5">
-            <ng-template let-product pTemplate="item">
-                <div class="border-1 surface-border border-round text-center my-3">
-                    <div class="">
-                        <img src="{{ product.url }}" [alt]="" />
-                    </div>
-                    <div>
-                        <h6 class="mb-1">{{ product.title }}</h6>
-                    </div>
-                </div>
-            </ng-template>
-        </p-carousel>
+
 
     <div class="p-3 fw-bold bg-secondary text-light">
         <p>தொடிப்புழுதி கஃசா உணக்கின் பிடித்தெருவும்</p>
@@ -48,6 +55,6 @@
         <p>பொருள்:</p>
 
         <p>உழுத மண்ணை, ஒருபலம் புழுதி, காற்பலம் ஆகிற அளவுக்குப் புழுதி ஆகும்படி காய விட்டுப் பிறகு பயிர் செய்தால் ஒரு
-        கைப்பிடி அளவு எருவும் இடாமலேயே கூட அந்தப் பயிர் அதிகம் விளையும்.</p>
+            கைப்பிடி அளவு எருவும் இடாமலேயே கூட அந்தப் பயிர் அதிகம் விளையும்.</p>
     </div>
 </div>

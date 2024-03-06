@@ -1,8 +1,7 @@
-<h1 class="aboutus_title text-center my-2">Non - Teaching staff</h1>
+<!-- <h1 class="aboutus_title text-center my-2">Non - Teaching staff</h1>
 
 <div class="m-5">
     <div class="row ">
-
         <div class="col-md-3">
             <div class=" card border text-center my-2">
                 <div class="p-3">
@@ -42,8 +41,7 @@
         <div class="col-md-3">
             <div class=" card border text-center my-2">
                 <div class="p-4">
-                <p-image src="assets/sidan.jpg" alt="Image" width="200" [preview]="true"></p-image>
-
+                    <p-image src="assets/sidan.jpg" alt="Image" width="200" [preview]="true"></p-image>
                 </div>
                 <div class="p-4">
                     <h5 class="text-danger">Mr.SIDDAN</h5>
@@ -55,9 +53,7 @@
         <div class="col-md-3">
             <div class=" card border text-center my-2">
                 <div class="p-3">
-                <p-image src="assets/M-R-Nandhini.jpg" alt="Image" width="200" [preview]="true"></p-image>
-
-
+                    <p-image src="assets/M-R-Nandhini.jpg" alt="Image" width="200" [preview]="true"></p-image>
                 </div>
                 <div class="p-3">
                     <h5 class="text-danger">Mrs.NANDHINI</h5>
@@ -65,72 +61,46 @@
                 </div>
             </div>
         </div>
-
     </div>
+</div> -->
 
-
-
-
-
-    <!-- <div class="d-flex flex-warp gap-5 m-5">
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/S.-Balaji-gowda.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mr BALAJI</h5>
-                <h5 class="text-center">Administrative Officer</h5>
-            </div>
-        </div>
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/m.ravi_.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mr. M. RAVI</h5>
-                <h5 class="text-center">AAO</h5>
-            </div>
-        </div>
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/Mrs.-C.-Pushpa.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mrs.C.PUSHPA</h5>
-                <h5 class="text-center">Librarian</h5>
-            </div>
-        </div>
-
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/sidan.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mr.SIDDAN</h5>
-                <h5 class="text-center">AAO</h5>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex flex-warp gap-5 m-5">
-
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/lokesh.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mr. LOKESH</h5>
-                <h5 class="text-center">AAO</h5>
-            </div>
-        </div>
-
-        <div class=" card border text-center p-3">
-            <div>
-                <p-image src="assets/M-R-Nandhini.jpg" alt="Image" width="200" [preview]="true"></p-image>
-            </div>
-            <div>
-                <h5 class="text-danger">Mrs.NANDHINI</h5>
-                <h5 class="text-center">AAO</h5>
-            </div>
-        </div>
+<div class="mx-5">
+    <!-- <div class=" mx-5 flex justify-content-center">
+        <p-dropdown [options]="department" [(ngModel)]="selectedDepartment" optionLabel="name" [placeholder]=placeholder
+            (onChange)="openSelectedDepartmentImages(selectedDepartment)"
+           ></p-dropdown>
     </div> -->
+
+    <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of FacultyImages">
+        <div class="d-flex">
+            <div class="w-25 p-4">
+                <img src="{{images.url}}" alt="" class="rounded-circle">
+            </div>
+            <div class="border-left border border-secondary my-5"></div>
+
+            <div>
+                <div class="d-flex flex-wrap my-4">
+                    <p class="mt-5 mx-3">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="mx-2 fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
+                    </p>
+                    <p class="mt-5">
+                        <span>|</span>
+                    </p>
+                    <p class="mt-5 mx-3">
+                        <i class="fa-solid fa-briefcase"></i><span
+                            class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
+                    </p>
+                </div>
+                <!-- <div class="mx-3">
+                    <i class="fa-solid fa-gear"></i><span
+                        class="mx-2 fs-6 fw-bold text-success">{{images.name.split('_')[3]}}</span>
+                </div> -->
+            </div>
+            <div class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
+                <button class="btn btn-success">View Profile</button>
+            </div>
+
+        </div>
+    </div>
 </div>

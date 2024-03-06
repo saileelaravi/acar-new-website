@@ -1,0 +1,20 @@
+<div class="image-wrapper">
+    <div class="row mx-5 my-3">
+        <h3 class="aboutus_title text-center">Field Visit And All India Tour</h3>
+
+        <ng-container *ngIf="imageUrls" class="">
+            <div class="d-flex flex-wrap justify-content-start align-items-center">
+                <div *ngFor="let image of imageUrls; let index = index" class="col-lg-3 mb-3">
+                    <img [src]="image.url" [alt]="" (click)="imageClick(index)" class="w-100 h-100 px-5 py-3" />
+                    <h6 class="p-2 text-success text-center">{{image.name.split('.')[0].split('_')[0]}}</h6>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <p-galleria [value]="imageUrls" [(visible)]="displayCustom" [activeIndex]="activeIndex"
+        [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
+        [showItemNavigators]="true" [showThumbnails]="false">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.url" />
+        </ng-template>
+    </p-galleria>

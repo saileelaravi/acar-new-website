@@ -17,10 +17,8 @@ export class EnglishComponent {
   constructor(private departmentService: DepartmentService) {
     this.departmentService.readFilesFromStorage('English');
 
-
     this.departmentService.english$.subscribe((images: { url: string; name: string; }[]) => {
       this.englishImages = images
-      
     });
   }
 }

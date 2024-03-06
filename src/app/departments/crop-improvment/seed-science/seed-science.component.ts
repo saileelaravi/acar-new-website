@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
+import { DepartmentService } from '../../service/department.service';
 
 @Component({
   selector: 'app-seed-science',
@@ -9,21 +10,19 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './seed-science.component.scss'
 })
 export class SeedScienceComponent {
+  responsiveOptions: any[]=[];
+  seed_science_dept_img: { url: string; name: string; }[] = [];
 
-  seedtech_lab = [
-    { url: 'assets/Seed-tech-Lab-1.jpg', title: 'Seed tech Lab-1' },
-    { url: 'assets/Seed-tech-Lab-2.jpg', title: 'Seed tech Lab-2' },
-    { url: 'assets/Seed-tech-Lab-3.jpg', title: 'Seed tech Lab-3' },
-    { url: 'assets/Seed-tech-Lab-4.jpg', title: 'Seed tech Lab-4' },
-    { url: 'assets/Seed-tech-Lab-5.jpg', title: 'Seed tech Lab-5' },
-    { url: 'assets/Seed-tech-Lab-6.jpg', title: 'Seed tech Lab-6' },
-    { url: 'assets/Seed-tech-Lab-7.jpg', title: 'Seed tech Lab-7' },
-    { url: 'assets/Seed-tech-Lab-8.jpg', title: 'Seed tech Lab-8' },
-    { url: 'assets/Seed-tech-Lab-9.jpg', title: 'Seed tech Lab-9' },
-    { url: 'assets/Seed-tech-Lab-10.jpg', title:'Seed tech Lab-10'},
+  constructor(private departmentService: DepartmentService) {
+    this.departmentService.readFilesFromStorage('seed_science_dept_img');
 
-   
-  ]
+    this.departmentService.seed_science_dept_img$.subscribe((images: { url: string; name: string; }[]) => {
+      this.seed_science_dept_img = images
+      console.log(images);
+      
+    });
+  }
 
-  responsiveOptions!: any[];
+
+
 }

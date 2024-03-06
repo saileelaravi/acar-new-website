@@ -25,9 +25,9 @@ export class TeachingStaffComponent {
 
   FacultyImages: any = [];
 
-  cropImprovmentFacultyProfile: { url: string; name: string; }[] = [];
+  facultyProfile: { url: string; name: string; }[] = [];
   placeholder!: string;
-  private subscription: Subscription | undefined;
+  principalImages: { url: string; name: string; }[]=[];
 
 
   constructor(private menuService: MenuService) {
@@ -50,6 +50,8 @@ export class TeachingStaffComponent {
     this.menuService.readFilesFromStorage('teaching_faculty/natural_resource_management');
     this.menuService.readFilesFromStorage('teaching_faculty/horticulture');
     this.menuService.readFilesFromStorage('teaching_faculty/social_sciences');
+    this.menuService.readFilesFromStorage('teaching_faculty/principal');
+
 
 
     this.menuService.readFilesFromStorage('teaching_faculty/faculty_profile');
@@ -58,14 +60,18 @@ export class TeachingStaffComponent {
       this.FacultyImages = images
     });
 
+    this.menuService.pricipal$.subscribe((images: { url: string; name: string; }[]) => {
+      this.principalImages = images
+      console.log('principal images', images)
 
+    });
 
   }
 
   viewProfile(id: any) {
     console.log('id::', id);
-    this.menuService.cropImprovmentFacultyProfile$.subscribe((images: { url: string; name: string; id: string }[]) => {
-      this.cropImprovmentFacultyProfile = images
+    this.menuService.facultyProfile$.subscribe((images: { url: string; name: string; id: string }[]) => {
+      this.facultyProfile = images
       // console.log(images);
 
 
@@ -91,10 +97,13 @@ export class TeachingStaffComponent {
     if (event.code == 'crop_improvment') {
       this.menuService.cropImprovment$.subscribe((images: { url: string; name: string; }[]) => {
         this.FacultyImages = images
+        console.log(this.FacultyImages);
+
       });
     }
     else if (event.code == 'crop_management') {
       this.menuService.cropManagement$.subscribe((images: { url: string; name: string; }[]) => {
+
         this.FacultyImages = images
         console.log(this.FacultyImages);
       });

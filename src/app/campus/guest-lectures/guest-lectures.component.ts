@@ -1,28 +1,28 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/compat/storage';
+import { Component } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { ImageModule } from 'primeng/image';
 
 @Component({
-  selector: 'app-laboratries',
+  selector: 'app-guest-lectures',
   standalone: true,
   imports: [CommonModule, GalleriaModule, CarouselModule, ImageModule],
-  templateUrl: './laboratries.component.html',
-  styleUrl: './laboratries.component.scss'
+  templateUrl: './guest-lectures.component.html',
+  styleUrl: './guest-lectures.component.scss'
 })
-export class LaboratriesComponent implements OnInit {
+export class GuestLecturesComponent {
   // imageUrls: any = [];
   responsiveOptions: any[] = [];
   imageUrls: { url: string; name: string; }[] = [];
   displayCustom: boolean = false;
   activeIndex: number = 0;
-
+  
   constructor(private storage: AngularFireStorage) { }
 
   ngOnInit() {
-    this.readFilesFromStorage('laboratries');
+    this.readFilesFromStorage('/GIS Guest lecture');
   }
 
   readFilesFromStorage(folderPath: string) {
@@ -48,6 +48,5 @@ export class LaboratriesComponent implements OnInit {
   imageClick(index: number) {
     this.activeIndex = index;
     this.displayCustom = true;
-  }
-
+}
 }

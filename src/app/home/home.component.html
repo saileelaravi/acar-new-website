@@ -22,15 +22,13 @@
 
 
 <div class="">
-  <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" 
-  [showIndicators]="true"
-    [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [autoPlay]="true"
-     [circular]="true" 
-    [numVisible]="1"  >
+  <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true"
+    [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [autoPlay]="true" [circular]="true"
+    [numVisible]="1">
     <ng-template pTemplate="item" let-item>
       <img [src]="item" style="width: 100%; display: block;" />
     </ng-template>
-   
+
   </p-galleria>
 </div>
 

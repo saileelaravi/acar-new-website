@@ -1,15 +1,15 @@
 <div class="m-5">
     <div class="row">
         <div class="  col-md-5 ">
-            <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card">
+            <p-carousel [value]="plant_breeading_dept_img" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" class="card card1">
                 <ng-template let-product pTemplate="item">
                     <div class="border-1 surface-border border-round text-center my-3">
                         <div class="">
-                            <img src="{{ product.url }}" [alt]="" />
+                            <img src="{{ product.url }}" [alt]="" class="col-lg-10" style="height: 300px;" />
                         </div>
                         <div>
-                            <h4 class="mb-1">{{ product.title }}</h4>
+                            <h4 class="mb-1">{{ product.name.split('_')[0] }}</h4>
                         </div>
                     </div>
                 </ng-template>
@@ -142,9 +142,9 @@
         </div>
     </div>
 
-    <div class=" card my-5">
+    <div class=" card card1 my-5">
         <h3 class="text-center py-3 aboutus_title">Hybridization in Bhendi</h3>
-        <p-carousel [value]="hybridization_in_bhendi" [numVisible]="4" [numScroll]="1" [circular]="true"
+        <p-carousel [value]="hybridizatio_in_bhendi_plant_breeding_dept_img" [numVisible]="4" [numScroll]="1" [circular]="true"
             [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
             <ng-template let-product pTemplate="item">
                 <div class="border-1 surface-border border-round text-center my-3">
@@ -152,7 +152,7 @@
                         <img src="{{ product.url }}" [alt]="" />
                     </div>
                     <div>
-                        <h6 class="mb-1">{{ product.title }}</h6>
+                        <h6 class="mb-1">{{ product.name.split('_')[0] }}</h6>
                     </div>
                 </div>
             </ng-template>
@@ -160,7 +160,7 @@
         <hr>
 
         <h3 class="text-center py-3 aboutus_title">Breeding Exposure Visits</h3>
-        <p-carousel [value]="breeding_exposure_visits" [numVisible]="3" [numScroll]="1" [circular]="true"
+        <p-carousel [value]="breeding_Exposure_Visits_dept_img_dept_img" [numVisible]="3" [numScroll]="1" [circular]="true"
             [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
             <ng-template let-product pTemplate="item">
                 <div class="border-1 surface-border border-round text-center my-3">
@@ -168,7 +168,7 @@
                         <img src="{{ product.url }}" [alt]="" />
                     </div>
                     <div>
-                        <h6 class="mb-1">{{ product.title }}</h6>
+                        <h6 class="mb-1">{{ product.name.split('_')[0] }}</h6>
                     </div>
                 </div>
             </ng-template>

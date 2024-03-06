@@ -1,24 +1,40 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { DialogModule } from 'primeng/dialog';
+import { DepartmentService } from '../../service/department.service';
 
 @Component({
   selector: 'app-plant-breeding',
   standalone: true,
-  imports: [CarouselModule,DialogModule],
+  imports: [CarouselModule, DialogModule],
   templateUrl: './plant-breeding.component.html',
   styleUrl: './plant-breeding.component.scss'
 })
-export class PlantBreedingComponent {
-  products = [
-    { url: 'assets/Gel-Electrophoresis-254x300.jpg', title: 'Gel Electrophoresis' },
-    { url: 'assets/GPB-Lab-254x300.jpg', title: 'GPB Lab' },
-    { url: 'assets/Observing-different-phases-of-cell-division-254x300.jpg', title: 'Observing different phases of cell-division' },
-    { url: 'assets/Observing-Mitotic-Phase-254x300.jpg', title: 'Observing Mitotic Phase' },
-    { url: 'assets/Purity-analysis-of-seeds-in-rice-254x300.jpg', title: 'Purity analysis of seeds in rice' },
-    { url: 'assets/Rice-landraces-254x300.jpg', title: 'Rice landraces' },
 
-  ]
+export class PlantBreedingComponent {
+  plant_breeading_dept_img: { url: string; name: string; }[] = [];
+  hybridizatio_in_bhendi_plant_breeding_dept_img: { url: string; name: string; }[] = [];
+  breeding_Exposure_Visits_dept_img_dept_img: { url: string; name: string; }[] = [];
+
+  constructor(private departmentService: DepartmentService) {
+    this.departmentService.readFilesFromStorage('plant_breeading_dept_img');
+    this.departmentService.readFilesFromStorage('hybridizatio_ in_bhendi_plant_breeding_dept_img');
+    this.departmentService.readFilesFromStorage('Breeding_Exposure_Visits_dept_img');
+
+
+    this.departmentService.plant_breeading_dept_img$.subscribe((images: { url: string; name: string; }[]) => {
+      this.plant_breeading_dept_img = images
+    });
+    this.departmentService.hybridizatio_in_bhendi_plant_breeding_dept_img$.subscribe((images: { url: string; name: string; }[]) => {
+      this.hybridizatio_in_bhendi_plant_breeding_dept_img = images
+    });
+    this.departmentService.breeding_Exposure_Visits_dept_img_dept_img$.subscribe((images: { url: string; name: string; }[]) => {
+      this.breeding_Exposure_Visits_dept_img_dept_img = images
+      console.log(images);
+    });
+  }
+
+
   hybridization_in_bhendi = [
     { url: 'assets/Emasculated-flower-254x300.jpg', title: 'Emasculated flower' },
     { url: 'assets/Hybridization-in-Bhendi-254x300.jpg', title: 'Hybridization in Bhendi' },
