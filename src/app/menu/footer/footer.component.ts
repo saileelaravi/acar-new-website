@@ -5,7 +5,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 
 @Component({
   selector: 'app-footer',
-  // encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None,
   standalone: true,
   imports: [GoogleMapsModule  ],
   templateUrl: './footer.component.html',

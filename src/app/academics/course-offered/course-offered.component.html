@@ -1,5 +1,73 @@
-<h1 class="aboutus_title text-center my-4">Course Offered B.Sc (Hons) Agriculture</h1>
+<div class="d-flex justify-content-center my-4  text-center ">
+    <h1 class="aboutus_title">Course Offered B.Sc (Hons) Agriculture</h1>
+    <!-- <button class="my-3 mx-5 text-decoration-underline btn btn-primary" *ngIf="showApplicationForm" (click)="showDialog()"></button> -->
+    <p-button label="Click here for application form" [link]="true" class="my-2 mx-2 text-decoration-underline"
+        (click)="showDialog()"></p-button>
+    <p-dialog header="B.Sc. (Hons.) Agriculture Application Form" [resizable]="false" [modal]="true"
+        [maximizable]="true" appendTo="body" [(visible)]="dialogVisible" [style]="{width: '75vw'}"
+        [contentStyle]="{height: '400px'}" class="custom-dialog">
 
+
+        <div class="form-container">
+            <form id="applicationForm">
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="first_name">First Name <span class="text-danger">*</span> </label>
+                    <input pInputText id="first_name" [(ngModel)]="first_name" class="form-control"
+                        [ngModelOptions]="{standalone: true}" />
+                </div>
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="last_name">Last Name <span class="text-danger">*</span> </label>
+                    <input pInputText id="last_name" [(ngModel)]="last_name" class="form-control"
+                        [ngModelOptions]="{standalone: true}" />
+
+                </div>
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="email">Email <span class="text-danger">*</span> </label>
+                    <input pInputText id="email" [(ngModel)]="email" class="form-control" type="email"
+                        [ngModelOptions]="{standalone: true}" />
+
+                </div>
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="tel">Mobile Number <span class="text-danger">*</span> </label>
+                    <input pInputText id="tel" [(ngModel)]="tel" class="form-control" type="tel"
+                        [ngModelOptions]="{standalone: true}" />
+                </div>
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="qouta">B.Sc (Hons) Agriculture <span class="text-danger">*</span> </label>
+                    <p-dropdown [options]="qouta" [(ngModel)]="selectedQouta" optionLabel="name"
+                        [ngModelOptions]="{standalone: true}"></p-dropdown>
+
+                </div>
+
+                <div class="flex flex-column gap-2 my-2">
+                    <label for="tnauCounselling">Have you Applied for TNAU Counselling <span
+                            class="text-danger">*</span> </label>
+                    <p-dropdown [options]="tnauCounselling" [(ngModel)]="selectedtnauCounselling" optionLabel="name"
+                        [ngModelOptions]="{standalone: true}" aria-describedby="tnauCounselling"></p-dropdown>
+                    <small id="tnauCounselling" class="text-warning">Both for Management and Counseling admission,
+                        candidates must apply
+                        through TNAU</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="your_msg">Your Message</label>
+                    <textarea type="text" id="your_msg" class="form-control" [(ngModel)]="your_msg" [ngModelOptions]="{standalone: true}" required></textarea>
+                </div>
+
+                <div class="form-group my-4">
+                    <input type="submit" value="Submit" class="btn btn-danger" (click)="submitApplicationForm()">
+                </div>
+            </form>
+        </div>
+
+
+    </p-dialog>
+</div>
 <div class="mx-5">
     <table>
         <tr>
@@ -118,4 +186,5 @@
 
         </p>
     </div>
+
 </div>

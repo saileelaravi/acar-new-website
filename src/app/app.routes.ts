@@ -40,5 +40,9 @@ export const routes: Routes = [
   {
     path: 'life-at-acar',
     loadChildren: () => import('../app/life-at-acar/life-at-acar.module').then(m => m.LifeAtAcarModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('../app/contact-us/contact-us.module').then(m => m.ContactUsModule)
   }
 ];

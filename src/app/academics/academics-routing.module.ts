@@ -11,6 +11,8 @@ import { CommitteesComponent } from './committees/committees/committees.componen
 
 const routes: Routes = [
   { path: 'course-offered', component: CourseOfferedComponent },
+  { path: 'course-offered/:id', component: CourseOfferedComponent },
+
   { path: 'exams', component: ExamsComponent },
   { path: 'rules-regulations', component: RulesRegulationsComponent },
   { path: 'certificate-courses', component: CertificateCoursesComponent },

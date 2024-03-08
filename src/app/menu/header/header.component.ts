@@ -348,17 +348,17 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Trainings and Events',
-                        command: () => this.route.navigate(['/life-at-acar/trainings-and-events']),
+                                command: () => this.route.navigate(['/life-at-acar/trainings-and-events']),
 
                             },
                             {
                                 label: 'Functions',
-                        command: () => this.route.navigate(['/life-at-acar/Functions']),
+                                command: () => this.route.navigate(['/life-at-acar/Functions']),
 
                             },
                             {
                                 label: 'Sports',
-                        command: () => this.route.navigate(['/life-at-acar/Sports']),
+                                command: () => this.route.navigate(['/life-at-acar/Sports']),
 
                             }
                         ]
@@ -369,12 +369,12 @@ export class HeaderComponent {
                         items: [
                             {
                                 label: 'Library',
-                        command: () => this.route.navigate(['/life-at-acar/Library']),
+                                command: () => this.route.navigate(['/life-at-acar/Library']),
 
                             },
                             {
                                 label: 'IT LAB',
-                        command: () => this.route.navigate(['/life-at-acar/IT-Lab']),
+                                command: () => this.route.navigate(['/life-at-acar/IT-Lab']),
 
                             },
                         ]
@@ -384,6 +384,8 @@ export class HeaderComponent {
             },
             {
                 label: 'Job Placemnets',
+                command: () => this.route.navigate(['/activites/placements']),
+
                 items: [
                     {
                         label: 'Higer Education & Job Placemnets',
@@ -394,9 +396,12 @@ export class HeaderComponent {
             },
             {
                 label: 'Contact Us',
+                command: () => this.route.navigate(['/contact-us']),
                 items: [
                     {
-                        label: 'Contact Us'
+                        label: 'Contact Us',
+                        command: () => this.route.navigate(['/contact-us']),
+
                     }
                 ]
             },

@@ -11,5 +11,6 @@ export const environment = {
         appId: "1:1068376281804:web:13e5b6a4f71cf5d70f2869",
         measurementId: "G-Y34GSCM5R2"
     },
+    firestoreDatabaseId: "acar-database"
   };
   
