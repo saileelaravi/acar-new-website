@@ -63,10 +63,28 @@ p {
     // margin-right: 10em;
 }
 
-.marquee {
+// .marquee {
+//     white-space: nowrap;
+//     // overflow: hidden;
+//     animation: marquee 30s linear infinite;
+// }
+
+// @keyframes marquee {
+//     0% {
+//         transform: translateX(100%);
+//     }
+
+//     100% {
+//         transform: translateX(-100%);
+//     }
+// }
+.news-container {
+    overflow: hidden;
+}
+
+.news-scroller {
     white-space: nowrap;
-    // overflow: hidden;
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 @keyframes marquee {
@@ -76,5 +94,16 @@ p {
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+.news-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .news-item {
+        padding: 5px;
     }
 }

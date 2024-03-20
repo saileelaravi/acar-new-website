@@ -30,6 +30,7 @@ export class FooterComponent {
   }
   redirectToPath(path: string | UrlTree){
     this.router.navigateByUrl(path)
+    window.scrollTo(0, 0);
   }
 
   moveMap(event: google.maps.MapMouseEvent) {
