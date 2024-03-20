@@ -12,8 +12,8 @@ export class MenuService {
   private _natural_resource_management$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
   private _horticulture$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
   private _social_sciences$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
-  private _nonTeachingFacultyImages$ = new BehaviorSubject<{ url: string; name: string; id: string}[]>([]);
-  private _pricipal$ = new BehaviorSubject<{ url: string; name: string; id: string}[]>([]);
+  private _nonTeachingFacultyImages$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
+  private _pricipal$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
 
 
   private _facultyProfile$ = new BehaviorSubject<{ url: string; name: string; id: string }[]>([]);
@@ -46,7 +46,7 @@ export class MenuService {
 
   private readFile(itemRef: any): void {
     console.log(itemRef.fullPath)
-    
+
     itemRef.getDownloadURL().then((url: string) => {
       const extractedString = itemRef.fullPath.match(/^[^/]+\/[^/]+/)[0];
       // console.log(extractedString);
@@ -114,5 +114,15 @@ export class MenuService {
       console.error('Error getting download URL:', error);
     });
   }
-
+  clearImages() {
+    this._pricipal$.next([]);
+    this._cropImprovment$.next([]);
+    this._cropManagement$.next([]);
+    this._department_of_plant_protection$.next([]);
+    this._natural_resource_management$.next([]);
+    this._horticulture$.next([]);
+    this._social_sciences$.next([]);
+    this._pricipal$.next([]);
+    this._nonTeachingFacultyImages$.next([]);
+  }
 }

@@ -1,3 +1,39 @@
+<div class="mx-5">
+    <p class="text-center fw-bold fs-3 text-success my-2">Sports</p>
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ friendlyMatchbwAcarandHorticultureImages[0]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Friendly Match B/W ACAR & Horticulture
+                College,Jeenur 2023
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('sports-1')">View More</button>
+        </div>
+
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ inter_college_tournament_2022_coimbatoreImages[0]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Inter Collegiate Tournament 2022 - Coimbatore</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('sports-2')">View More</button>
+        </div>
+
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ sports_day_2022Images[0]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Sports Day 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('sports-3')">View More</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- 
 <div>
     <h2 class="aboutus_title text-center my-3">Friendly Match B/W ACAR & Horticulture College,Jeenur 2023</h2>
     <ng-container *ngIf="friendlyMatchbwAcarandHorticultureImages">
@@ -57,4 +93,4 @@
             </ng-template>
         </p-galleria>
     </ng-container>
-</div>
+</div> -->

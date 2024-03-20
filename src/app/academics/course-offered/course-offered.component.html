@@ -40,7 +40,7 @@
                 <div class="flex flex-column gap-2 my-2">
                     <label for="qouta">B.Sc (Hons) Agriculture <span class="text-danger">*</span> </label>
                     <p-dropdown [options]="qouta" [(ngModel)]="selectedQouta" optionLabel="name"
-                        [ngModelOptions]="{standalone: true}"></p-dropdown>
+                        [ngModelOptions]="{standalone: true}" [style]="{'width':'100%'}"></p-dropdown>
 
                 </div>
 
@@ -48,7 +48,8 @@
                     <label for="tnauCounselling">Have you Applied for TNAU Counselling <span
                             class="text-danger">*</span> </label>
                     <p-dropdown [options]="tnauCounselling" [(ngModel)]="selectedtnauCounselling" optionLabel="name"
-                        [ngModelOptions]="{standalone: true}" aria-describedby="tnauCounselling"></p-dropdown>
+                        [ngModelOptions]="{standalone: true}" aria-describedby="tnauCounselling"
+                        [style]="{'width':'100%'}"></p-dropdown>
                     <small id="tnauCounselling" class="text-warning">Both for Management and Counseling admission,
                         candidates must apply
                         through TNAU</small>
@@ -56,7 +57,8 @@
 
                 <div class="form-group">
                     <label for="your_msg">Your Message</label>
-                    <textarea type="text" id="your_msg" class="form-control" [(ngModel)]="your_msg" [ngModelOptions]="{standalone: true}" required></textarea>
+                    <textarea type="text" id="your_msg" class="form-control" [(ngModel)]="your_msg"
+                        [ngModelOptions]="{standalone: true}" required></textarea>
                 </div>
 
                 <div class="form-group my-4">

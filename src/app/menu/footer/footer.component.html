@@ -1,16 +1,55 @@
-<div class="acar_footer mt-5 row">
-    <div class="mx-5 text-light col">
-        <div >
-        <h4 class="foot_title">Contact Us</h4>
-        <p>
-            <b>Adhiyamaan College of Agriculture and Research</b><br>
-            Affiliated to TamilNadu Agricultural University ( Affiliation No.E1/A.E.R.I/02711/2016 )<br>
-            Shoolagiri to Berigai Road, Athimugam Village, Krishnagiri District 635105
-        </p>
-        <p> Phone Number: +91 – 6380277180, +91 – 9442006269, +91 – 9442219990<br>
-            Email: deanacar&#64;tnau.ac.in, office&#64;acar.ac.in</p>
+<div class="acar_footer mt-5 ">
+    <div>
+        <div class="mx-5 text-light d-flex justify-content-between flex-wrap">
+            <div class="">
+                <h4 class="foot_title">Contact Us</h4>
+                <div>
+                    <b class='fs-4'>Adhiyamaan College of Agriculture and Research</b>
+                    <p class="fw-bold">Affiliated to TamilNadu Agricultural University <br>
+                        (Affiliation No.E1/A.E.R.I/02711/2016)<br>
+                        Shoolagiri to Berigai Road, Athimugam Village, Krishnagiri District 635105<br>
+
+                        Phone Number: +91 – 6380277180, +91 – 9442006269, +91 – 9442219990<br>
+                        Email: deanacar&#64;tnau.ac.in, office&#64;acar.ac.in</p>
+                </div>
+            </div>
+            <div class="navigatToLinks">
+                <h4 class="foot_title">About Us</h4>
+                <p (click)="redirectToPath('menu/about-us')">About ACAR And AERI Trust</p>
+                <p (click)="redirectToPath('menu/messages')">Chairperson's Message</p>
+                <p (click)="redirectToPath('menu/principal-message')">Principal's Message</p>
+                <p (click)="redirectToPath('menu/vision_mision_goal')">Vission, Mission, Goal</p>
+            </div>
+            <div class="navigatToLinks">
+                <h4 class="foot_title">Quick Links</h4>
+                <p (click)="redirectToPath('activites/placements')">Placements </p>
+                <p (click)="redirectToPath('life-at-acar/trainings-and-events')">Training And Event</p>
+                <p (click)="redirectToPath('life-at-acar/Functions')">Functions</p>
+                <p (click)="redirectToPath('life-at-acar/Sports')">Sports</p>
+            </div>
+            <div class="navigatToLinks">
+                <h4 class="foot_title">Follow Us</h4>
+                <!-- <p> <a href="https://www.facebook.com/Adhiyamaan Agriculture" target="_blank" class="">
+                        <i class="pi pi-linkedin px-1" aria-hidden="true"></i>LinkedIn</a> </p> -->
+                <p><a href="https://www.facebook.com/Adhiyamaan Agriculture" target="_blank" class="">
+                        <i class="pi pi-facebook px-1" aria-hidden="true"></i>Facebook</a> </p>
+                <!-- <p><a href="https://www.facebook.com/Adhiyamaan Agriculture" target="_blank" class="">
+                        <i class="pi pi-twitter px-1" aria-hidden="true"></i>Twitter</a> </p> -->
+                <p><a href="https://www.instagram.com/acar_college_2k24" target="_blank" class="">
+                        <i class="pi pi-instagram px-1" aria-hidden="true"></i>Instagram</a> </p>
+                <p><a href="https://www.youtube.com/@adhiyamaancollegeofagricul5729" target="_blank" class=""> <i
+                            class="pi pi-youtube px-1" aria-hidden="true"></i> YouTube</a> </p>
+            </div>
+        </div>
+
+        <div class="mx-5 mt-5">
+            <hr class="text-light">
+            <p class="text-light">Copyright©{{currentYear}} Adhiyamaan College of Agriculture And Research | Powered by
+                <span class="text-info fs-6 fw-bold">Saileela Ravindranath</span>
+            </p>
+        </div>
     </div>
-    </div>
+
     <!-- <div  class="mx-5 col-6"> 
       <google-map height="300"
             [center]="center" 

@@ -3,6 +3,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { LifeAtAcarService } from '../../service/life-at-acar.service';
 import { CommonModule } from '@angular/common';
 import { GalleriaModule } from 'primeng/galleria';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trainings-and-events',
@@ -24,8 +25,15 @@ export class TrainingsAndEventsComponent {
   dengueAwarenessProgramImages: { url: string; name: string; }[] = [];
   graduationImages: { url: string; name: string; }[] = [];
   aluminiMeetImages: { url: string; name: string; }[] = [];
+  breedingManagementInCattleImages: { url: string; name: string; }[]=[];
+  awarenessProgrammeOnHigherEducationforSchoolStudentsImages: { url: string; name: string; }[] =[];
+  exposureVisitToNIFTEMTNAUImages: { url: string; name: string; }[]=[];
+  PRASettipalliImages: { url: string; name: string; }[] =[];
+  trainingonIntegratedCropManagementImages: { url: string; name: string; }[] =[];
+  ERISilkwormTraining2022Images: { url: string; name: string; }[]=[];
+  GISGuestlectureImages: { url: string; name: string; }[]=[];
 
-  constructor(private lifeAtAcarService: LifeAtAcarService) {
+  constructor(private lifeAtAcarService: LifeAtAcarService, private router: Router) {
     this.lifeAtAcarService.readFilesFromStorage('PADHMASREE- AWARD');
     this.lifeAtAcarService.readFilesFromStorage('tanflor_visit');
     this.lifeAtAcarService.readFilesFromStorage('eductional-awarness');
@@ -34,6 +42,13 @@ export class TrainingsAndEventsComponent {
     this.lifeAtAcarService.readFilesFromStorage('dengue-awareness-program');
     this.lifeAtAcarService.readFilesFromStorage('graduation-celebration');
     this.lifeAtAcarService.readFilesFromStorage('acar-alumini-meet');
+    this.lifeAtAcarService.readFilesFromStorage('Breeding Management in Cattle');
+    this.lifeAtAcarService.readFilesFromStorage('Awareness Programme on Higher Education for School Students');
+    this.lifeAtAcarService.readFilesFromStorage('Exposure Visit to NIFTEM, TNAU');
+    this.lifeAtAcarService.readFilesFromStorage('PRA Settipalli');
+    this.lifeAtAcarService.readFilesFromStorage('Training on Integrated Crop Management');
+    this.lifeAtAcarService.readFilesFromStorage('ERI Silkworm Training 2022');
+    this.lifeAtAcarService.readFilesFromStorage('GIS Guest lecture');
 
 
 
@@ -58,13 +73,42 @@ export class TrainingsAndEventsComponent {
     });
     this.lifeAtAcarService.graduation$.subscribe((images: { url: string; name: string; }[]) => {
       this.graduationImages = images
+
     });
     this.lifeAtAcarService.aluminiMeet$.subscribe((images: { url: string; name: string; }[]) => {
       this.aluminiMeetImages = images
+    });
+    this.lifeAtAcarService.breedingManagementInCattle$.subscribe((images: { url: string; name: string; }[]) => {
+      this.breedingManagementInCattleImages = images
+    });
+    this.lifeAtAcarService.awarenessProgrammeOnHigherEducationforSchoolStudents$.subscribe((images: { url: string; name: string; }[]) => {
+      this.awarenessProgrammeOnHigherEducationforSchoolStudentsImages = images
+    });
+    this.lifeAtAcarService.exposureVisitToNIFTEMTNAU$.subscribe((images: { url: string; name: string; }[]) => {
+      this.exposureVisitToNIFTEMTNAUImages = images
+    });
+    this.lifeAtAcarService.PRASettipalli$.subscribe((images: { url: string; name: string; }[]) => {
+      this.PRASettipalliImages = images
+    });
+    this.lifeAtAcarService.trainingonIntegratedCropManagement$.subscribe((images: { url: string; name: string; }[]) => {
+      this.trainingonIntegratedCropManagementImages = images
+    });
+    this.lifeAtAcarService.ERISilkwormTraining2022$.subscribe((images: { url: string; name: string; }[]) => {
+      this.ERISilkwormTraining2022Images = images
+    });
+    this.lifeAtAcarService.GISGuestlecture$.subscribe((images: { url: string; name: string; }[]) => {
+      this.GISGuestlectureImages = images
+      console.log(images);
     });
   }
   imageClick(index: number) {
     this.activeIndex = index;
     this.displayCustom = true;
+  }
+  redirectToPage(path: any) {
+    this.router.navigateByUrl(`life-at-acar/${path}`)
+  }
+  ngOnDestroy() {
+    this.lifeAtAcarService.clearImages();
   }
 }

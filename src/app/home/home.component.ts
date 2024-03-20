@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { MegaMenuModule } from 'primeng/megamenu';
@@ -16,14 +16,15 @@ import { PlacementsComponent } from '../activites/placements/placements.componen
 import { GalleriaModule } from 'primeng/galleria';
 import { WhyAcarComponent } from '../campus/why-acar/why-acar.component';
 import { ImageModule } from 'primeng/image';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [NgbCarouselModule, 
-        FormsModule, 
-        MegaMenuModule, 
-        ActivitesComponent, 
+    imports: [NgbCarouselModule,
+        FormsModule,
+        MegaMenuModule,
+        ActivitesComponent,
         YoutbueVideosComponent,
         CampusComponent,
         EventsComponent,
@@ -35,24 +36,30 @@ import { ImageModule } from 'primeng/image';
         PlacementsComponent,
         GalleriaModule,
         WhyAcarComponent,
-        ImageModule],
+        ImageModule,
+        DialogModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
 
 })
 
-export class HomeComponent  {
-
+export class HomeComponent implements OnInit {
     images: string[] = [
         'assets/2college_full_view.JPG',
         'assets/DSC_5112.JPG',
-    //    'assets/IMG_0396.JPG',
-    //    'assets/IMG_0408.JPG',
-    //    'assets/IMG_1240.JPG',
-    //    'assets/IMG_1941.JPG',
-    //    'assets/IMG_6548.JPG',
-    //    'assets/IMG_9918.JPG',
-
     ];
     responsiveOptions = []
+    displayDialog: boolean = false;
+
+
+    ngOnInit() {
+        // Show dialog when the component is initialized
+        this.showDialog();
+    }
+
+    showDialog() {
+        this.displayDialog = true;
+    }
+
+
 }

@@ -1,26 +1,3 @@
-<!-- <app-header></app-header> -->
-
-<!-- Carousel with sliding images -->
-<!-- <ngb-carousel [interval]="1000">
-        @for (img of images; track img; let i = $index) {
-        <ng-template ngbSlide>
-            <div>
-                <img [src]="img" alt="Slide {{ i + 1 }}" width="100%" />
-            </div>
-        </ng-template>
-        }
-    </ngb-carousel> -->
-
-<!-- <div class=" acar_activites ">
-  <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [circular]="true"
-    [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-    <ng-template let-product pTemplate="item">
-      <img src="{{ product }}" [alt]="" style="width: 100%; height: 600px;" />
-    </ng-template>
-  </p-carousel>
-</div> -->
-
-
 <div class="">
   <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true"
     [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [autoPlay]="true" [circular]="true"
@@ -50,3 +27,6 @@
 <app-why-acar></app-why-acar>
 <!-- Events -->
 <!-- <app-events></app-events> -->
+<p-dialog header="Green Fest 2K24" [(visible)]="displayDialog" [modal]="true" [style]="{ 'width': '350px'}">
+  <img src="../../assets/GreenFestInvitationCard.png" alt="" class="w-100">
+</p-dialog>

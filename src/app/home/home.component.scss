@@ -1,5 +1,3 @@
-
-
 // ::ng-deep button.p-ripple.p-element.p-carousel-next.p-link {
 //     display: none;
 // }
@@ -7,6 +5,16 @@
 //     display: none;
 
 // }
-::ng-deep ul.p-carousel-indicators.p-reset{
+::ng-deep ul.p-carousel-indicators.p-reset {
     display: none !important;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    color: green;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    font-weight: bolder;
+}
+
+p-dialog {
+    overflow-y: hidden;
 }

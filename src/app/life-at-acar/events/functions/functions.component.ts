@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { LifeAtAcarService } from '../../service/life-at-acar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-functions',
@@ -32,7 +33,7 @@ export class FunctionsComponent {
   world_food_day_2022Images: { url: string; name: string; }[] = [];
   saraswathi_puja_2022Images: { url: string; name: string; }[] = [];
 
-  constructor(private lifeAtAcarService: LifeAtAcarService) {
+  constructor(private lifeAtAcarService: LifeAtAcarService, private router: Router) {
     this.lifeAtAcarService.readFilesFromStorage('Teachers Day Celebration 2023');
     this.lifeAtAcarService.readFilesFromStorage('ACAR Administrative Office Opening 2023');
     this.lifeAtAcarService.readFilesFromStorage('Muthamizh Vizha 2023');
@@ -86,6 +87,8 @@ export class FunctionsComponent {
     });
     this.lifeAtAcarService.farewell_2022$.subscribe((images: { url: string; name: string; }[]) => {
       this.farewell_2022Images = images
+      console.log(images)
+
     });
     this.lifeAtAcarService.pongal$.subscribe((images: { url: string; name: string; }[]) => {
       this.pongalImages = images
@@ -102,5 +105,10 @@ export class FunctionsComponent {
     this.activeIndex = index;
     this.displayCustom = true;
   }
-
+  redirectToPage(path: any) {
+    this.router.navigateByUrl(`life-at-acar/${path}`)
+  }
+  ngOnDestroy() {
+    this.lifeAtAcarService.clearImages();
+  }
 }

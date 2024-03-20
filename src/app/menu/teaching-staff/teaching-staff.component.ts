@@ -136,7 +136,9 @@ export class TeachingStaffComponent {
     }
   }
 
-
+  ngOnDestroy() {
+    this.menuService.clearImages();
+  }
 
 
 

@@ -30,6 +30,8 @@ export class HeaderComponent {
                 items: [
                     {
                         label: 'About Us',
+                        command: () => this.route.navigate(['/menu/about-us']),
+
                         items: [
                             {
                                 label: 'ACAR & AEIR Trust',
@@ -405,6 +407,14 @@ export class HeaderComponent {
                     }
                 ]
             },
+            {
+                label: 'Admission',
+                command: () => this.route.navigate(['academics/course-offered/application-form']),
+
+            },
+            // {
+            //     label: 'Login',
+            // },
         ];
     }
 

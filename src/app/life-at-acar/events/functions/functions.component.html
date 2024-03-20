@@ -1,404 +1,134 @@
-<div>
-    <h2 class="aboutus_title text-center my-3">Teachers Day Celebration 2023</h2>
-    <ng-container *ngIf="teachersDaycelbImages">
-        <div class=" ">
-            <p-carousel [value]="teachersDaycelbImages" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(teachersDaycelbImages.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+<div class="mx-5">
+    <p class="text-center fw-bold fs-3 text-success my-2">Celebrations</p>
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ teachersDaycelbImages[0]?.url }}" [alt]="" class="text-center w-75 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Teachers Day Celebration 2023
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-1')">View More</button>
         </div>
-        <p-galleria [value]="teachersDaycelbImages" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
-            [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
-            [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">ACAR Administrative Office Opening 2023</h2>
-    <ng-container *ngIf="administrative_Office_Opening_2023Images">
-        <div class=" ">
-            <p-carousel [value]="administrative_Office_Opening_2023Images" [numVisible]="3" [numScroll]="3"
-                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(administrative_Office_Opening_2023Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ administrative_Office_Opening_2023Images[0]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">ACAR Administrative Office Opening 2023</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-2')">View More</button>
         </div>
-        <p-galleria [value]="administrative_Office_Opening_2023Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Muthamizh Vizha 2023</h2>
-    <ng-container *ngIf="muthamizh_Vizha_2023Images">
-        <div class=" ">
-            <p-carousel [value]="muthamizh_Vizha_2023Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(muthamizh_Vizha_2023Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ muthamizh_Vizha_2023Images[0]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Muthamizh Vizha 2023</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-3')">View More</button>
         </div>
-        <p-galleria [value]="muthamizh_Vizha_2023Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Freshers Day 2023</h2>
-    <ng-container *ngIf="freshersDay_2023Images">
-        <div class=" ">
-            <p-carousel [value]="freshersDay_2023Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(freshersDay_2023Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
-        </div>
-        <p-galleria [value]="freshersDay_2023Images" [(visible)]="displayCustom" [responsiveOptions]="responsiveOptions"
-            [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false"
-            [containerStyle]="{ 'max-width': '850px' }" [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
+    </div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Women's Day Celebration 2023</h2>
-    <ng-container *ngIf="Womens_Day_Celebration_2023Images">
-        <div class=" ">
-            <p-carousel [value]="Womens_Day_Celebration_2023Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(Womens_Day_Celebration_2023Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ freshersDay_2023Images[0]?.url }}" [alt]="" class="text-center w-75 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Freshers Day 2023
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-4')">View More</button>
         </div>
-        <p-galleria [value]="Womens_Day_Celebration_2023Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Year Day Celebration - 2021 Batch</h2>
-    <ng-container *ngIf="Year_Day_Celebration_2021_BatchImages">
-        <div class=" ">
-            <p-carousel [value]="Year_Day_Celebration_2021_BatchImages" [numVisible]="3" [numScroll]="3"
-                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(Year_Day_Celebration_2021_BatchImages.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ Womens_Day_Celebration_2023Images[2]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Women's Day Celebration 2023</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-5')">View More</button>
         </div>
-        <p-galleria [value]="Year_Day_Celebration_2021_BatchImages" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">TNAU Standing Committee Visit 2022</h2>
-    <ng-container *ngIf="TNAU_Standing_Committee_Visit_2022Images">
-        <div class=" ">
-            <p-carousel [value]="TNAU_Standing_Committee_Visit_2022Images" [numVisible]="3" [numScroll]="3"
-                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(TNAU_Standing_Committee_Visit_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ Year_Day_Celebration_2021_BatchImages[0]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Year Day Celebration - 2021 Batch</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-6')">View More</button>
         </div>
-        <p-galleria [value]="TNAU_Standing_Committee_Visit_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Parents Teachers Meeting 2022</h2>
-    <ng-container *ngIf="Parents_Teachers_Meeting_2022Images">
-        <div class=" ">
-            <p-carousel [value]="Parents_Teachers_Meeting_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(Parents_Teachers_Meeting_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
-        </div>
-        <p-galleria [value]="Parents_Teachers_Meeting_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
+    </div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Independence Day 2022</h2>
-    <ng-container *ngIf="Independence_Day_2022Images">
-        <div class=" ">
-            <p-carousel [value]="Independence_Day_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(Independence_Day_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ TNAU_Standing_Committee_Visit_2022Images[3]?.url }}" [alt]=""
+                class="text-center w-75 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">TNAU Standing Committee Visit 2022
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-7')">View More</button>
         </div>
-        <p-galleria [value]="Independence_Day_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Agriculture Innovation Competition</h2>
-    <ng-container *ngIf="agriculture_Innovation_CompetitionImages">
-        <div class=" ">
-            <p-carousel [value]="agriculture_Innovation_CompetitionImages" [numVisible]="3" [numScroll]="3"
-                [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(agriculture_Innovation_CompetitionImages.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ Parents_Teachers_Meeting_2022Images[2]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Parents Teachers Meeting 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-8')">View More</button>
         </div>
-        <p-galleria [value]="agriculture_Innovation_CompetitionImages" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Club Day and Hostel Day 2022</h2>
-    <ng-container *ngIf="club_day_and_hostel_day_2022Images">
-        <div class=" ">
-            <p-carousel [value]="club_day_and_hostel_day_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(club_day_and_hostel_day_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ Independence_Day_2022Images[2]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Independence Day 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-9')">View More</button>
         </div>
-        <p-galleria [value]="club_day_and_hostel_day_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Farewell 2022</h2>
-    <ng-container *ngIf="farewell_2022Images">
-        <div class=" ">
-            <p-carousel [value]="farewell_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(farewell_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
-        </div>
-        <p-galleria [value]="farewell_2022Images
-        
-        " [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
+    </div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Pongal</h2>
-    <ng-container *ngIf="pongalImages">
-        <div class=" ">
-            <p-carousel [value]="pongalImages" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(pongalImages.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ agriculture_Innovation_CompetitionImages[3]?.url }}" [alt]=""
+                class="text-center w-75 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Agriculture Innovation Competition
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-10')">View More</button>
         </div>
-        <p-galleria [value]="pongalImages" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">World Food Day 2022</h2>
-    <ng-container *ngIf="world_food_day_2022Images">
-        <div class=" ">
-            <p-carousel [value]="world_food_day_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(world_food_day_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ club_day_and_hostel_day_2022Images[2]?.url }}" [alt]=""
+                class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Club Day and Hostel Day 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-11')">View More</button>
         </div>
-        <p-galleria [value]="world_food_day_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
-</div>
 
-<div>
-    <h2 class="aboutus_title text-center my-3">Saraswathi Puja 2022</h2>
-    <ng-container *ngIf="saraswathi_puja_2022Images">
-        <div class=" ">
-            <p-carousel [value]="saraswathi_puja_2022Images" [numVisible]="3" [numScroll]="3" [circular]="true"
-                [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
-                <ng-template let-product pTemplate="item" let-i="index">
-                    <div class="border-1 surface-border border-round text-center">
-                        <div class="">
-                            <img src="{{ product.url }}" [alt]="" class="w-75 shadow-2"
-                                (click)="imageClick(saraswathi_puja_2022Images.indexOf(product))" />
-                        </div>
-                    </div>
-                </ng-template>
-            </p-carousel>
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ farewell_2022Images[2]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Farewell 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-12')">View More</button>
         </div>
-        <p-galleria [value]="saraswathi_puja_2022Images" [(visible)]="displayCustom"
-            [responsiveOptions]="responsiveOptions" [numVisible]="7" [circular]="true" [fullScreen]="true"
-            [showItemNavigators]="true" [showThumbnails]="false" [containerStyle]="{ 'max-width': '850px' }"
-            [activeIndex]="activeIndex">
-            <ng-template pTemplate="item" let-item>
-                <img src="{{ item.url }}" alt="{{ item.title }}" />
-            </ng-template>
-        </p-galleria>
-    </ng-container>
+
+    </div>
+
+    <div class="row mx-5 my-3">
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ pongalImages[3]?.url }}" [alt]="" class="text-center w-75 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Pongal
+            </p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-13')">View More</button>
+        </div>
+
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ world_food_day_2022Images[3]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">World Food Day 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-14')">View More</button>
+        </div>
+
+        <div class="card card1 col-md-3 mx-4">
+            <img src="{{ saraswathi_puja_2022Images[3]?.url }}" [alt]="" class="text-center w-75 h-50 mx-4 my-3" />
+            <p class="text-center fw-bold fs-5 text-success mb-5 pb-3">Saraswathi Puja 2022</p>
+            <button class="btn btn-success position-absolute bottom-0 start-0 mb-3 m-3"
+                (click)="redirectToPage('celeb-15')">View More</button>
+        </div>
+
+    </div>
 </div>
