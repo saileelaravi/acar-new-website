@@ -2,12 +2,12 @@
 <!-- <h1 class="aboutus_title">Principal</h1> -->
 <div class="row justify-content-center">
     <div class="col-xl-6 ">
-        <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of principalImages">
-            <div class="d-flex">
+        <div class="card  container shadow-lg" *ngFor="let images of principalImages">
+            <div class="d-flex flex-wrap">
                 <div class="p-4">
                     <img src="{{images.url}}" alt="" class="">
                 </div>
-                <div class="border-left border border-secondary my-5"></div>
+                <!-- <div class="border-left border border-secondary my-5"></div> -->
 
                 <div class=" mx-4">
                     <p class="mt-5 ">
@@ -39,17 +39,17 @@
 </div>
 
 <div class="mx-5">
-    <div class=" mx-5 flex justify-content-center">
+    <div class="container my-2">
         <p-dropdown [options]="department" [(ngModel)]="selectedDepartment" optionLabel="name" [placeholder]=placeholder
             (onChange)="openSelectedDepartmentImages(selectedDepartment)"></p-dropdown>
     </div>
 
-    <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of FacultyImages">
-        <div class="d-flex">
+    <div class="card  my-2 container shadow-lg" *ngFor="let images of FacultyImages">
+        <div class="d-flex flex-wrap">
             <div class="w-25 p-4">
                 <img src="{{images.url}}" alt="" class="rounded-circle">
             </div>
-            <div class="border-left border border-secondary my-5"></div>
+            <!-- <div class="border-left border border-secondary my-5"></div> -->
 
             <div>
                 <div class="d-flex flex-wrap">
@@ -57,10 +57,16 @@
                         <i class="fa-solid fa-user"></i>
                         <span class="mx-2 fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
                     </p>
-                    <p class="mt-5">
+                    <!-- <p class="mt-5">
                         <span>|</span>
                     </p>
                     <p class="mt-5 mx-3">
+                        <i class="fa-solid fa-briefcase"></i><span
+                            class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
+                    </p> -->
+                </div>
+                <div>
+                    <p class="mx-3">
                         <i class="fa-solid fa-briefcase"></i><span
                             class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
                     </p>

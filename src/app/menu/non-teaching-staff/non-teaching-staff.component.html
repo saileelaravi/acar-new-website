@@ -1,32 +1,52 @@
 <div class="mx-5">
     <h1 class="aboutus_title text-center my-2"> Non-Teaching staff</h1>
 
-    <div class="card  mx-5 my-2 container shadow-lg" *ngFor="let images of FacultyImages">
-        <div class="d-flex">
+    <div class="card my-2 container shadow-lg" *ngFor="let images of FacultyImages">
+        <div class="d-flex flex-wrap">
             <div class="w-25 p-4">
                 <img src="{{images.url}}" alt="" class="rounded-circle">
             </div>
-            <div class="border-left border border-secondary my-5"></div>
 
-            <div>
-                <div class="d-flex flex-wrap my-4">
-                    <p class="mt-5 mx-3">
+            <div class="d-flex flex-wrap align-items-center">
+                <div>
+                    <p class="mx-3">
                         <i class="fa-solid fa-user"></i>
                         <span class="mx-2 fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
                     </p>
-                    <p class="mt-5">
-                        <span>|</span>
-                    </p>
-                    <p class="mt-5 mx-3">
+
+                </div>
+                <div>
+                    <p class="mx-3">
                         <i class="fa-solid fa-briefcase"></i><span
                             class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
                     </p>
                 </div>
             </div>
-            <!-- <div class="text-end ms-auto align-self-end m-5" (click)="viewProfile(images.name.split('_')[1])">
-                <button class="btn btn-success">View Profile</button>
-            </div> -->
+
+
+
+
+
+            <!-- 
+        <div class="d-flex flex-wrap">
+            <div class="w-25 p-4">
+                <img src="{{images.url}}" alt="" class="rounded-circle">
+            </div>
+            <div>
+                <div class="mt-5">
+                    <p class="mx-3">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="mx-2 fs-6 fw-bold text-danger">{{images.name.split('_')[0]}}</span>
+                    </p>
+                    <p class="mx-3">
+                        <i class="fa-solid fa-briefcase"></i><span
+                            class="mx-2 fs-6 fw-bold text">{{images.name.split('_')[2]}}</span>
+                    </p>
+                </div>
+            </div>
+         
+
+        </div> -->
 
         </div>
     </div>
-</div>
