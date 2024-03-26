@@ -27,6 +27,8 @@
 <app-why-acar></app-why-acar>
 <!-- Events -->
 <!-- <app-events></app-events> -->
-<p-dialog header="Green Fest 2K24" [(visible)]="displayDialog" [modal]="true" [style]="{ 'width': '350px'}">
-  <img src="../../assets/GreenFestInvitationCard.png" alt="" class="w-100">
+<p-dialog header="" [(visible)]="displayDialog" [modal]="true">
+  <!-- <img src="{{dialogBoxImages[0]?.url}}" alt="" class="w-100"> -->
+  <p-image src="{{dialogBoxImages[0]?.url}}" [preview]="false" width="" height="400"></p-image>
+  
 </p-dialog>

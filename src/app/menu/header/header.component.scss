@@ -85,6 +85,11 @@ p {
 .news-scroller {
     white-space: nowrap;
     animation: marquee 20s linear infinite;
+    animation-play-state: running;
+    /* Initially set to running */
+}
+.news-scroller:hover {
+    animation-play-state: paused; /* Pausing animation on hover */
 }
 
 @keyframes marquee {

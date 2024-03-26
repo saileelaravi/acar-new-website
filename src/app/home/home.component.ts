@@ -17,6 +17,8 @@ import { GalleriaModule } from 'primeng/galleria';
 import { WhyAcarComponent } from '../campus/why-acar/why-acar.component';
 import { ImageModule } from 'primeng/image';
 import { DialogModule } from 'primeng/dialog';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
     selector: 'app-home',
@@ -51,15 +53,71 @@ export class HomeComponent implements OnInit {
     responsiveOptions = []
     displayDialog: boolean = false;
 
+    private _imageUrls$ = new BehaviorSubject<{ url: string; name: string }[]>([]);
+    imageUrls$ = this._imageUrls$.asObservable();
+    dialogBoxImages: any = []
+    showCurrentEventImage!: string;
+
+
+    constructor(private storage: AngularFireStorage) { }
+
 
     ngOnInit() {
         // Show dialog when the component is initialized
-        this.showDialog();
+        this.dialogOnPageOpen()
     }
 
     showDialog() {
         this.displayDialog = true;
     }
 
+    readFilesFromStorage(folderPath: string) {
+        const ref = this.storage.ref(folderPath);
+        ref.listAll().subscribe(list => {
+            list.items.forEach(itemRef => {
+                this.readFile(itemRef);
+            });
+        });
+    }
+
+    // private readFile(itemRef: any): void {
+    //     itemRef.getDownloadURL().then((url: string) => {
+    //         itemRef.getMetadata().then((metadata: any) => {
+    //             // console.log('timeCreated::', metadata.timeCreated, 'name::', metadata.name);
+    //             (this.dialogBoxImages as unknown as { url: string; createdTime: Date }[]).push({ url, createdTime: new Date(metadata.timeCreated) });
+    //             // Sorting the array based on createdTime
+    //             (this.dialogBoxImages as unknown as { url: string; createdTime: Date }[]).sort((a, b) => b.createdTime.getTime() - a.createdTime.getTime());
+    //             this.showCurrentEventImage = this.dialogBoxImages[0]
+    //         });
+    //     })
+    //     console.log(this.dialogBoxImages);
+
+    // }
+
+    private readFile(itemRef: any): void {
+        itemRef.getDownloadURL().then((url: string) => {
+            itemRef.getMetadata().then((metadata: any) => {
+                // console.log('timeCreated::', metadata.timeCreated, 'name::', metadata.name);
+                const createdTime = new Date(metadata.timeCreated);
+                const newItem = { url, createdTime };
+
+                // Push the new item to the array and sort the array based on createdTime
+                const dialogBoxImagesArray = this.dialogBoxImages as unknown as { url: string; createdTime: Date }[];
+                dialogBoxImagesArray.push(newItem);
+                dialogBoxImagesArray.sort((a, b) => b.createdTime.getTime() - a.createdTime.getTime());
+                this.dialogBoxImages = dialogBoxImagesArray
+
+            });
+        });
+
+    }
+
+
+    dialogOnPageOpen() {
+        this.readFilesFromStorage('invitationOnDialogOnPageLoads');
+        console.log(this.dialogBoxImages);
+        this.displayDialog = true;
+
+    }
 
 }
